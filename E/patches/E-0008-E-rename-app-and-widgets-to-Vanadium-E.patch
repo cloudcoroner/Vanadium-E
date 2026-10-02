@@ -1,0 +1,33 @@
+From a8d89e768cde26c9fabdcb3349da9b7613393b6b Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Fri, 2 Oct 2026 08:30:07 -0400
+Subject: [PATCH 8/8] E: rename app and widgets to Vanadium-E
+
+Launcher label and widget titles read Vanadium-E so the app is distinguishable
+from Vanadium in the launcher.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../java/res_vanadium_base/values/channel_constants.xml   | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/chrome/android/java/res_vanadium_base/values/channel_constants.xml b/chrome/android/java/res_vanadium_base/values/channel_constants.xml
+index 1a502c7..fe905be 100644
+--- a/chrome/android/java/res_vanadium_base/values/channel_constants.xml
++++ b/chrome/android/java/res_vanadium_base/values/channel_constants.xml
+@@ -7,8 +7,8 @@ found in the LICENSE file.
+ 
+ <resources xmlns:android="http://schemas.android.com/apk/res/android">
+     <!-- The application name displayed to the user. -->
+-    <string name="app_name" translatable="false">Vanadium</string>
+-    <string name="bookmark_widget_title" translatable="false">Vanadium bookmarks</string>
+-    <string name="search_widget_title" translatable="false">Vanadium search</string>
+-    <string name="quick_action_search_widget_title" translatable="false">Vanadium quick action search</string>
++    <string name="app_name" translatable="false">Vanadium-E</string>
++    <string name="bookmark_widget_title" translatable="false">Vanadium-E bookmarks</string>
++    <string name="search_widget_title" translatable="false">Vanadium-E search</string>
++    <string name="quick_action_search_widget_title" translatable="false">Vanadium-E quick action search</string>
+ </resources>
+-- 
+2.50.1 (Apple Git-155)
+
