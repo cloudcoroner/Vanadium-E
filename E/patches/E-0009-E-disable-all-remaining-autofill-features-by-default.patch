@@ -1,0 +1,113 @@
+From a6c2f85b97e7463923e0bdf8fa15aab4397b881b Mon Sep 17 00:00:00 2001
+From: Anthony Glackmeyer <anthony.glackmeyer@wwt.com>
+Date: Fri, 2 Oct 2026 08:38:00 -0400
+Subject: [PATCH] E: disable all remaining autofill features by default
+
+Turns off Autofill AI, buy-now-pay-later, wallet and instant-payment
+facilitation, email verification autofill, payment card benefits and the
+Android platform Autofill service switch that Vanadium enables, so no
+autofill source is active out of the box.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../autofill/core/common/autofill_prefs.cc    | 24 +++++++++----------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/components/autofill/core/common/autofill_prefs.cc b/components/autofill/core/common/autofill_prefs.cc
+index d8f582b..cda243d 100644
+--- a/components/autofill/core/common/autofill_prefs.cc
++++ b/components/autofill/core/common/autofill_prefs.cc
+@@ -48,24 +48,24 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+       kAutofillLastVersionDeduped, 0,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillAiIdentityEntitiesEnabled, true,
++      kAutofillAiIdentityEntitiesEnabled, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillAiShoppingEntitiesEnabled, true,
++      kAutofillAiShoppingEntitiesEnabled, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterIntegerPref(
+       kAutofillAiLastVersionDeduped, 0,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillAiPrivateInferenceOptInStatus, true,
++      kAutofillAiPrivateInferenceOptInStatus, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillAiTravelEntitiesEnabled, true,
++      kAutofillAiTravelEntitiesEnabled, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+ #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) || \
+     BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_IOS)
+   registry->RegisterBooleanPref(
+-      kAutofillAiReauthBeforeViewingSensitiveData, true,
++      kAutofillAiReauthBeforeViewingSensitiveData, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+ #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) ||
+         // BUILDFLAG(IS_CHROMEOS)
+@@ -79,7 +79,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+       kAutofillPaymentCvcStorage, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillPaymentCardBenefits, true,
++      kAutofillPaymentCardBenefits, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+ 
+   registry->RegisterBooleanPref(
+@@ -105,7 +105,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+       kAutofillAiPrivateInferenceNoticeAcknowledgedTimestamp, base::Time());
+   registry->RegisterTimePref(kAutofillAiPrivateInferenceNoticeShownTimestamp,
+                              base::Time());
+-  registry->RegisterBooleanPref(kAutofillEmailVerificationEnabled, true);
++  registry->RegisterBooleanPref(kAutofillEmailVerificationEnabled, false);
+   registry->RegisterDictionaryPref(kAutofillEmailVerificationState);
+   registry->RegisterBooleanPref(kAutofillCreditCardFidoAuthEnabled, false);
+ #if BUILDFLAG(IS_ANDROID)
+@@ -141,13 +141,13 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+ #endif
+ 
+ #if BUILDFLAG(IS_ANDROID)
+-  registry->RegisterBooleanPref(kAutofillUsingPlatformAutofill, true);
++  registry->RegisterBooleanPref(kAutofillUsingPlatformAutofill, false);
+   registry->RegisterBooleanPref(kAutofillThirdPartyPasswordManagersAllowed,
+                                 true);
+   registry->RegisterStringPref(
+       kAutofillThirdPartyPackageUsedForPlatformAutofill, "");
+   registry->RegisterBooleanPref(
+-      kFacilitatedPaymentsEwallet, /*default_value=*/true,
++      kFacilitatedPaymentsEwallet, /*default_value=*/false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   // The eWallet account linking pref is a profile pref but not synced across
+   // devices since users may prefer to have a different value for it on
+@@ -155,7 +155,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+   registry->RegisterBooleanPref(kFacilitatedPaymentsEwalletAccountLinking,
+                                 /*default_value=*/true);
+   registry->RegisterBooleanPref(
+-      kFacilitatedPaymentsPix, /*default_value=*/true,
++      kFacilitatedPaymentsPix, /*default_value=*/false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   // The Pix account linking pref is a profile pref but not synced across
+   // devices since users may prefer to have a different value for it on
+@@ -163,7 +163,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+   registry->RegisterBooleanPref(kFacilitatedPaymentsPixAccountLinking,
+                                 /*default_value=*/true);
+   registry->RegisterBooleanPref(
+-      kFacilitatedPaymentsA2AEnabled, /*default_value=*/true,
++      kFacilitatedPaymentsA2AEnabled, /*default_value=*/false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+       kFacilitatedPaymentsA2ATriggeredOnce, /*default_value=*/false,
+@@ -171,7 +171,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+ #endif
+ 
+   registry->RegisterBooleanPref(
+-      kAutofillBnplEnabled, true,
++      kAutofillBnplEnabled, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+       kAutofillHasSeenBnpl, false,
+-- 
+2.50.1 (Apple Git-155)
+
