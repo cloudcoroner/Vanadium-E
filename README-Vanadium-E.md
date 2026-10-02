@@ -15,7 +15,7 @@ customized default configuration and default profile. No Vanadium code is modifi
 2. From that checkout: `/path/to/Vanadium-E/E/tools/apply-patches.sh`
 3. `mkdir -p out/Default && /path/to/Vanadium-E/E/tools/build-args.sh > out/Default/args.gn`
 4. `gn gen out/Default && autoninja -C out/Default chrome_public_apk` (see GrapheneOS build docs).
-5. Sign with your own key (`vanadium-e.keystore`) and put its cert digest in `E/args.gn.overlay`.
+5. Sign with your own key: see `E/SIGNING.md`.
 
 ## Sync
 `E/tools/sync-upstream.sh`, then rebuild; fix any E patch that no longer applies.

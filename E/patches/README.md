@@ -24,13 +24,15 @@ When upstream changes break an E patch, rebase only that E patch.
 | Save passwords / auto sign-in off | `E-0004` |
 | Save and fill payment methods / security codes off | `E-0005` |
 | Save and fill addresses off | `E-0005` |
+| Disable all autofill | `E-0005` + `E-0009` (also Autofill AI, buy-now-pay-later, wallet/instant payments, email verification, payment card benefits, and Android platform Autofill) |
 
 | Distinct launcher icon (incl. themed/monochrome) | `E-0007` (violet ring with an "E"; the themed icon has the E cut out of its center; PNGs regenerate with `E/branding/generate-icons.py`) |
 | Launcher name "Vanadium-E" | `E-0008` (app label and widget titles) |
+| In-app name "Vanadium-E" | `E/tools/rebrand-strings.py`, run by `apply-patches.sh` (rewrites visible message text only, so no patch to maintain) |
 
-Not covered: the "Autofill settings" section of the request was empty.
 
 Notes
+- Strings: GRIT message IDs derive from the English text, so translations of messages that contain the product name no longer match and show in English.
 - Defaults only: a user can still flip any toggle in Settings.
 - `E-0006` applies to windows holding both regular and incognito tabs (phones). Where the
   OS opens incognito as a separate window (some tablet/desktop modes) it is skipped.

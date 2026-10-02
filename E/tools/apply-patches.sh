@@ -15,6 +15,11 @@ shopt -s nullglob
 e=("$root"/E/patches/E-*.patch)
 [[ ${#e[@]} -gt 0 ]] && git am --3way "${e[@]}"
 
+# Rebrand visible in-app strings to Vanadium-E (done by script so upstream string changes never conflict).
+python3 "$root/E/tools/rebrand-strings.py" "$src"
+git add -A -- '*.grd' '*.grdp'
+git commit -q -m "E: rebrand in-app strings to Vanadium-E" || true
+
 # Vanadium-E submodule patches, e.g. E/subprojects_patches/<subproject path>/E-*.patch
 for d in "$root"/E/subprojects_patches/third_party/search_engines_data/resources; do
     sub=${d#"$root"/E/subprojects_patches/}

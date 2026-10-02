@@ -4,3 +4,9 @@
 /.gclient_previous_sync_commits
 /src
 /vanadium.keystore
+
+# Vanadium-E: never commit signing keys
+*.keystore
+*.jks
+*.p12
+*.pem
