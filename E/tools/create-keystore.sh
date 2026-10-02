@@ -8,7 +8,7 @@ ks=${VANADIUM_E_KEYSTORE:-$HOME/.vanadium-e/vanadium-e.keystore}
 [[ -e $ks ]] && { echo "$ks already exists, refusing to overwrite"; exit 1; }
 mkdir -p "$(dirname "$ks")" && chmod 700 "$(dirname "$ks")"
 keytool -genkeypair -v -keystore "$ks" -alias vanadium-e \
-    -keyalg RSA -keysize 4096 -validity 36500 -dname "CN=Vanadium-E"
+    -storetype pkcs12 -keyalg RSA -keysize 4096 -sigalg SHA512withRSA -validity 36500 -dname "CN=Vanadium-E"
 chmod 600 "$ks"
 echo
 echo "Created $ks. Now run: $(dirname "$0")/cert-digest.sh --write"
