@@ -10,5 +10,5 @@ config_apk_package = "app.vanadiume.config"
 # MUST be replaced with the SHA-256 digest of YOUR signing certificate
 # (keytool -list -v -keystore vanadium-e.keystore). The Vanadium digests in
 # ../args.gn belong to the GrapheneOS key and will not match your builds.
-trichrome_certdigest = "REPLACE_WITH_VANADIUM_E_CERT_DIGEST"
-config_apk_certdigest = "REPLACE_WITH_VANADIUM_E_CERT_DIGEST"
+trichrome_certdigest = "7cea22b2ec11681f5c39eac8e0cc79a58457a4dfd97a4703d96b7ce051536101"
+config_apk_certdigest = "7cea22b2ec11681f5c39eac8e0cc79a58457a4dfd97a4703d96b7ce051536101"
