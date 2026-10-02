@@ -1,0 +1,14 @@
+# Vanadium-E build argument overrides. Applied on top of ../args.gn by
+# E/tools/build-args.sh. Any key listed here replaces the Vanadium value.
+
+# Distinct package names so Vanadium-E installs alongside Vanadium.
+chrome_public_manifest_package = "app.vanadiume.browser"
+system_webview_package_name = "app.vanadiume.webview"
+trichrome_library_package = "app.vanadiume.trichromelibrary"
+config_apk_package = "app.vanadiume.config"
+
+# MUST be replaced with the SHA-256 digest of YOUR signing certificate
+# (keytool -list -v -keystore vanadium-e.keystore). The Vanadium digests in
+# ../args.gn belong to the GrapheneOS key and will not match your builds.
+trichrome_certdigest = "REPLACE_WITH_VANADIUM_E_CERT_DIGEST"
+config_apk_certdigest = "REPLACE_WITH_VANADIUM_E_CERT_DIGEST"
