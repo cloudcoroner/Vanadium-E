@@ -1,0 +1,29 @@
+From 7c227f2b6f73c39d7f2449515827a9a03d29edcd Mon Sep 17 00:00:00 2001
+From: Anthony Glackmeyer <anthony.glackmeyer@wwt.com>
+Date: Fri, 2 Oct 2026 07:54:08 -0400
+Subject: [PATCH 1/6] E: set default search engine to Startpage
+
+Replaces the DuckDuckGo fallback chosen by Vanadium. Startpage is added as
+the first entry on every regional list by the search_engines_data patch.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ components/search_engines/template_url_prepopulate_data.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/components/search_engines/template_url_prepopulate_data.cc b/components/search_engines/template_url_prepopulate_data.cc
+index e375e64..579d7d6 100644
+--- a/components/search_engines/template_url_prepopulate_data.cc
++++ b/components/search_engines/template_url_prepopulate_data.cc
+@@ -318,7 +318,7 @@ std::unique_ptr<TemplateURLData> GetPrepopulatedFallbackSearch(
+     const std::vector<raw_ptr<const PrepopulatedEngine>>&
+         regional_prepopulated_engines) {
+   return FindPrepopulatedEngineInternal(prefs, regional_prepopulated_engines,
+-                                        duckduckgo.id,
++                                        startpage.id,
+                                         /*use_first_as_fallback=*/true);
+ }
+ 
+-- 
+2.50.1 (Apple Git-155)
+

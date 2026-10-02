@@ -1,0 +1,40 @@
+From cd6c398e04833ecd90fc55c6cc2f3292241d6b5b Mon Sep 17 00:00:00 2001
+From: Anthony Glackmeyer <anthony.glackmeyer@wwt.com>
+Date: Fri, 2 Oct 2026 07:54:08 -0400
+Subject: [PATCH 5/6] E: disable saving and filling addresses, payment methods
+ and security codes by default
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ components/autofill/core/common/autofill_prefs.cc | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/components/autofill/core/common/autofill_prefs.cc b/components/autofill/core/common/autofill_prefs.cc
+index a374ccd..d8f582b 100644
+--- a/components/autofill/core/common/autofill_prefs.cc
++++ b/components/autofill/core/common/autofill_prefs.cc
+@@ -42,7 +42,7 @@ constexpr char kAutofillAiSyncedOptInStatusDeprecated[] =
+ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+   // Synced prefs. Used for cross-device choices, e.g., credit card Autofill.
+   registry->RegisterBooleanPref(
+-      kAutofillProfileEnabled, true,
++      kAutofillProfileEnabled, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterIntegerPref(
+       kAutofillLastVersionDeduped, 0,
+@@ -73,10 +73,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+       kAutofillHasSeenIban, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillCreditCardEnabled, true,
++      kAutofillCreditCardEnabled, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+-      kAutofillPaymentCvcStorage, true,
++      kAutofillPaymentCvcStorage, false,
+       user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
+   registry->RegisterBooleanPref(
+       kAutofillPaymentCardBenefits, true,
+-- 
+2.50.1 (Apple Git-155)
+

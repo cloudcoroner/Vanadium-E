@@ -1,0 +1,54 @@
+From c378e8201c5611076d5ac507cd171a1cf189dc23 Mon Sep 17 00:00:00 2001
+From: Anthony Glackmeyer <anthony.glackmeyer@wwt.com>
+Date: Fri, 2 Oct 2026 07:54:08 -0400
+Subject: [PATCH 6/6] E: always start browsing sessions in an incognito tab
+
+The initial tab created on a cold start without restored tabs is now an
+incognito tab. Combined with close tabs on exit and opening external links
+in incognito (both on by default), every session starts clean.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../chromium/chrome/browser/ChromeTabbedActivity.java    | 5 ++++-
+ .../org/chromium/chrome/browser/TabPreferencesUtils.java | 9 +++++++++
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+
+diff --git a/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java b/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
+index b1b4f9a..95f4cc5 100644
+--- a/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
++++ b/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
+@@ -2767,7 +2767,10 @@ public class ChromeTabbedActivity extends ChromeActivity implements PreAttachInt
+     private void createInitialTab() {
+         Log.i(TAG, "#createInitialTab executed.");
+         mPendingInitialTabCreation = false;
+-        boolean incognito = mSupportedProfileType == SupportedProfileType.OFF_THE_RECORD;
++        boolean incognito =
++                mSupportedProfileType == SupportedProfileType.OFF_THE_RECORD
++                        || (mSupportedProfileType != SupportedProfileType.REGULAR
++                                && TabPreferencesUtils.shouldAlwaysStartInIncognito());
+ 
+         List<String> startupUrls =
+                 TabbedStartupWindowPolicyDelegate.getInstance().resolveStartupUrls(incognito);
+diff --git a/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java b/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
+index 0f41a75..51d5f54 100644
+--- a/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
++++ b/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
+@@ -25,6 +25,15 @@ public final class TabPreferencesUtils {
+         return SharedPrefsExt.CLOSE_TABS_ON_EXIT.get();
+     }
+ 
++    /**
++     * Vanadium-E always starts browsing sessions in an incognito tab. Only applies to windows
++     * which can hold both regular and incognito tabs, since incognito tabs would otherwise
++     * be redirected to a separate window.
++     */
++    public static boolean shouldAlwaysStartInIncognito() {
++        return true;
++    }
++
+     public static boolean shouldOpenLinksInIncognito() {
+         return SharedPrefsExt.OPEN_LINKS_IN_INCOGNITO.get();
+     }
+-- 
+2.50.1 (Apple Git-155)
+

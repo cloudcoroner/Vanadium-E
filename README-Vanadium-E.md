@@ -6,7 +6,7 @@ customized default configuration and default profile. No Vanadium code is modifi
 ## Layout
 - Everything upstream (`patches/`, `args.gn`, ...) is untouched, so syncing never conflicts.
 - `E/args.gn.overlay` – build arg overrides (package names, signing digest).
-- `E/patches/` – extra patches applied after Vanadium's (defaults live here).
+- `E/patches/` – extra Chromium patches (defaults); `E/subprojects_patches/` – patches for the search engine data submodule. See `E/patches/README.md` for the settings map.
 - `E/tools/` – `sync-upstream.sh`, `build-args.sh`, `apply-patches.sh`.
 - `.github/workflows/sync-upstream.yml` – daily upstream merge PR.
 
