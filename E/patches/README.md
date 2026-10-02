@@ -25,6 +25,8 @@ When upstream changes break an E patch, rebase only that E patch.
 | Save and fill payment methods / security codes off | `E-0005` |
 | Save and fill addresses off | `E-0005` |
 
+| Distinct launcher icon | `E-0007` (violet ring with an "E"; regenerate with `E/branding/generate-icons.py`) |
+
 Not covered: the "Autofill settings" section of the request was empty.
 
 Notes
