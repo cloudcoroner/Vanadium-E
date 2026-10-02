@@ -1,0 +1,31 @@
+From e55ebf1491093a7014a7c58ce5aab4c0e588218e Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Fri, 2 Oct 2026 07:54:08 -0400
+Subject: [PATCH 3/6] E: use secure DNS with Cloudflare security resolver by
+ default
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ chrome/browser/net/default_dns_over_https_config_source.cc | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/chrome/browser/net/default_dns_over_https_config_source.cc b/chrome/browser/net/default_dns_over_https_config_source.cc
+index e5a2aad..c71652a 100644
+--- a/chrome/browser/net/default_dns_over_https_config_source.cc
++++ b/chrome/browser/net/default_dns_over_https_config_source.cc
+@@ -38,8 +38,10 @@ DefaultDnsOverHttpsConfigSource::~DefaultDnsOverHttpsConfigSource() = default;
+ // static
+ void DefaultDnsOverHttpsConfigSource::RegisterPrefs(
+     PrefRegistrySimple* registry) {
+-  registry->RegisterStringPref(prefs::kDnsOverHttpsMode, std::string());
+-  registry->RegisterStringPref(prefs::kDnsOverHttpsTemplates, std::string());
++  registry->RegisterStringPref(prefs::kDnsOverHttpsMode, "secure");
++  registry->RegisterStringPref(
++      prefs::kDnsOverHttpsTemplates,
++      "https://security.cloudflare-dns.com/dns-query");
+   registry->RegisterBooleanPref(prefs::kDnsOverHttpsAutomaticModeFallbackToDoh,
+                                 false);
+ #if BUILDFLAG(IS_CHROMEOS)
+-- 
+2.50.1 (Apple Git-155)
+

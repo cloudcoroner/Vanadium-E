@@ -1,0 +1,30 @@
+From b9eb693934dd5ff729ace90c7dc9dcdcdefde424 Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Fri, 2 Oct 2026 07:54:08 -0400
+Subject: [PATCH 2/6] E: enable close tabs on exit and open external links in
+ incognito by default
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../chromium/base/shared_preferences/SharedPrefsUtils.java    | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/vanadium/chromium_src/base/android/java/src/org/chromium/base/shared_preferences/SharedPrefsUtils.java b/vanadium/chromium_src/base/android/java/src/org/chromium/base/shared_preferences/SharedPrefsUtils.java
+index e9f9abe..a6da019 100644
+--- a/vanadium/chromium_src/base/android/java/src/org/chromium/base/shared_preferences/SharedPrefsUtils.java
++++ b/vanadium/chromium_src/base/android/java/src/org/chromium/base/shared_preferences/SharedPrefsUtils.java
+@@ -120,9 +120,9 @@ public final class SharedPrefsUtils {
+     // Stores SharedPreferences keys and its default value
+     public static class SharedPrefsExt {
+         public static final BoolSharedPref CLOSE_TABS_ON_EXIT =
+-                new BoolSharedPref("close_tabs_on_exit", false);
++                new BoolSharedPref("close_tabs_on_exit", true);
+         public static final BoolSharedPref OPEN_LINKS_IN_INCOGNITO =
+-                new BoolSharedPref("open_links_in_incognito", false);
++                new BoolSharedPref("open_links_in_incognito", true);
+     }
+ 
+     static SharedPreferencesManager getSharedPrefManager() {
+-- 
+2.50.1 (Apple Git-155)
+
