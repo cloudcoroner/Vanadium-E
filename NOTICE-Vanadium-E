@@ -1,0 +1,9 @@
+Vanadium-E is a derivative of Vanadium (https://github.com/GrapheneOS/Vanadium),
+Copyright © 2016-2026 GrapheneOS.
+
+Vanadium patches are licensed under GPL-2.0 only (LICENSE, LICENSE.GPL-2.0), with the
+exceptions in LICENSE.WebView-note, LICENSE.Apache-2.0-note and LICENSE.FTL-note. Those
+files are retained unmodified. All additions in Vanadium-E (everything under E/ and
+.github/) are likewise licensed under GPL-2.0 only. Chromium itself remains under its own
+licenses. Vanadium-E is not affiliated with or endorsed by GrapheneOS; the "Vanadium"
+name belongs to its owners, so a "-E" suffix is used to mark this as a separate build.
