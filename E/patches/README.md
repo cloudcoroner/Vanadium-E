@@ -25,7 +25,8 @@ When upstream changes break an E patch, rebase only that E patch.
 | Save and fill payment methods / security codes off | `E-0005` |
 | Save and fill addresses off | `E-0005` |
 
-| Distinct launcher icon | `E-0007` (violet ring with an "E"; regenerate with `E/branding/generate-icons.py`) |
+| Distinct launcher icon (incl. themed/monochrome) | `E-0007` (violet ring with an "E"; the themed icon has the E cut out of its center; PNGs regenerate with `E/branding/generate-icons.py`) |
+| Launcher name "Vanadium-E" | `E-0008` (app label and widget titles) |
 
 Not covered: the "Autofill settings" section of the request was empty.
 
