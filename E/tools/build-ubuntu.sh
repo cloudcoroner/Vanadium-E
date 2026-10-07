@@ -3,7 +3,7 @@
 # Builds and signs Vanadium-E on Ubuntu (24.04 LTS recommended, x86_64).
 #
 #   E/tools/build-ubuntu.sh            run every phase (skips phases already done)
-#   E/tools/build-ubuntu.sh <phase>    run one phase: deps | fetch | patch | sync | subpatch | gn | build | sign
+#   E/tools/build-ubuntu.sh <phase>    run one phase: deps | fetch | patch | sync | hooks | subpatch | gn | build | sign
 #   FORCE=1 ...                        re-run phases even if already done
 #   IGNORE_SPECS=1 ...                 skip only the RAM/disk checks (build may be slow or run out of space)
 #
@@ -51,6 +51,14 @@ preflight() {
         echo "No signing cert digest. Run E/tools/cert-digest.sh, then: export VANADIUM_E_CERT_DIGEST=<that value>"; exit 1; fi
 }
 
+ensure_pgo_var() {
+    # is_official_build needs V8's builtins PGO profiles and the Android AFDO profile; the gclient hooks
+    # that download them are off unless this custom var is set in .gclient.
+    local f=$WORK/chromium/.gclient
+    grep -q checkout_pgo_profiles "$f" || sed -i 's/"custom_vars": *{}/"custom_vars": {"checkout_pgo_profiles": True}/' "$f"
+    grep -q checkout_pgo_profiles "$f" || { echo "Could not enable PGO profiles: add \"custom_vars\": {\"checkout_pgo_profiles\": True} to the src solution in $f"; exit 1; }
+}
+
 p_deps() {
     sudo apt-get update
     sudo apt-get install -y git git-lfs curl python3 python3-pip gperf zip unzip rsync \
@@ -64,10 +72,7 @@ p_fetch() {
     gclient --version
     mkdir -p "$WORK/chromium"; cd "$WORK/chromium"
     if [[ ! -d src ]]; then fetch --nohooks android; fi
-    # is_official_build needs V8's builtins PGO profiles (and the Android AFDO profile); the hooks that
-    # download them are off by default.
-    grep -q checkout_pgo_profiles .gclient || sed -i 's/"custom_vars": *{}/"custom_vars": {"checkout_pgo_profiles": True}/' .gclient
-    grep -q checkout_pgo_profiles .gclient || { echo "Could not enable PGO profiles: add \"custom_vars\": {\"checkout_pgo_profiles\": True} to the src solution in $WORK/chromium/.gclient"; exit 1; }
+    ensure_pgo_var
     cd src
     # Chromium's own dependency installer (Android build deps)
     sudo ./build/install-build-deps.sh --android --no-prompt || true
@@ -82,8 +87,18 @@ p_patch() {
 }
 
 p_sync() {
+    ensure_pgo_var
     cd "$WORK/chromium"
     gclient sync -D --with_branch_heads --with_tags --jobs "$JOBS"
+}
+
+p_hooks() {
+    # Re-runs the download hooks (V8 builtins PGO profile, Android AFDO profile) without re-syncing,
+    # so it is safe after the subproject patches too.
+    ensure_pgo_var
+    cd "$WORK/chromium"
+    gclient runhooks
+    [[ -f src/v8/tools/builtins-pgo/profiles/x64.profile ]] || { echo "V8 PGO profile still missing after runhooks"; exit 1; }
 }
 
 p_subpatch() {
@@ -127,6 +142,7 @@ phase deps p_deps
 phase fetch p_fetch
 phase patch p_patch
 phase sync p_sync
+phase hooks p_hooks
 phase subpatch p_subpatch
 phase gn p_gn
 phase build p_build
