@@ -3,7 +3,7 @@
 # Builds and signs Vanadium-E on Ubuntu (24.04 LTS recommended, x86_64).
 #
 #   E/tools/build-ubuntu.sh            run every phase (skips phases already done)
-#   E/tools/build-ubuntu.sh <phase>    run one phase: deps | fetch | patch | sync | hooks | subpatch | gn | build | sign
+#   E/tools/build-ubuntu.sh <phase>    run one phase: deps | fetch | patch | sync | hooks | subpatch | lists | gn | build | sign
 #   FORCE=1 ...                        re-run phases even if already done
 #   IGNORE_SPECS=1 ...                 skip only the RAM/disk checks (build may be slow or run out of space)
 #
@@ -106,6 +106,10 @@ p_subpatch() {
     "$root/E/tools/apply-subproject-patches.sh"
 }
 
+p_lists() {
+    "$root/E/tools/download-filter-lists.sh" "$WORK/chromium/src"
+}
+
 p_gn() {
     cd "$WORK/chromium/src"
     mkdir -p out/Default
@@ -144,6 +148,7 @@ phase patch p_patch
 phase sync p_sync
 phase hooks p_hooks
 phase subpatch p_subpatch
+phase lists p_lists
 phase gn p_gn
 phase build p_build
 phase sign p_sign
