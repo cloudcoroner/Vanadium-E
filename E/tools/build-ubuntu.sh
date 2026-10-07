@@ -22,7 +22,6 @@ WORK=${WORK:-$HOME/vanadium-e-build}
 JOBS=${JOBS:-$(nproc)}
 export VANADIUM_E_KEYSTORE=${VANADIUM_E_KEYSTORE:-$HOME/.vanadium-e/vanadium-e.keystore}
 export PATH=$HOME/depot_tools:$PATH
-export DEPOT_TOOLS_UPDATE=0
 state=$WORK/.state
 version=$(sed -n 's/^android_default_version_name = "\(.*\)"/\1/p' "$root/args.gn")
 [[ -n $version ]] || { echo "could not read Chromium version from args.gn"; exit 1; }
@@ -61,6 +60,8 @@ p_deps() {
 
 p_fetch() {
     [[ -d $HOME/depot_tools ]] || git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git "$HOME/depot_tools"
+    # First run of gclient bootstraps depot_tools (python, cipd); needs depot_tools auto-update enabled.
+    gclient --version
     mkdir -p "$WORK/chromium"; cd "$WORK/chromium"
     if [[ ! -d src ]]; then fetch --nohooks android; fi
     cd src
