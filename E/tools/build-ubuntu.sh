@@ -97,7 +97,17 @@ p_gn() {
 p_build() {
     cd "$WORK/chromium/src"
     # Browser + its shared library + config app. (WebView is not needed for a standalone browser.)
-    chrt -b 0 autoninja -C out/Default trichrome_chrome_64_32_apk trichrome_library_64_32_apk vanadium_config_apk
+    # Target names depend on the ABI config: *_64_32_apk exists only with a secondary ABI, otherwise *_64_apk.
+    local all_targets targets=()
+    all_targets=$(gn ls out/Default)
+    for t in chrome library; do
+        if grep -q ":trichrome_${t}_64_32_apk$" <<< "$all_targets"; then targets+=("trichrome_${t}_64_32_apk")
+        elif grep -q ":trichrome_${t}_64_apk$" <<< "$all_targets"; then targets+=("trichrome_${t}_64_apk")
+        else echo "no trichrome_${t} target found; closest:"; grep "trichrome_${t}" <<< "$all_targets" | head; exit 1; fi
+    done
+    targets+=(vanadium_config_apk)
+    echo "building: ${targets[*]}"
+    chrt -b 0 autoninja -C out/Default "${targets[@]}"
 }
 
 p_sign() {
