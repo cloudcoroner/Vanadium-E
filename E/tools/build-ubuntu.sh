@@ -11,6 +11,7 @@
 #   WORK=~/vanadium-e-build                       where Chromium is checked out
 #   VANADIUM_E_KEYSTORE=~/.vanadium-e/vanadium-e.keystore   signing key (copy it to this machine first)
 #   VANADIUM_E_CERT_DIGEST=<sha256 of your signing cert>   needed unless E/args.gn.overlay defines it
+#   BUILD_JOBS=<n>                                 compile parallelism (default: (RAM+swap GiB)/2, capped at nproc)
 #   JOBS=$(nproc)                                  parallel jobs for gclient sync
 #
 # Needs: 32 GiB+ RAM (CFI+LTO link), ~300 GB free disk, and hours of time. Resumable: if a step
@@ -130,13 +131,24 @@ p_build() {
     done
     targets+=(vanadium_config_apk)
     echo "building: ${targets[*]}"
-    chrt -b 0 autoninja -C out/Default "${targets[@]}"
+    # Parallel jobs: ~2 GiB RAM+swap per compile job, otherwise the OOM killer ends the build partway.
+    local mem_gb swap_gb jobs
+    mem_gb=$(awk '/MemTotal/ {print int($2/1024/1024)}' /proc/meminfo)
+    swap_gb=$(awk '/SwapTotal/ {print int($2/1024/1024)}' /proc/meminfo)
+    jobs=${BUILD_JOBS:-$(( (mem_gb + swap_gb) / 2 ))}
+    (( jobs > $(nproc) )) && jobs=$(nproc)
+    (( jobs < 2 )) && jobs=2
+    echo "build parallelism: -j $jobs (override with BUILD_JOBS); run inside tmux so a dropped SSH session cannot kill it"
+    chrt -b 0 autoninja -j "$jobs" -C out/Default "${targets[@]}"
 }
 
 p_sign() {
     [[ -f $VANADIUM_E_KEYSTORE ]] || { echo "keystore not found: $VANADIUM_E_KEYSTORE (copy it to this machine)"; exit 1; }
     cd "$WORK/chromium/src"
+    ls out/Default/apks/Trichrome*.apk out/Default/apks/Vanadium*.apk >/dev/null 2>&1 \
+        || { echo "No built APKs in out/Default/apks/. The build did not finish; run the build phase first."; exit 1; }
     "$root/E/tools/generate-release" out
+    ls out/Default/apks/release/*.apk >/dev/null 2>&1 || { echo "Signing produced no APKs (wrong passphrase?)."; exit 1; }
     say "Signed APKs:"; ls -1 out/Default/apks/release/
 }
 
