@@ -64,6 +64,10 @@ p_fetch() {
     gclient --version
     mkdir -p "$WORK/chromium"; cd "$WORK/chromium"
     if [[ ! -d src ]]; then fetch --nohooks android; fi
+    # is_official_build needs V8's builtins PGO profiles (and the Android AFDO profile); the hooks that
+    # download them are off by default.
+    grep -q checkout_pgo_profiles .gclient || sed -i 's/"custom_vars": *{}/"custom_vars": {"checkout_pgo_profiles": True}/' .gclient
+    grep -q checkout_pgo_profiles .gclient || { echo "Could not enable PGO profiles: add \"custom_vars\": {\"checkout_pgo_profiles\": True} to the src solution in $WORK/chromium/.gclient"; exit 1; }
     cd src
     # Chromium's own dependency installer (Android build deps)
     sudo ./build/install-build-deps.sh --android --no-prompt || true
