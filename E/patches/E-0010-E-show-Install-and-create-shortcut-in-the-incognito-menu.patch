@@ -1,0 +1,40 @@
+From ea967e70d86872a0cc536ac1777d1ee276fe267e Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Wed, 7 Oct 2026 19:45:17 -0400
+Subject: [PATCH] E: show Install and create shortcut in the incognito menu
+
+Chromium hides the menu item in incognito so a shortcut made there is not later
+opened as a regular web app. Vanadium-E sessions are always incognito, so the
+item is shown there too.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../browser/app/appmenu/AppMenuPropertiesDelegateImpl.java   | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/chrome/android/java/src/org/chromium/chrome/browser/app/appmenu/AppMenuPropertiesDelegateImpl.java b/chrome/android/java/src/org/chromium/chrome/browser/app/appmenu/AppMenuPropertiesDelegateImpl.java
+index 62ec141..eb165b8 100644
+--- a/chrome/android/java/src/org/chromium/chrome/browser/app/appmenu/AppMenuPropertiesDelegateImpl.java
++++ b/chrome/android/java/src/org/chromium/chrome/browser/app/appmenu/AppMenuPropertiesDelegateImpl.java
+@@ -444,8 +444,8 @@ public abstract class AppMenuPropertiesDelegateImpl implements AppMenuProperties
+             GURL url) {
+         // Hide 'Add to homescreen' for the following:
+         // * native pages - Android doesn't know how to direct those URLs.
+-        // * incognito pages - To avoid problems where users create shortcuts in incognito
+-        //                      mode and then open the webapp in regular mode.
++        // * (Vanadium-E: incognito pages are no longer hidden, since every session is incognito.
++        //   Shortcuts created in incognito open as regular, non-incognito web apps.)
+         // * file:// - After API 24, file: URIs are not supported in VIEW intents and thus
+         //             can not be added to the homescreen.
+         // * content:// - Accessing external content URIs requires the calling app to grant
+@@ -456,7 +456,6 @@ public abstract class AppMenuPropertiesDelegateImpl implements AppMenuProperties
+                 && !isNativePage
+                 && !isFileScheme
+                 && !isContentScheme
+-                && !isIncognito
+                 && !url.isEmpty();
+     }
+ 
+-- 
+2.50.1 (Apple Git-155)
+

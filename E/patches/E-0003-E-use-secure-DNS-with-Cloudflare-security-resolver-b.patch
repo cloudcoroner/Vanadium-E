@@ -1,18 +1,32 @@
-From e55ebf1491093a7014a7c58ce5aab4c0e588218e Mon Sep 17 00:00:00 2001
+From 43fe903926b1a13ebdeebbea9d0329609f1bac4e Mon Sep 17 00:00:00 2001
 From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
 Date: Fri, 2 Oct 2026 07:54:08 -0400
-Subject: [PATCH 3/6] E: use secure DNS with Cloudflare security resolver by
+Subject: [PATCH] E: use secure DNS with Cloudflare security resolver by
  default
+
+Sets the default mode to secure both where the pref is registered and where
+Chromium overrides the default to automatic at startup, and presets the
+Cloudflare security resolver template, so the settings screen shows
+Choose another provider with the URL filled in.
 
 Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
 ---
- chrome/browser/net/default_dns_over_https_config_source.cc | 6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
+ .../browser/net/default_dns_over_https_config_source.cc   | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/chrome/browser/net/default_dns_over_https_config_source.cc b/chrome/browser/net/default_dns_over_https_config_source.cc
-index e5a2aad..c71652a 100644
+index e5a2aad..91b439f 100644
 --- a/chrome/browser/net/default_dns_over_https_config_source.cc
 +++ b/chrome/browser/net/default_dns_over_https_config_source.cc
+@@ -29,7 +29,7 @@ DefaultDnsOverHttpsConfigSource::DefaultDnsOverHttpsConfigSource(
+   if (set_up_pref_defaults) {
+     local_state->SetDefaultPrefValue(prefs::kDnsOverHttpsMode,
+                                      base::Value(SecureDnsConfig::ModeToString(
+-                                         net::SecureDnsMode::kAutomatic)));
++                                         net::SecureDnsMode::kSecure)));
+   }
+ }
+ 
 @@ -38,8 +38,10 @@ DefaultDnsOverHttpsConfigSource::~DefaultDnsOverHttpsConfigSource() = default;
  // static
  void DefaultDnsOverHttpsConfigSource::RegisterPrefs(

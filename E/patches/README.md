@@ -19,7 +19,7 @@ When upstream changes break an E patch, rebase only that E patch.
 | Open external links in incognito on | `E-0002` |
 | Safe Browsing off | already Vanadium `0087` |
 | Always use secure connections (warn on public + private sites) | already Vanadium `0119` (strict HTTPS-only; balanced mode stays off) |
-| Secure DNS on, `https://security.cloudflare-dns.com/dns-query` | `E-0003` |
+| Secure DNS on, `https://security.cloudflare-dns.com/dns-query` | `E-0003` (sets "Choose another provider" with the URL filled in; strict mode, so DNS fails rather than falling back if that resolver is unreachable) |
 | Access payment methods off | already Vanadium `0081` |
 | Save passwords / auto sign-in off | `E-0004` |
 | Save and fill payment methods / security codes off | `E-0005` |
@@ -27,6 +27,7 @@ When upstream changes break an E patch, rebase only that E patch.
 | Disable all autofill | `E-0005` + `E-0009` (also Autofill AI, buy-now-pay-later, wallet/instant payments, email verification, payment card benefits, and Android platform Autofill) |
 
 | Distinct launcher icon (incl. themed/monochrome) | `E-0007` (violet ring with an "E"; the themed icon has the E cut out of its center; PNGs regenerate with `E/branding/generate-icons.py`) |
+| "Install and create shortcut" shown in incognito menu | `E-0010` (Chromium hides it in incognito; shortcuts made in incognito open as regular, non-incognito web apps) |
 | Launcher name "Vanadium-E" | `E-0008` (app label and widget titles) |
 | In-app name "Vanadium-E" | `E/tools/rebrand-strings.py`, run by `apply-patches.sh` (rewrites visible message text only, so no patch to maintain) |
 
