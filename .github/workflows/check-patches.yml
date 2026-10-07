@@ -1,0 +1,18 @@
+name: check-patches
+# Verifies the Vanadium-E patches still apply on top of Vanadium's patches at the Chromium version
+# in args.gn. Lightweight: downloads only the few files the patches touch. Not a build.
+on:
+  push:
+    branches: [main]
+    paths: ['E/**', 'patches/**', 'subprojects_patches/**', 'args.gn', '.github/workflows/check-patches.yml']
+  pull_request:
+    paths: ['E/**', 'patches/**', 'subprojects_patches/**', 'args.gn', '.github/workflows/check-patches.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: E/tools/check-patches.sh
