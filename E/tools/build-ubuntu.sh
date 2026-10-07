@@ -5,6 +5,7 @@
 #   E/tools/build-ubuntu.sh            run every phase (skips phases already done)
 #   E/tools/build-ubuntu.sh <phase>    run one phase: deps | fetch | patch | sync | subpatch | gn | build | sign
 #   FORCE=1 ...                        re-run phases even if already done
+#   IGNORE_SPECS=1 ...                 skip only the RAM/disk checks (build may be slow or run out of space)
 #
 # Environment (all optional):
 #   WORK=~/vanadium-e-build                       where Chromium is checked out
@@ -42,10 +43,10 @@ preflight() {
     swap_gb=$(awk '/SwapTotal/ {print int($2/1024/1024)}' /proc/meminfo)
     mkdir -p "$WORK"; free_gb=$(df -BG --output=avail "$WORK" | tail -1 | tr -dc 0-9)
     echo "RAM ${mem_gb} GiB (+${swap_gb} GiB swap), free disk ${free_gb} GiB at $WORK"
-    if (( mem_gb + swap_gb < 32 )) && [[ -z ${FORCE:-} ]]; then
-        echo "Need 32 GiB RAM (or RAM+swap) for the CFI/LTO link. Add swap or set FORCE=1."; exit 1; fi
+    if (( mem_gb + swap_gb < 32 )) && [[ -z ${IGNORE_SPECS:-} ]]; then
+        echo "Need 32 GiB RAM (or RAM+swap) for the CFI/LTO link. Add swap or set IGNORE_SPECS=1."; exit 1; fi
     if (( mem_gb < 32 )); then echo "warning: under 32 GiB RAM, the link step will lean on swap and be very slow"; fi
-    if (( free_gb < 300 )) && [[ -z ${FORCE:-} ]]; then echo "Need ~300 GB free disk. FORCE=1 to override."; exit 1; fi
+    if (( free_gb < 300 )) && [[ -z ${IGNORE_SPECS:-} ]]; then echo "Need ~300 GB free disk. IGNORE_SPECS=1 to override."; exit 1; fi
     if grep -q REPLACE_WITH "$root/E/args.gn.overlay"; then
         echo "E/args.gn.overlay still has placeholder cert digests. See E/SIGNING.md."; exit 1; fi
 }
