@@ -9,7 +9,8 @@ digest=$(keytool -list -v -keystore "$ks" -alias vanadium-e | sed -n 's/^[[:spac
 [[ ${#digest} -eq 64 ]] || { echo "could not read digest from $ks"; exit 1; }
 echo "$digest"
 if [[ ${1:-} == --write ]]; then
-    sed -i.bak -E "s/^(trichrome_certdigest|config_apk_certdigest) = .*/\1 = \"$digest\"/" "$root/E/args.gn.overlay"
-    rm -f "$root/E/args.gn.overlay.bak"
+    f=$root/E/args.gn.overlay
+    sed -i.bak -E '/^(trichrome_certdigest|config_apk_certdigest) = /d' "$f"; rm -f "$f.bak"
+    printf 'trichrome_certdigest = "%s"\nconfig_apk_certdigest = "%s"\n' "$digest" "$digest" >> "$f"
     echo "updated E/args.gn.overlay"
 fi

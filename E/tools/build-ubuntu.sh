@@ -10,6 +10,7 @@
 # Environment (all optional):
 #   WORK=~/vanadium-e-build                       where Chromium is checked out
 #   VANADIUM_E_KEYSTORE=~/.vanadium-e/vanadium-e.keystore   signing key (copy it to this machine first)
+#   VANADIUM_E_CERT_DIGEST=<sha256 of your signing cert>   needed unless E/args.gn.overlay defines it
 #   JOBS=$(nproc)                                  parallel jobs for gclient sync
 #
 # Needs: 32 GiB+ RAM (CFI+LTO link), ~300 GB free disk, and hours of time. Resumable: if a step
@@ -47,8 +48,8 @@ preflight() {
         echo "Need 32 GiB RAM (or RAM+swap) for the CFI/LTO link. Add swap or set IGNORE_SPECS=1."; exit 1; fi
     if (( mem_gb < 32 )); then echo "warning: under 32 GiB RAM, the link step will lean on swap and be very slow"; fi
     if (( free_gb < 300 )) && [[ -z ${IGNORE_SPECS:-} ]]; then echo "Need ~300 GB free disk. IGNORE_SPECS=1 to override."; exit 1; fi
-    if grep -q REPLACE_WITH "$root/E/args.gn.overlay"; then
-        echo "E/args.gn.overlay still has placeholder cert digests. See E/SIGNING.md."; exit 1; fi
+    if ! grep -q '^trichrome_certdigest *=' "$root/E/args.gn.overlay" && [[ ! ${VANADIUM_E_CERT_DIGEST:-} =~ ^[0-9a-f]{64}$ ]]; then
+        echo "No signing cert digest. Run E/tools/cert-digest.sh, then: export VANADIUM_E_CERT_DIGEST=<that value>"; exit 1; fi
 }
 
 p_deps() {
@@ -99,7 +100,7 @@ p_build() {
 }
 
 p_sign() {
-    [[ -f $VANADIUM_E_KEYSTORE ]] || { echo "keystore not found: $VANADIUM_E_KEYSTORE (copy it here, see E/SIGNING.md)"; exit 1; }
+    [[ -f $VANADIUM_E_KEYSTORE ]] || { echo "keystore not found: $VANADIUM_E_KEYSTORE (copy it to this machine)"; exit 1; }
     cd "$WORK/chromium/src"
     "$root/E/tools/generate-release" out
     say "Signed APKs:"; ls -1 out/Default/apks/release/
