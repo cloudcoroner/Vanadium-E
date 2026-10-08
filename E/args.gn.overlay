@@ -6,3 +6,7 @@ chrome_public_manifest_package = "app.vanadiume.browser"
 system_webview_package_name = "app.vanadiume.webview"
 trichrome_library_package = "app.vanadiume.trichromelibrary"
 config_apk_package = "app.vanadiume.config"
+
+# Raise by one for every re-release of the same Chromium version, so Android sees the new build as an
+# update (Vanadium's own versionCode mechanism). Reset to "0" when the Chromium version changes.
+ext_version_increment = "1"
