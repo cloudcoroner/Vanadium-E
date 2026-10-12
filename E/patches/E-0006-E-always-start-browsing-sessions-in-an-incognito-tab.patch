@@ -1,7 +1,7 @@
-From c378e8201c5611076d5ac507cd171a1cf189dc23 Mon Sep 17 00:00:00 2001
+From 3b298d052dbb3e765c096d3c6db4b6aa1138279a Mon Sep 17 00:00:00 2001
 From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
-Date: Fri, 2 Oct 2026 07:54:08 -0400
-Subject: [PATCH 6/6] E: always start browsing sessions in an incognito tab
+Date: Mon, 12 Oct 2026 09:16:10 -0400
+Subject: [PATCH] E: always start browsing sessions in an incognito tab
 
 The initial tab created on a cold start without restored tabs is now an
 incognito tab. Combined with close tabs on exit and opening external links
@@ -14,10 +14,10 @@ Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
  2 files changed, 13 insertions(+), 1 deletion(-)
 
 diff --git a/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java b/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
-index b1b4f9a..95f4cc5 100644
+index 6919130..9e4477b 100644
 --- a/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
 +++ b/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
-@@ -2767,7 +2767,10 @@ public class ChromeTabbedActivity extends ChromeActivity implements PreAttachInt
+@@ -2798,7 +2798,10 @@ public class ChromeTabbedActivity extends ChromeActivity implements PreAttachInt
      private void createInitialTab() {
          Log.i(TAG, "#createInitialTab executed.");
          mPendingInitialTabCreation = false;
@@ -27,8 +27,8 @@ index b1b4f9a..95f4cc5 100644
 +                        || (mSupportedProfileType != SupportedProfileType.REGULAR
 +                                && TabPreferencesUtils.shouldAlwaysStartInIncognito());
  
-         List<String> startupUrls =
-                 TabbedStartupWindowPolicyDelegate.getInstance().resolveStartupUrls(incognito);
+         String url = null;
+         GURL homepageGurl = HomepageManager.getInstance().getHomepageGurlForZeroTabs(incognito);
 diff --git a/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java b/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
 index 0f41a75..51d5f54 100644
 --- a/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java

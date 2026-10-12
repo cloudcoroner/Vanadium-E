@@ -32,5 +32,9 @@ jobs:
           } > body.md
           rm check.log
           git push -f origin upstream-sync
-          gh pr create --base main --head upstream-sync $draft --title "Sync with upstream Vanadium" --body-file body.md \
-            || gh pr edit upstream-sync --body-file body.md
+          if ! gh pr create --base main --head upstream-sync $draft --title "Sync with upstream Vanadium" --body-file body.md \
+              && ! gh pr edit upstream-sync --body-file body.md; then
+            url="https://github.com/${GITHUB_REPOSITORY}/compare/main...upstream-sync"
+            echo "::warning::Branch upstream-sync is pushed but a pull request could not be created. In Settings > Actions > General, enable 'Allow GitHub Actions to create and approve pull requests', or open one manually: $url"
+            { echo "### upstream-sync pushed, but no PR was created"; echo; echo "Open one manually: $url"; echo; echo "If this keeps happening, enable *Allow GitHub Actions to create and approve pull requests* under Settings > Actions > General."; echo; cat body.md; } >> "$GITHUB_STEP_SUMMARY"
+          fi

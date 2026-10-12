@@ -9,4 +9,4 @@ config_apk_package = "app.vanadiume.config"
 
 # Raise by one for every re-release of the same Chromium version, so Android sees the new build as an
 # update (Vanadium's own versionCode mechanism). Reset to "0" when the Chromium version changes.
-ext_version_increment = "1"
+ext_version_increment = "0"
