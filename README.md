@@ -1,3 +1,5 @@
+Vanadium-E is a fork of the GrapheneOS native browser Vanadium (readme below). Vanadium-E's aim is to keep Vanadium exactly as is but layer an additional set of configs on top that add an ephemeral browser option for users. Vanadium-E is meant to run along side Vanadium on GrapheneOS and be the default browser so that links in emails and instant messages are opened in an ephemeral space where the user can set a heightened level of DNS security, should they so choose.
+
 Vanadium is a privacy and security hardened variant of Chromium providing the WebView (used by
 other apps to render web content) and standard browser for [GrapheneOS](https://grapheneos.org).
 It depends on hardening and compatibility fixes in GrapheneOS rather than reinventing the wheel
