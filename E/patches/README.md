@@ -16,6 +16,7 @@ When upstream changes break an E patch, rebase only that E patch.
 | Block third-party cookies | already Vanadium `0079` |
 | Do Not Track on | already Vanadium `0125` |
 | Close tabs on exit on | `E-0002` |
+| Clear history, site data, cache and form data when the app is closed | `E-0012` (runs once per app start, the first reliable point after the app was closed or swiped away; not when merely switching apps, which would sign users out) |
 | Open external links in incognito on | `E-0002` |
 | Safe Browsing off | already Vanadium `0087` |
 | Always use secure connections (warn on public + private sites) | already Vanadium `0119` (strict HTTPS-only; balanced mode stays off) |

@@ -1,0 +1,80 @@
+From 882cc4bf14c6d467b018df40a0fbbed0e1a10750 Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 09:00:08 -0400
+Subject: [PATCH] E: clear history, site data, cache and form data when the app
+ is started
+
+Once per app process start, which is the first reliable point after the app was
+closed or swiped away (Android gives no dependable exit callback). Not done when
+the app merely goes to the background, so switching apps keeps sessions. Covers
+regular-mode tabs, including the first window on tablets where Vanadium-E cannot
+start in incognito.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ .../chrome/browser/ChromeTabbedActivity.java  |  2 ++
+ .../chrome/browser/TabPreferencesUtils.java   | 27 +++++++++++++++++++
+ 2 files changed, 29 insertions(+)
+
+diff --git a/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java b/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
+index 9e4477b..5add897 100644
+--- a/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
++++ b/chrome/android/java/src/org/chromium/chrome/browser/ChromeTabbedActivity.java
+@@ -2506,6 +2506,8 @@ public class ChromeTabbedActivity extends ChromeActivity implements PreAttachInt
+             boolean noRestoreState =
+                     CommandLine.getInstance().hasSwitch(ChromeSwitches.NO_RESTORE_STATE);
+             noRestoreState |= TabPreferencesUtils.shouldCloseTabsOnExit();
++            TabPreferencesUtils.clearBrowsingDataOnStartup(
++                    assertNonNull(getProfileProviderSupplier().get()).getOriginalProfile());
+             boolean shouldShowNtpAsHomeSurfaceAtStartup = false;
+             final AtomicBoolean isActiveUrlNtp = new AtomicBoolean(false);
+             if (noRestoreState) {
+diff --git a/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java b/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
+index 51d5f54..29f7480 100644
+--- a/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
++++ b/vanadium/chromium_src/chrome/android/java/src/org/chromium/chrome/browser/TabPreferencesUtils.java
+@@ -11,7 +11,11 @@ import android.content.Intent;
+ import org.chromium.base.IntentUtils;
+ import org.chromium.base.shared_preferences.SharedPrefsUtils.SharedPrefsExt;
+ import org.chromium.build.annotations.NullMarked;
++import org.chromium.chrome.browser.browsing_data.BrowsingDataBridge;
++import org.chromium.chrome.browser.browsing_data.BrowsingDataType;
++import org.chromium.chrome.browser.browsing_data.TimePeriod;
+ import org.chromium.chrome.browser.document.ChromeLauncherActivity;
++import org.chromium.chrome.browser.profiles.Profile;
+ import org.chromium.chrome.browser.tab.TabLaunchType;
+ 
+ /*
+@@ -34,6 +38,29 @@ public final class TabPreferencesUtils {
+         return true;
+     }
+ 
++    private static boolean sClearedBrowsingDataThisProcess;
++
++    /**
++     * Vanadium-E clears history, cookies and site data, cache and form data once each time the app
++     * process starts, which is the earliest reliable point after the app was closed or swiped away.
++     * It is not done on every stop, since that would sign users out when they briefly switch apps.
++     * Incognito browsing leaves nothing behind, so only the regular profile needs clearing.
++     */
++    public static void clearBrowsingDataOnStartup(Profile profile) {
++        if (sClearedBrowsingDataThisProcess) return;
++        sClearedBrowsingDataThisProcess = true;
++        BrowsingDataBridge.getForProfile(profile)
++                .clearBrowsingData(
++                        /* listener= */ null,
++                        new int[] {
++                            BrowsingDataType.HISTORY,
++                            BrowsingDataType.CACHE,
++                            BrowsingDataType.SITE_DATA,
++                            BrowsingDataType.FORM_DATA
++                        },
++                        TimePeriod.ALL_TIME);
++    }
++
+     public static boolean shouldOpenLinksInIncognito() {
+         return SharedPrefsExt.OPEN_LINKS_IN_INCOGNITO.get();
+     }
+-- 
+2.50.1 (Apple Git-155)
+
