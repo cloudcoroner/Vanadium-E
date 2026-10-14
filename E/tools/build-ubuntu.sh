@@ -47,7 +47,10 @@ preflight() {
     if (( mem_gb + swap_gb < 32 )) && [[ -z ${IGNORE_SPECS:-} ]]; then
         echo "Need 32 GiB RAM (or RAM+swap) for the CFI/LTO link. Add swap or set IGNORE_SPECS=1."; exit 1; fi
     if (( mem_gb < 32 )); then echo "warning: under 32 GiB RAM, the link step will lean on swap and be very slow"; fi
-    if (( free_gb < 300 )) && [[ -z ${IGNORE_SPECS:-} ]]; then echo "Need ~300 GB free disk. IGNORE_SPECS=1 to override."; exit 1; fi
+    # A first-time setup downloads Chromium (~300 GB total); with the checkout already present only the build output is needed.
+    local need_gb=300
+    [[ -d $WORK/chromium/src/.git ]] && need_gb=120
+    if (( free_gb < need_gb )) && [[ -z ${IGNORE_SPECS:-} ]]; then echo "Need ~${need_gb} GB free disk, have ${free_gb}. IGNORE_SPECS=1 to override."; exit 1; fi
     if ! grep -q '^trichrome_certdigest *=' "$root/E/args.gn.overlay" && [[ ! ${VANADIUM_E_CERT_DIGEST:-} =~ ^[0-9a-f]{64}$ ]]; then
         echo "No signing cert digest. Run E/tools/cert-digest.sh, then: export VANADIUM_E_CERT_DIGEST=<that value>"; exit 1; fi
 }
