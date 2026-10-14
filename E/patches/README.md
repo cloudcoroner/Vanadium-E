@@ -29,6 +29,7 @@ When upstream changes break an E patch, rebase only that E patch.
 | Distinct launcher icon (incl. themed/monochrome) | `E-0007` (violet ring with an "E"; the themed icon has the E cut out of its center; PNGs regenerate with `E/branding/generate-icons.py`) |
 | "Install and create shortcut" shown in incognito menu | `E-0010` (Chromium hides it in incognito; shortcuts made in incognito open as regular, non-incognito web apps) |
 | Launcher name "Vanadium-E" | `E-0008` (app label and widget titles) |
+| Config app name "Vanadium-E Config" | `E-0011` (label only; the APK file name stays `VanadiumConfig.apk`) |
 | In-app name "Vanadium-E" | `E/tools/rebrand-strings.py`, run by `apply-patches.sh` (rewrites visible message text only, so no patch to maintain) |
 
 

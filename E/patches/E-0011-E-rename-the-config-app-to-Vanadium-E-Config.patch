@@ -1,0 +1,29 @@
+From c409d4878e81c43ce1bb7176d857738bd2378b77 Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 08:45:34 -0400
+Subject: [PATCH] E: rename the config app to Vanadium-E Config
+
+Distinguishes it from GrapheneOS's Vanadium Config in Settings and app lists,
+since both can be installed at the same time.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ vanadium/android_config/BUILD.gn | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vanadium/android_config/BUILD.gn b/vanadium/android_config/BUILD.gn
+index b75fff6..83a5f2d 100644
+--- a/vanadium/android_config/BUILD.gn
++++ b/vanadium/android_config/BUILD.gn
+@@ -11,7 +11,7 @@ assert(is_android)
+ 
+ config_apk_tmpl("vanadium_config_apk") {
+   apk_name = "VanadiumConfig"
+-  application_label = "Vanadium Config"
++  application_label = "Vanadium-E Config"
+   deps = [
+     "filter_lists:ruleset_assets",
+     "proto/assets:proto_config_assets",
+-- 
+2.50.1 (Apple Git-155)
+
