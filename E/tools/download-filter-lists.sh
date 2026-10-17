@@ -4,14 +4,15 @@
 # checkout has none). Uses Vanadium's own downloader (tools/filter_lists/filter_list_download.py).
 # Usage: E/tools/download-filter-lists.sh <chromium src dir>
 # Vanadium's repo does not publish its list sources; these are the public EasyList and regional
-# lists. Edit the table to change sources. All 21 files must exist or the config app won't build.
+# lists. Edit the table to change sources. All 22 files must exist or the config app won't build.
 set -o errexit -o nounset -o pipefail
 root=$(cd "$(dirname "$0")/../.." && pwd)
 dest=${1:?usage: $0 <chromium src dir>}/vanadium/android_config/filter_lists
 [[ -d $dest ]] || { echo "not found: $dest (apply the patches first)"; exit 1; }
 
 lists=(
- "easylist https://easylist.to/easylist/easylist.txt"
+ "easylist https://easylist-downloads.adblockplus.org/easylist.txt"
+ "easyprivacy https://easylist-downloads.adblockplus.org/easyprivacy.txt"
  "easylist_arabic https://easylist-downloads.adblockplus.org/Liste_AR.txt"
  "easylist_bulgaria https://stanev.org/abp/adblock_bg.txt"
  "easylist_china https://easylist-downloads.adblockplus.org/easylistchina.txt"

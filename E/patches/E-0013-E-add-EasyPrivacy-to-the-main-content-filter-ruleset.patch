@@ -1,0 +1,30 @@
+From 669267a3948423d067b801289769acbf1f0e460b Mon Sep 17 00:00:00 2001
+From: cloudcoroner <93301474+cloudcoroner@users.noreply.github.com>
+Date: Sat, 17 Oct 2026 06:43:41 -0400
+Subject: [PATCH] E: add EasyPrivacy to the main content filter ruleset
+
+Adds the EasyPrivacy tracking list as a second input of the main ruleset, next to
+EasyList. Vanadium's published config app has a main ruleset about 2.4 MB larger
+than one built from EasyList alone, which matches EasyList plus EasyPrivacy, and
+Vanadium-E did not block ad and tracker requests that Vanadium blocks.
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ vanadium/android_config/filter_lists/BUILD.gn | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/vanadium/android_config/filter_lists/BUILD.gn b/vanadium/android_config/filter_lists/BUILD.gn
+index 791b1be..68d29b1 100644
+--- a/vanadium/android_config/filter_lists/BUILD.gn
++++ b/vanadium/android_config/filter_lists/BUILD.gn
+@@ -195,6 +195,7 @@ generate_unindexed_ruleset_assets("ruleset_china_assets") {
+ generate_unindexed_ruleset_assets("easylist_ruleset_assets") {
+   inputs = [
+     "//vanadium/android_config/filter_lists/filter_lists_easylist.txt",
++    "//vanadium/android_config/filter_lists/filter_lists_easyprivacy.txt",
+   ]
+ 
+   asset_file_name = "unindexed_ruleset"
+-- 
+2.54.0 (Apple Git-157)
+
