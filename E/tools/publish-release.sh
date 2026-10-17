@@ -77,6 +77,12 @@ done
 stage=$(mktemp -d); trap 'rm -rf "$stage"' EXIT
 for a in "${apks[@]}"; do cp "$APK_DIR/$a" "$stage/"; done
 ( cd "$stage" && sha256 "${apks[@]}" > SHA256SUMS )
+# Which filter-list content went into this build (written by download-filter-lists.sh), if available.
+lists_manifest=$WORK/chromium/src/vanadium/android_config/filter_lists/E-manifest.txt
+lists_section=""
+if [[ -s $lists_manifest ]]; then
+    lists_section=$(printf '\n<details><summary>Filter lists in this build</summary>\n\n```\n%s\n```\n</details>\n\n' "$(cat "$lists_manifest")")
+fi
 cat > "$stage/notes.md" <<NOTES
 Unofficial Vanadium-E build on Chromium \`$version\`. Not affiliated with or endorsed by GrapheneOS.
 
@@ -90,6 +96,7 @@ Vanadium-E uses its own signing key: it installs alongside Vanadium and updates 
 $(cat "$stage/SHA256SUMS")
 \`\`\`
 
+$lists_section
 **Source (GPL-2.0-only):** https://github.com/$REPO/tree/$commit (Vanadium patches in \`patches/\`, Vanadium-E patches in \`E/\`). Chromium source: tag \`$version\` at https://chromium.googlesource.com/chromium/src/+/refs/tags/$version
 NOTES
 
