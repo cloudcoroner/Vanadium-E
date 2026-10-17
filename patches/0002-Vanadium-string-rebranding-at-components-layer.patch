@@ -19598,7 +19598,7 @@ index 88c0ffd0f6fbd..ddde27c501131 100644
  <translation id="9182556968660520230">Nie zezwalaj witrynom na odtwarzanie chronionych treści</translation>
  <translation id="927148002081263046">Udostępnianie kontaktu</translation>
 diff --git a/components/browser_ui/strings/android/translations/browser_ui_strings_pt-BR.xtb b/components/browser_ui/strings/android/translations/browser_ui_strings_pt-BR.xtb
-index e6115621c5c46..66191acc04f42 100644
+index b984f74d6dc73..5a5427f76577a 100644
 --- a/components/browser_ui/strings/android/translations/browser_ui_strings_pt-BR.xtb
 +++ b/components/browser_ui/strings/android/translations/browser_ui_strings_pt-BR.xtb
 @@ -7,19 +7,19 @@
@@ -19695,8 +19695,8 @@ index e6115621c5c46..66191acc04f42 100644
 -<translation id="2814830417943086299">Agora, o Chrome mostra suas guias recentes na lista de apps e nos resultados da pesquisa do dispositivo. É possível desativar essa opção a qualquer momento nas configurações do Chrome.</translation>
 +<translation id="2814830417943086299">Agora, o Vanadium mostra suas guias recentes na lista de apps e nos resultados da pesquisa do dispositivo. É possível desativar essa opção a qualquer momento nas configurações do Vanadium.</translation>
  <translation id="2822354292072154809">Tem certeza de que quer redefinir todas as permissões de site para <ph name="CHOSEN_OBJECT_NAME" />?</translation>
--<translation id="2848335882304088250">Você já pode aproveitar tudo o que o Chrome tem a oferecer no seu dispositivo.</translation>
-+<translation id="2848335882304088250">Você já pode aproveitar tudo o que o Vanadium tem a oferecer no seu dispositivo.</translation>
+-<translation id="2848335882304088250">Aproveite o que o Chrome tem a oferecer.</translation>
++<translation id="2848335882304088250">Aproveite o que o Vanadium tem a oferecer.</translation>
  <translation id="2850913818900871965">Solicitar versão para dispositivos móveis</translation>
  <translation id="2870560284913253234">Site</translation>
  <translation id="2874939134665556319">Faixa anterior</translation>
@@ -25698,7 +25698,7 @@ index 28148446a1a76..9db9f7d0a43b7 100644
  <translation id="9182556968660520230">Không cho phép trang web phát nội dung được bảo vệ</translation>
  <translation id="927148002081263046">Chia sẻ thông tin liên hệ</translation>
 diff --git a/components/browser_ui/strings/android/translations/browser_ui_strings_zh-CN.xtb b/components/browser_ui/strings/android/translations/browser_ui_strings_zh-CN.xtb
-index bebdf7c6ed2f8..13c983576143b 100644
+index fc2e6e03ca0f4..e148598411fea 100644
 --- a/components/browser_ui/strings/android/translations/browser_ui_strings_zh-CN.xtb
 +++ b/components/browser_ui/strings/android/translations/browser_ui_strings_zh-CN.xtb
 @@ -7,19 +7,19 @@
@@ -25795,8 +25795,8 @@ index bebdf7c6ed2f8..13c983576143b 100644
 -<translation id="2814830417943086299">Chrome 现在会在设备的应用列表和搜索结果中显示您近期打开的标签页。您可以随时在 Chrome 设置中关闭此功能。</translation>
 +<translation id="2814830417943086299">Vanadium 现在会在设备的应用列表和搜索结果中显示您近期打开的标签页。您可以随时在 Vanadium 设置中关闭此功能。</translation>
  <translation id="2822354292072154809">确定要重置<ph name="CHOSEN_OBJECT_NAME" />的所有网站权限吗？</translation>
--<translation id="2848335882304088250">现在即可在设备上充分体验 Chrome 的出色功能。</translation>
-+<translation id="2848335882304088250">现在即可在设备上充分体验 Vanadium 的出色功能。</translation>
+-<translation id="2848335882304088250">现在，您可以尽享 Chrome 的完整体验。</translation>
++<translation id="2848335882304088250">现在，您可以尽享 Vanadium 的完整体验。</translation>
  <translation id="2850913818900871965">请求使用移动视图</translation>
  <translation id="2870560284913253234">网站</translation>
  <translation id="2874939134665556319">上一首</translation>
@@ -52036,7 +52036,7 @@ index ce533332c75c7..373e1e418b9ce 100644
  <translation id="976415389478739655">Vereisen dat de apparaten van gebruikers zich binnen een beheerd netwerk bevinden om deel uit te maken van de klas <ph name="CLASS_TOOLS_NAME" /></translation>
  <translation id="978619365985286086">Instellingen voor tools voor lesgroepbeheer</translation>
 diff --git a/components/policy/resources/policy_templates_pt-BR.xtb b/components/policy/resources/policy_templates_pt-BR.xtb
-index aa4dab4a94bb7..c7b79b16cbd62 100644
+index 8f31ee5a343eb..950db066651d0 100644
 --- a/components/policy/resources/policy_templates_pt-BR.xtb
 +++ b/components/policy/resources/policy_templates_pt-BR.xtb
 @@ -35,7 +35,7 @@ Os recursos da IA generativa do <ph name="CHROME_DEVTOOLS_NAME" /> incluem:
@@ -52304,7 +52304,7 @@ index aa4dab4a94bb7..c7b79b16cbd62 100644
  
        Se você definir a política, os usuários não poderão mudá-la. Se ela não for definida, os usuários poderão escolher como usar o recurso.</translation>
 @@ -1755,7 +1755,7 @@ No <ph name="MAC_OS_NAME" />, essa política só está disponível em instância
- <translation id="2111355600078097861">Permitir o recurso Encontrar e Preencher com o Gemini sem melhorar os modelos de IA.</translation>
+ <translation id="2111355600078097861">Permitir o recurso Encontre e Preencha com o Gemini sem melhorar os modelos de IA.</translation>
  <translation id="2112656109118682849">Permitir que os usuários escolham se as informações do sistema vão ser mostradas na tela de login ou não</translation>
  <translation id="2113068765175018713">Limitar tempo de execução do dispositivo reiniciando automaticamente</translation>
 -<translation id="211386002920955760">Controle se um usuário empresarial pode acessar o recurso de compartilhamento de grupos de guias no Chrome.
@@ -84507,7 +84507,7 @@ index cd395da323c7a..12b2e2394d29b 100644
  <translation id="981121421437150478">Vanlyn</translation>
  <translation id="98237783946365638">Stoor ID-kaart veilig in Google Wallet</translation>
 diff --git a/components/strings/components_strings_am.xtb b/components/strings/components_strings_am.xtb
-index 16a878fc2ed8f..a9bc082bff5b8 100644
+index e2c9d6ec9a146..6b1e389bf4889 100644
 --- a/components/strings/components_strings_am.xtb
 +++ b/components/strings/components_strings_am.xtb
 @@ -11,7 +11,7 @@
@@ -85740,7 +85740,7 @@ index 16a878fc2ed8f..a9bc082bff5b8 100644
  <translation id="981121421437150478">ከመስመር ውጭ</translation>
  <translation id="98237783946365638">የመታወቂያ ካርድን ደኅንነቱ በተጠበቀ ሁኔታ Google Wallet ውስጥ ይስቀምጡ</translation>
 diff --git a/components/strings/components_strings_ar.xtb b/components/strings/components_strings_ar.xtb
-index 5f7bb647b8733..79e6e35d22a5c 100644
+index c72d0f6dee4e5..27bde58ff8235 100644
 --- a/components/strings/components_strings_ar.xtb
 +++ b/components/strings/components_strings_ar.xtb
 @@ -11,7 +11,7 @@
@@ -101249,7 +101249,7 @@ index 74a5f317d8937..9b3e25b7ce690 100644
  <translation id="981121421437150478">Sense connexió</translation>
  <translation id="98237783946365638">Desa el document d'identitat de manera segura a Google Wallet</translation>
 diff --git a/components/strings/components_strings_cs.xtb b/components/strings/components_strings_cs.xtb
-index 6dce85067f791..d5a1781a5d0c4 100644
+index c20f262b1d27f..ed8de8621ee64 100644
 --- a/components/strings/components_strings_cs.xtb
 +++ b/components/strings/components_strings_cs.xtb
 @@ -11,7 +11,7 @@
@@ -102265,7 +102265,7 @@ index 6dce85067f791..d5a1781a5d0c4 100644
 +<translation id="7483863401933039889"><ph name="CHROME_TIP" />, tip pro Vanadium zavřete stisknutím klávesy Tab a poté Enter.</translation>
  <translation id="7485870689360869515">Nebyla nalezena žádná data.</translation>
  <translation id="7486880426035242089">OneDrive</translation>
- <translation id="7489255442002627311"><ph name="BNPL_ISSUER_NAME" /> ověří vaši způsobilost (výsledek neovlivní vaše kreditní skóre). V případě schválení vám <ph name="BNPL_ISSUER_NAME" /> nabídne různé možnosti platebních tarifů k dokončení nákupu.</translation>
+ <translation id="7489255442002627311"><ph name="BNPL_ISSUER_NAME" /> ověří vaši způsobilost (výsledek neovlivní vaše úvěrové skóre). V případě schválení vám <ph name="BNPL_ISSUER_NAME" /> nabídne různé možnosti platebních tarifů k dokončení nákupu.</translation>
 @@ -3881,7 +3881,7 @@ Kontaktujte administrátora systému.</translation>
  <translation id="7561784249784255101">Disk DVD</translation>
  <translation id="7564049878696755256">Mohli byste ztratit přístup k účtu <ph name="ORG_NAME" /> nebo by mohlo dojít k odcizení vaší identity. Doporučujeme vám okamžitě změnit heslo.</translation>
@@ -104834,7 +104834,7 @@ index 72cd305a9b13b..aec7e11315982 100644
  <translation id="981121421437150478">All-lein</translation>
  <translation id="98237783946365638">Cadw cerdyn adnabod yn ddiogel yn Google Wallet</translation>
 diff --git a/components/strings/components_strings_da.xtb b/components/strings/components_strings_da.xtb
-index 162ee5637c307..e52d6c59309f9 100644
+index 175ae219fb15f..f628eaf3cfcdf 100644
 --- a/components/strings/components_strings_da.xtb
 +++ b/components/strings/components_strings_da.xtb
 @@ -11,7 +11,7 @@
@@ -105876,7 +105876,7 @@ index 162ee5637c307..e52d6c59309f9 100644
 @@ -2212,7 +2212,7 @@ Gå til <ph name="BEGIN_LINK" />betalingsindstillingerne<ph name="END_LINK" /> f
  <translation id="4732860731866514038">Downloader sprogpakken for <ph name="LANGUAGE" />... <ph name="PERCENT" /> %</translation>
  <translation id="4733082559415072992"><ph name="URL" /> anmoder om at bruge enhedens placering</translation>
- <translation id="473414950835101501">Brug dine kameraer</translation>
+ <translation id="473414950835101501">Bruge dine kameraer</translation>
 -<translation id="4736825316280949806">Genstart Chromium</translation>
 +<translation id="4736825316280949806">Genstart Vanadium</translation>
  <translation id="4736934858538408121">Virtuelt kort</translation>
@@ -107085,7 +107085,7 @@ index 162ee5637c307..e52d6c59309f9 100644
  <translation id="981121421437150478">Offline</translation>
  <translation id="98237783946365638">Gem identitetskortet sikkert i Google Wallet</translation>
 diff --git a/components/strings/components_strings_de.xtb b/components/strings/components_strings_de.xtb
-index aeb72eb0ae8bd..8158b34d06ea2 100644
+index 878b63260c5d9..c99d878f8f20a 100644
 --- a/components/strings/components_strings_de.xtb
 +++ b/components/strings/components_strings_de.xtb
 @@ -11,7 +11,7 @@
@@ -118594,7 +118594,7 @@ index 023924ec98a3a..6c723bb9915d5 100644
  <translation id="981121421437150478">Sin conexión</translation>
  <translation id="98237783946365638">Guarda el documento de identidad de forma segura en Google Wallet</translation>
 diff --git a/components/strings/components_strings_et.xtb b/components/strings/components_strings_et.xtb
-index a912a3071c044..cc9fd5184854c 100644
+index 6a8afe7255321..6bbf03b193909 100644
 --- a/components/strings/components_strings_et.xtb
 +++ b/components/strings/components_strings_et.xtb
 @@ -11,7 +11,7 @@
@@ -118623,7 +118623,7 @@ index a912a3071c044..cc9fd5184854c 100644
  <translation id="1067029985695494416">Otsingumootori üksikasjad</translation>
  <translation id="1068467933609179019">Automaattäite teenuste seaded</translation>
 @@ -62,10 +62,10 @@
- <translation id="1095093219235104018">Leidke ja täitke Geminiga</translation>
+ <translation id="1095093219235104018">Geminiga otsimine ja täitmine</translation>
  <translation id="1096545575934602868">Sellel väljal ei tohi olla üle <ph name="MAX_ITEMS_LIMIT" /> kirje. Kõigist ülejäänud kirjetest loobutakse.</translation>
  <translation id="1099928364755383720">automaatne pilt pildis režiim</translation>
 -<translation id="1100782917270858593">Nupp Jätkake oma teekonda, teekonna jätkamiseks ja oma Chrome'i ajaloos asjakohaste tegevuste nägemiseks vajutage sisestusklahvi.</translation>
@@ -120809,7 +120809,7 @@ index a912a3071c044..cc9fd5184854c 100644
  <translation id="963988220224168636">Hüvitisnumbri turvaliselt Google Walletisse lisamine</translation>
  <translation id="964050462028070434">Paroolide ja pääsukoodide haldamine …</translation>
 diff --git a/components/strings/components_strings_eu.xtb b/components/strings/components_strings_eu.xtb
-index eb9c7cb6522ec..fd68b77e830bc 100644
+index ebe4b5d9c6bba..0d5dda154139a 100644
 --- a/components/strings/components_strings_eu.xtb
 +++ b/components/strings/components_strings_eu.xtb
 @@ -11,7 +11,7 @@
@@ -120888,7 +120888,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="129553762522093515">Itxitako azkenak</translation>
 @@ -199,7 +199,7 @@ Bestela, pribatutasun-ezarpenek blokeatu egingo dute baimen hori. Baimen honekin
  <translation id="1330449323196174374">Leiho-erako tolestura ezkerrean</translation>
- <translation id="1330952240988133220">Gorde zuzenketa-zenbakia modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="1330952240988133220">Gorde zuzenketa-zenbakia modu seguruan Google Wallet-en</translation>
  <translation id="133173645041092770">Itxi webgunea</translation>
 -<translation id="1333745675627230582">Aritu Chrome-ko Dino jokoan</translation>
 +<translation id="1333745675627230582">Aritu Vanadium-ko Dino jokoan</translation>
@@ -120916,12 +120916,12 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="139305205187523129"><ph name="HOST_NAME" /> webguneak ez du bidali daturik.</translation>
 -<translation id="1393071644879491291">Baliteke bisitatu nahi duzun webguneko erasotzaileak zu iruzurtzen saiatzea softwarea instala dezazun, edo informazioa eman dezazun, hala nola pasahitzak, telefono-zenbakia edo kreditu-txartelen zenbakiak. Chrome-k atzera egitea gomendatzen dizu, zeure burua babesteko. <ph name="BEGIN_LEARN_MORE_LINK" />Lortu abisu honi buruzko informazio gehiago<ph name="END_LEARN_MORE_LINK" /></translation>
 +<translation id="1393071644879491291">Baliteke bisitatu nahi duzun webguneko erasotzaileak zu iruzurtzen saiatzea softwarea instala dezazun, edo informazioa eman dezazun, hala nola pasahitzak, telefono-zenbakia edo kreditu-txartelen zenbakiak. Vanadium-k atzera egitea gomendatzen dizu, zeure burua babesteko. <ph name="BEGIN_LEARN_MORE_LINK" />Lortu abisu honi buruzko informazio gehiago<ph name="END_LEARN_MORE_LINK" /></translation>
- <translation id="1397342126322860141">Gehitu nortasun-agiria modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="1397342126322860141">Gehitu nortasun-agiria modu seguruan Google Wallet-en</translation>
  <translation id="1398743098754840707">Hemen gehitzen dituzun webguneak ez dira erabiliko erantzunak sortzeko, nahiz eta fitxa irekita egon. Gehitzen duzun webgune bat une horretan elkarrizketa-hari batean erabiltzen bada, baliteke 30 minuturaino behar izatea hariak webgunea aipatzeari uzteko.</translation>
  <translation id="1405567553485452995">Berde argia</translation>
 @@ -254,8 +254,8 @@ Bestela, pribatutasun-ezarpenek blokeatu egingo dute baimen hori. Baimen honekin
  <translation id="1410941016594047814">Invite gutun-azala</translation>
- <translation id="1413235258620101697">Txartel honen CVCa enkriptatuko da, eta Google Diru-zorroa zerbitzuan gordeko, bizkorrago ordaintzeko</translation>
+ <translation id="1413235258620101697">Txartel honen CVCa enkriptatuko da, eta Google Wallet-en gordeko, bizkorrago ordaintzeko</translation>
  <translation id="1413809658975081374">Pribatutasun-errorea</translation>
 -<translation id="1419305130220238697">Chrome-ren bidez egindako deskargak kudeatzeko botoia: aktiba ezazu Chrome-ren bidez deskargatu dituzun fitxategiak kudeatzeko</translation>
 -<translation id="1420345875188552368">Baliteke gordetako ordainketa-metodo automatikoa ordainketa honetarako erabiltzea. Chrome-n diru-zorro digitalak desaktibatzeko, joan <ph name="BEGIN_LINK1" />ordainketa-ezarpenetara<ph name="END_LINK1" /></translation>
@@ -121006,7 +121006,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="1757935267918149452">Google-ko pasahitza aldatzeko botoia: aktiba ezazu Google-ko kontuko pasahitza aldatzeko</translation>
 -<translation id="1759776526873274358">Bete webguneek segurtasuna hobetzeko erabiltzen dituzten egiaztapen-kodeak automatikoki. Chrome-k zure Gmail-etik eskura ditzake kode horiek. <ph name="BEGIN_LINK" />Lortu eginbide honi buruzko informazio gehiago<ph name="LINK_END" /></translation>
 +<translation id="1759776526873274358">Bete webguneek segurtasuna hobetzeko erabiltzen dituzten egiaztapen-kodeak automatikoki. Vanadium-k zure Gmail-etik eskura ditzake kode horiek. <ph name="BEGIN_LINK" />Lortu eginbide honi buruzko informazio gehiago<ph name="LINK_END" /></translation>
- <translation id="176013700366797492">Joan Google Diru-zorroa zerbitzura <ph name="BEGIN_LINK1" />datuen eta pribatutasunaren hobespenak<ph name="END_LINK1" /> kontrolatzeko edo <ph name="BEGIN_LINK2" />ordainketa-metodoak<ph name="END_LINK2" /> eta <ph name="BEGIN_LINK3" />txartelak<ph name="END_LINK3" /> kudeatzeko, hala nola fideltasun-txartelak eta nortasun-agiriak</translation>
+ <translation id="176013700366797492">Joan Google Wallet-era <ph name="BEGIN_LINK1" />datuen eta pribatutasunaren hobespenak<ph name="END_LINK1" /> kontrolatzeko edo <ph name="BEGIN_LINK2" />ordainketa-metodoak<ph name="END_LINK2" /> eta <ph name="BEGIN_LINK3" />txartelak<ph name="END_LINK3" /> kudeatzeko, hala nola fideltasun-txartelak eta nortasun-agiriak</translation>
  <translation id="1763864636252898013">Zerbitzari honek ezin izan du egiaztatu <ph name="DOMAIN" /> domeinua denik. Zure gailuaren sistema eragilea ez da bere segurtasun-ziurtagiriaz fidatzen. Baliteke gaizki konfiguratuta dagoelako izatea edo erasotzaile batek zure konexioa atzeman duelako izatea.</translation>
  <translation id="1768211456781949159"><ph name="BEGIN_LINK" />Exekutatu Windows-en sare-diagnostikoak<ph name="END_LINK" />.</translation>
 @@ -480,7 +480,7 @@ Bestela, pribatutasun-ezarpenek blokeatu egingo dute baimen hori. Baimen honekin
@@ -121150,7 +121150,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="232390861414237658">Bete txartel hau automatikoki Chrome-n egindako erosketetan Google Play-rekin erabiltzeko gordeta dagoenean</translation>
 +<translation id="232390861414237658">Bete txartel hau automatikoki Vanadium-n egindako erosketetan Google Play-rekin erabiltzeko gordeta dagoenean</translation>
  <translation id="2325722389016720813">Automatikoki osatzeko aukerak ikusteko, sakatu gora edo behera egiteko gezi-tekla. Idatzi automatikoki osatzeko.</translation>
- <translation id="2326283484705860548">Orain, Google Diru-zorroa zerbitzuko informazio gehiago bete dezakezu automatikoki</translation>
+ <translation id="2326283484705860548">Orain, Google Wallet-eko informazio gehiago bete dezakezu automatikoki</translation>
  <translation id="2326747055382936979">Kudeatu betetze automatiko hobetua</translation>
 @@ -809,7 +809,7 @@ Bestela, pribatutasun-ezarpenek blokeatu egingo dute baimen hori. Baimen honekin
  <translation id="2348836501965732644">Kudeatu informazioa edo desaktibatu iradokizunak Ezarpenak atalean</translation>
@@ -121186,7 +121186,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="2399868464369312507">Google Chrome-k ordainketa-metodoak editatu behar ditu.</translation>
 +<translation id="2399868464369312507">Vanadium-k ordainketa-metodoak editatu behar ditu.</translation>
  <translation id="2400263725572336749">Gehitu pasaportea</translation>
- <translation id="2400271059665846158">Kudeatu fideltasun-txartelak Google Diru-zorroa zerbitzuan</translation>
+ <translation id="2400271059665846158">Kudeatu fideltasun-txartelak Google Wallet-en</translation>
  <translation id="2400600116338235695">Serieko ataketara konektatzea eska dezake</translation>
 @@ -859,10 +859,10 @@ Iradokizun hau Chrome-tik ken dezakezu. Jatorrizko materiala ez da ezabatuko. <p
  <translation id="2429702686644080813">Hasi saioa bideoa gordetzeko</translation>
@@ -121356,8 +121356,8 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="2905107382358353958">Ordainketa-ezarpen berri bati buruzko alerta</translation>
  <translation id="2909946352844186028">Aldaketa bat hauteman da sarean.</translation>
  <translation id="2910062169995917863">Saioaren denbora-muga gainditu da</translation>
--<translation id="2911224142899421774">Google Diru-zorroa zerbitzuaren ezarpenak Chrome-tik gordetako informazioari aplikatzen zaizkio</translation>
-+<translation id="2911224142899421774">Google Diru-zorroa zerbitzuaren ezarpenak Vanadium-tik gordetako informazioari aplikatzen zaizkio</translation>
+-<translation id="2911224142899421774">Google Wallet-en ezarpenak Chrome-tik gordetako informazioari aplikatzen zaizkio</translation>
++<translation id="2911224142899421774">Google Wallet-en ezarpenak Vanadium-tik gordetako informazioari aplikatzen zaizkio</translation>
  <translation id="2911973620368911614">Laneko kontabilitateaz arduratzen den erabiltzaile-identifikatzailea</translation>
 -<translation id="2914160345369867329">Eskuarki, <ph name="SITE" /> webguneak enkriptatzea erabiltzen du informazioa babesteko. Chrome <ph name="SITE" /> webgunera konektatzen saiatu denean, webguneak kredentzial desegokiak eta ezohikoak bidali ditu. Erasotzaile bat <ph name="SITE" /> webgunearen plantak egiten ari delako gerta daiteke hori, edo wifi-sarean saioa hasteko pantailak konexioa eten duelako. Zure informazioa seguru dago, datuak trukatu aurretik eten baitu Chrome-k konexioa.</translation>
 +<translation id="2914160345369867329">Eskuarki, <ph name="SITE" /> webguneak enkriptatzea erabiltzen du informazioa babesteko. Vanadium <ph name="SITE" /> webgunera konektatzen saiatu denean, webguneak kredentzial desegokiak eta ezohikoak bidali ditu. Erasotzaile bat <ph name="SITE" /> webgunearen plantak egiten ari delako gerta daiteke hori, edo wifi-sarean saioa hasteko pantailak konexioa eten duelako. Zure informazioa seguru dago, datuak trukatu aurretik eten baitu Vanadium-k konexioa.</translation>
@@ -121395,7 +121395,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="2995517112308048736">Fitxategiaren tamaina:</translation>
  <translation id="3001783404098700732">Gordetako ordainketa-metodo bat erabiliz automatikoki betetzeko, hautatu "Bete ordainketa-informazioa automatikoki" botoia.</translation>
 @@ -1193,7 +1193,7 @@ Iradokizun hau Chrome-tik ken dezakezu. Jatorrizko materiala ez da ezabatuko. <p
- <translation id="3019738915977809060">Gorde hegazkineratze-txartela Diru-zorroa zerbitzuan</translation>
+ <translation id="3019738915977809060">Gorde hegazkineratze-txartela Wallet-en</translation>
  <translation id="3022959067768579802">Jarraitu idazten</translation>
  <translation id="3024663005179499861">Gidalerro mota okerra</translation>
 -<translation id="3027857899292697441">Chrome-k phishingarekin, malwarearekin edo azpikeriekin erlazionatutako webguneetan ohikoak diren xehetasunak hauteman ditu. <ph name="BEGIN_LINK" />Lortu informazio gehiago<ph name="END_LINK" /></translation>
@@ -121455,7 +121455,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="3273738040255912340">Administratzaileak profilean eta arakatzailean aldaketak egin ditzake, baita txostenen bidez arakatzaileari buruzko informazioa aztertu eta beharrezko beste zeregin batzuk gauzatu ere. Baliteke gailu honetako jarduerak Vanadium-etik kanpo ere kudeatzea. <ph name="BEGIN_LINK" />Lortu informazio gehiago<ph name="END_LINK" /></translation>
  <translation id="3273757719652748628">IBANa gordetzeko leihoa altuera osoan irekita dago.</translation>
  <translation id="327455571215090823">Betetze automatiko adimentsuagoa, pribatutasuna mantenduta</translation>
- <translation id="3280440382387335343">Eguneratu pasaportea modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="3280440382387335343">Eguneratu pasaportea modu seguruan Google Wallet-en</translation>
 @@ -1357,18 +1357,18 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="3287510313208355388">Deskargatu konektatuta dagoenean</translation>
  <translation id="3289578402369490638">Sareko beste dendetatik</translation>
@@ -121482,7 +121482,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 @@ -1388,7 +1388,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="3364869320075768271"><ph name="URL" /> webguneak errealitate birtualeko gailua eta datuak erabili nahi ditu</translation>
  <translation id="3369192424181595722">Erlojuaren errorea</translation>
- <translation id="3370855919511944393">Diru-zorroa zerbitzuaren ezarpenak</translation>
+ <translation id="3370855919511944393">Wallet-en ezarpenak</translation>
 -<translation id="3371064404604898522">Ezarri Chrome arakatzaile lehenetsi gisa</translation>
 +<translation id="3371064404604898522">Ezarri Vanadium arakatzaile lehenetsi gisa</translation>
  <translation id="3371186787117738282">Gehitu da <ph name="ATTRIBUTE_NAME" /></translation>
@@ -121499,7 +121499,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="3421387094817716717">Kurba eliptikoko gako publikoa</translation>
 @@ -1424,7 +1424,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="3423742043356668186">Zehaztutako sistema</translation>
- <translation id="3426672782316020729">Eguneratu pasaportea Google Diru-zorroa zerbitzuan</translation>
+ <translation id="3426672782316020729">Eguneratu pasaportea Google Wallet-en</translation>
  <translation id="3427342743765426898">&amp;Berregin editatzea</translation>
 -<translation id="342781501876943858">Pasahitza beste webgune batzuetan ere erabili baduzu, hura berrezartzea gomendatzen du Chromium-ek.</translation>
 +<translation id="342781501876943858">Pasahitza beste webgune batzuetan ere erabili baduzu, hura berrezartzea gomendatzen du Vanadium-ek.</translation>
@@ -121542,9 +121542,9 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="3614001939154393113">Baliteke erasotzaileak <ph name="BEGIN_BOLD" /><ph name="SITE" /><ph name="END_BOLD" /> webguneko zure informazioa (besteak beste, pasahitzak, mezuak edo kreditu-txartelak) lapurtzen saiatzea. <ph name="BEGIN_LEARN_MORE_LINK" />Lortu abisu honi buruzko informazio gehiago<ph name="END_LEARN_MORE_LINK" /></translation>
  <translation id="361438452008624280">"<ph name="LANGUAGE_ID" />" zerrenda-sarrera: hizkuntza ez da ezagutzen edo onartzen.</translation>
 -<translation id="3614934205542186002"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT" />: sakatu tabuladorea eta, ondoren, sakatu "Sartu" tekla Chrome-ren ezarpenetan segurtasun-egiaztapena egiteko</translation>
--<translation id="3620865353340165509">Ezin izan da gorde IBANa Google Diru-zorroa zerbitzuan. Horren ordez, gailu honetako Chrome-n gorde da. IBANa erabiltzen duzun hurrengoan, Chrome-k berriro galdetuko dizu.</translation>
+-<translation id="3620865353340165509">Ezin izan da gorde IBANa Google Wallet-en. Horren ordez, gailu honetako Chrome-n gorde da. IBANa erabiltzen duzun hurrengoan, Chrome-k berriro galdetuko dizu.</translation>
 +<translation id="3614934205542186002"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT" />: sakatu tabuladorea eta, ondoren, sakatu "Sartu" tekla Vanadium-ren ezarpenetan segurtasun-egiaztapena egiteko</translation>
-+<translation id="3620865353340165509">Ezin izan da gorde IBANa Google Diru-zorroa zerbitzuan. Horren ordez, gailu honetako Vanadium-n gorde da. IBANa erabiltzen duzun hurrengoan, Vanadium-k berriro galdetuko dizu.</translation>
++<translation id="3620865353340165509">Ezin izan da gorde IBANa Google Wallet-en. Horren ordez, gailu honetako Vanadium-n gorde da. IBANa erabiltzen duzun hurrengoan, Vanadium-k berriro galdetuko dizu.</translation>
  <translation id="3621401353678567613">Jarraipena egiten diezun produktuen prezioak jaisten direnean alertak jasotzeko, aktibatu jakinarazpenak ezarpenetan.</translation>
  <translation id="362276910939193118">Erakutsi historia osoa</translation>
 -<translation id="3623041590998910684">Kamera erabiltzeko, eman Chrome-ri baimena hemen: <ph name="LINK" />.</translation>
@@ -121559,7 +121559,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="3634567936866541746">Webgune engainagarri batean idatzi duzu pasahitza. Kontuak babesteko, gordetako pasahitzei begiratu bat ematea gomendatzen du Chrome-k.</translation>
 +<translation id="3634567936866541746">Webgune engainagarri batean idatzi duzu pasahitza. Kontuak babesteko, gordetako pasahitzei begiratu bat ematea gomendatzen du Vanadium-k.</translation>
  <translation id="3638102297696182302">Aktibatu berriro Idazteko laguntza. Irekitzeko, sakatu tabuladorea eta Sartu.</translation>
- <translation id="3639626391482300575">IBANa Google Diru-zorroa zerbitzuan gorde da; beraz, Google-ren produktu guztietan erabil dezakezu.</translation>
+ <translation id="3639626391482300575">IBANa Google Wallet-en gorde da; beraz, Google-ren produktu guztietan erabil dezakezu.</translation>
  <translation id="3642196846309122856">Saiatu berriro fitxategiak deskargatzen</translation>
  <translation id="3642638418806704195">Aplikazioa:</translation>
  <translation id="3647286794400715637">URL kate bakoitzak URL bat edo bi izan behar ditu.</translation>
@@ -121693,7 +121693,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="4195459680867822611">Vanadium-ri buruzko aholkuak ikusteko botoia: aktiba ezazu Vanadium-ren eginbideei buruzko informazioa lortzeko</translation>
  <translation id="4195643157523330669">Ireki fitxa berri batean</translation>
  <translation id="4196861286325780578">&amp;Berregin mugitzea</translation>
- <translation id="4199131764832701740">Gehitu pasaportea Google Diru-zorroa zerbitzuan</translation>
+ <translation id="4199131764832701740">Gehitu pasaportea Google Wallet-en</translation>
 @@ -1911,11 +1911,11 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
      &lt;/ol&gt;
      &lt;h4&gt;2. urratsa: ireki web-orria ezkutuko moduan (ordenagailuan bakarrik)&lt;/h4&gt;
@@ -121715,7 +121715,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="4234996384188431444">Ordaindu Pix-ekin Google Chrome-n, aplikazioz aldatu gabe</translation>
 +<translation id="4234996384188431444">Ordaindu Pix-ekin Vanadium-n, aplikazioz aldatu gabe</translation>
  <translation id="4238607350028440048">Lagundu elkarrizketarako prestatzen, kontratazio-arduradun bat bazina bezala galderak eginda</translation>
- <translation id="4239215166147486528">Gorde gidabaimena modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="4239215166147486528">Gorde gidabaimena modu seguruan Google Wallet-en</translation>
  <translation id="4239799716689808527">Etiketak</translation>
 @@ -1954,7 +1954,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="4269599248168651462">Zerbitzari-ziurtagiria esklusiboa ez den izen bati jaulki zaio.</translation>
@@ -121764,7 +121764,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="4407758156081352648">Segurtasuna mantentzeko, erakundeak ez du uzten Vanadium-n pasahitzak berrerabiltzea. Erabiltzaileen pribatutasuna babesteko, Vanadium-ko pasahitzak enkriptatu egiten dira.</translation>
  <translation id="4409271659088619928"><ph name="DSE" /> da bilatzailea. Behar izanez gero, joan haren argibideetara bilaketa-historia ezabatzeari buruzko informazio gehiago lortzeko.</translation>
  <translation id="4409556632583862731">Elkarrizketa-hari berria</translation>
- <translation id="4410614037742891410">Eguneratu nortasun-agiria modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="4410614037742891410">Eguneratu nortasun-agiria modu seguruan Google Wallet-en</translation>
 @@ -2049,7 +2049,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="4415748029120993980">SECG kurba eliptikoko secp384r1 (edo, bestela esanda: NIST P-384)</translation>
  <translation id="4418150423720608641">ML-DSA-87</translation>
@@ -121826,7 +121826,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="4592951414987517459"><ph name="DOMAIN" /> domeinurako konexioa enkriptatze multzo moderno bat erabilita enkriptatu da.</translation>
  <translation id="4594403342090139922">&amp;Desegin ezabatzea</translation>
  <translation id="4598556348158889687">Memoriaren kudeaketa</translation>
- <translation id="4599572944836204718">Ordaindu bizkorrago Google Pay-rekin txartela gordeta edukita. Txartelaren xehetasunak enkriptatuta daude Google Diru-zorroa zerbitzuan.</translation>
+ <translation id="4599572944836204718">Ordaindu bizkorrago Google Pay-rekin txartela gordeta edukita. Txartelaren xehetasunak enkriptatuta daude Google Wallet-en.</translation>
  <translation id="4603727370377253901">Hegaldien erreserbak</translation>
 -<translation id="4607608436550361748">Ikusi Chrome-ri buruzko aholkuak</translation>
 +<translation id="4607608436550361748">Ikusi Vanadium-ri buruzko aholkuak</translation>
@@ -121929,7 +121929,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 @@ -2350,11 +2350,11 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="4953689047182316270">Erabilerraztasun-gertaerei erantzun.</translation>
  <translation id="4954505713046251871">Iradokizunak eskaintzeko eta eginbidea hobetzeko, orriaren URLa eta edukia Google-rekin partekatzen dira</translation>
- <translation id="4954891067389874142">Ordaindu bizkorrago txartela gordeta edukita. Txartelaren xehetasunak enkriptatuta daude Google Diru-zorroa zerbitzuan.</translation>
+ <translation id="4954891067389874142">Ordaindu bizkorrago txartela gordeta edukita. Txartelaren xehetasunak enkriptatuta daude Google Wallet-en.</translation>
 -<translation id="4957080528849277028">Chrome-ko historia ikusteko botoia: aktiba ezazu arakatze-historia Chrome-ren ezarpenetan ikusteko eta kudeatzeko</translation>
 +<translation id="4957080528849277028">Vanadium-ko historia ikusteko botoia: aktiba ezazu arakatze-historia Vanadium-ren ezarpenetan ikusteko eta kudeatzeko</translation>
  <translation id="4957781475307065660">{DOMAIN_COUNT,plural, =1{+ 1 webgune}other{+ # webgune}}</translation>
@@ -122019,14 +122019,14 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="5563589142503817291">Kokapena erabiltzeko, eman Chrome-ri baimena hemen: <ph name="LINK" />.</translation>
 +<translation id="5563589142503817291">Kokapena erabiltzeko, eman Vanadium-ri baimena hemen: <ph name="LINK" />.</translation>
  <translation id="5565613213060953222">Ireki ezkutuko moduko fitxa bat</translation>
- <translation id="5565613377956908865">Gehitu nortasun-agiria Google Diru-zorroa zerbitzuan</translation>
+ <translation id="5565613377956908865">Gehitu nortasun-agiria Google Wallet-en</translation>
  <translation id="5565735124758917034">Aktibo</translation>
 @@ -2726,7 +2726,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="5580958916614886209">Egiaztatu iraungitze-hilabetea eta saiatu berriro</translation>
  <translation id="5582453333200265572">Eguneratu nortasun-agiria</translation>
  <translation id="5583442610070676234"><ph name="COMPARE_SET_NAME" /> konparazio-taularen ekintza gehiago</translation>
--<translation id="55841966151154662">Ezin izan da gorde IBANa Google Diru-zorroa zerbitzuan. Horren ordez, gailu honetako Chrome-n gorde da.</translation>
-+<translation id="55841966151154662">Ezin izan da gorde IBANa Google Diru-zorroa zerbitzuan. Horren ordez, gailu honetako Vanadium-n gorde da.</translation>
+-<translation id="55841966151154662">Ezin izan da gorde IBANa Google Wallet-en. Horren ordez, gailu honetako Chrome-n gorde da.</translation>
++<translation id="55841966151154662">Ezin izan da gorde IBANa Google Wallet-en. Horren ordez, gailu honetako Vanadium-n gorde da.</translation>
  <translation id="558420943003240152">Kudeatu pasahitzak eta sarbide-gakoak…</translation>
  <translation id="5586446728396275693">Ez dago helbiderik gordeta</translation>
  <translation id="5586831831248371458">Bilatu "<ph name="KEYWORD_SUFFIX" />"</translation>
@@ -122092,7 +122092,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="5895694128043506580">Vanadium kontuzko informazioa erakusten saiatzen ari da</translation>
  <translation id="5898767305816764989">Gustatu zaizula adierazteko botoia. <ph name="THUMBS_UP_SUGGESTION_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT" /> gustatu zaizula aditzera emateko, sakatu Sartu.</translation>
  <translation id="5901630391730855834">Horia</translation>
- <translation id="5902204772823742902">Gehitu gidabaimena modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="5902204772823742902">Gehitu gidabaimena modu seguruan Google Wallet-en</translation>
 @@ -2975,7 +2975,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="6014851866995737824">Ez ikusi egin zaio, gaitzeko edo desgaitzeko zerrenda falta delako.</translation>
  <translation id="6015796118275082299">Urtea</translation>
@@ -122108,7 +122108,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="6087312102907839798">Erlazionatutako bilaketak</translation>
 -<translation id="6089505343295765444">Chrome-ko historiatik ezabatzen dituzun fitxak konparazio-tauletan agertuko dira halere</translation>
 +<translation id="6089505343295765444">Vanadium-ko historiatik ezabatzen dituzun fitxak konparazio-tauletan agertuko dira halere</translation>
- <translation id="6091115085465716987">Google Diru-zorroa zerbitzuaren logotipoa</translation>
+ <translation id="6091115085465716987">Google Wallet-en logotipoa</translation>
  <translation id="6091691259076781835">Ordainketa-prozesua bizkortzeko, gorde CVC hau zure gailuan</translation>
  <translation id="6093599771645355227">Hori argia</translation>
 @@ -3029,24 +3029,24 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
@@ -122180,7 +122180,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="6251906504834538140">{0,plural, =1{Fitxategia ezin da mugitu}other{<ph name="FILE_COUNT" /> fitxategi ezin dira mugitu}}</translation>
 -<translation id="6252613631861574218"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT" />: sakatu tabuladorea eta, ondoren, sakatu "Sartu" Chrome-ren bidez deskargatu dituzun fitxategiak kudeatzeko</translation>
 +<translation id="6252613631861574218"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT" />: sakatu tabuladorea eta, ondoren, sakatu "Sartu" Vanadium-ren bidez deskargatu dituzun fitxategiak kudeatzeko</translation>
- <translation id="6253380015872250643">Gorde txartela Google Diru-zorroa zerbitzuan</translation>
+ <translation id="6253380015872250643">Gorde txartela Google Wallet-en</translation>
  <translation id="6254436959401408446">Ez dago fitxategia irekitzeko behar adina memoria</translation>
  <translation id="625463612687472648">Utzi erabiltzeko baimena emateari</translation>
 @@ -3128,7 +3128,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
@@ -122210,7 +122210,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="6326175484149238433">Kendu Vanadium-tik</translation>
 +<translation id="6326947323444967009">Ezarri Vanadium sistemaren arakatzaile lehenetsi gisa iOS-en ezarpenetan</translation>
  <translation id="6328639280570009161">Saiatu sarearen iragarpena desgaitzen</translation>
- <translation id="6329742260390895689">Informazioa automatikoki betetzeko, aktibatu "Erabili txartelak Google osoan" Diru-zorroa zerbitzuaren ezarpenetan</translation>
+ <translation id="6329742260390895689">Informazioa automatikoki betetzeko, aktibatu "Erabili txartelak Google osoan" Wallet-en ezarpenetan</translation>
  <translation id="6329815962353376655">&lt;Idatzi galdera bat&gt;</translation>
 @@ -3181,7 +3181,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="635394585025793320">Norbait txunditu nahi dut. Bilatu 2 pertsonarentzako mahai libreak denek aipatzen dituzten jatetxeetan.</translation>
@@ -122224,12 +122224,12 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 @@ -3222,7 +3222,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="6411107829285739505">A4x8</translation>
  <translation id="6412543105195503444">Gurasoen onespen-leihoa</translation>
- <translation id="6413532517183895572">Diru-zorroa zerbitzuko ezarpenak kudeatu</translation>
+ <translation id="6413532517183895572">Wallet-eko ezarpenak kudeatu</translation>
 -<translation id="6415778972515849510">Google-ko kontua babesten eta pasahitza aldatzen lagun diezazuke Chromium-ek.</translation>
 +<translation id="6415778972515849510">Google-ko kontua babesten eta pasahitza aldatzen lagun diezazuke Vanadium-ek.</translation>
  <translation id="6416877227920300343">EDP</translation>
  <translation id="6418199314628742460">Ziurtatu enpresaren datu edo datu pertsonal garrantzitsuenak beste toki batean gordeta daudela.</translation>
- <translation id="6422648598133086441">Eguneratu ibilgailua modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="6422648598133086441">Eguneratu ibilgailua modu seguruan Google Wallet-en</translation>
 @@ -3267,7 +3267,7 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="6493924760403974580">Tamaina honetan soilik dago erabilgarri aplikazioa.</translation>
  <translation id="6494750904506170417">leiho gainerakorrak eta birbideratzeak</translation>
@@ -122272,8 +122272,8 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="6578434528542148658">Luzapenaren identifikatzaileak ez du balio.</translation>
 -<translation id="658230438113661756">Baliteke bisitatu nahi duzun webguneko erasotzaileak software kaltegarria instalatzea, pasahitzak, argazkiak, mezuak, kreditu-txartelen zenbakiak edo beste zerbait lapurtzeko edo ezabatzeko asmoz. Chrome-k atzera egitea gomendatzen dizu, zeure burua babesteko. <ph name="BEGIN_LEARN_MORE_LINK" />Lortu abisu honi buruzko informazio gehiago<ph name="END_LEARN_MORE_LINK" /></translation>
 +<translation id="658230438113661756">Baliteke bisitatu nahi duzun webguneko erasotzaileak software kaltegarria instalatzea, pasahitzak, argazkiak, mezuak, kreditu-txartelen zenbakiak edo beste zerbait lapurtzeko edo ezabatzeko asmoz. Vanadium-k atzera egitea gomendatzen dizu, zeure burua babesteko. <ph name="BEGIN_LEARN_MORE_LINK" />Lortu abisu honi buruzko informazio gehiago<ph name="END_LEARN_MORE_LINK" /></translation>
- <translation id="6583309742916093092">Google Diru-zorroa zerbitzuan gordeta</translation>
- <translation id="6585589684832019248">Txartela Google Diru-zorroa zerbitzuan gorde da; beraz, Google-ren produktu guztietan erabil dezakezu</translation>
+ <translation id="6583309742916093092">Google Wallet-en gordeta</translation>
+ <translation id="6585589684832019248">Txartela Google Wallet-en gorde da; beraz, Google-ren produktu guztietan erabil dezakezu</translation>
  <translation id="6587893660316489419">B5 gutun-azala</translation>
  <translation id="6587923378399804057">Kopiatu duzun esteka</translation>
  <translation id="6591833882275308647"><ph name="DEVICE_TYPE" /> gailuak ez du kudeatzailerik</translation>
@@ -122288,7 +122288,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="6613866251791999074">Lortu Vanadium-ko bilatzaileari buruzko informazio gehiago</translation>
  <translation id="6615297766614333076">2. pilatzailea</translation>
  <translation id="6619496928666593220">IBANa ez da bete</translation>
- <translation id="662009501953240458">Gehitu ibilgailua modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="662009501953240458">Gehitu ibilgailua modu seguruan Google Wallet-en</translation>
 @@ -3332,15 +3332,15 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="6625629379283886932">Irakats iezadazu programatzen</translation>
  <translation id="6628463337424475685"><ph name="ENGINE" /> Bilaketa</translation>
@@ -122299,8 +122299,8 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="6635900375070654124">autentifikazio-gailu bat</translation>
  <translation id="6641852376826221947">Berretsi erosketa</translation>
  <translation id="6643016212128521049">Garbitu</translation>
--<translation id="6644868143085860957">Ezin izan da gorde txartela Google Diru-zorroa zerbitzuan. Horren ordez, gailu honetako Chrome-n gorde da.</translation>
-+<translation id="6644868143085860957">Ezin izan da gorde txartela Google Diru-zorroa zerbitzuan. Horren ordez, gailu honetako Vanadium-n gorde da.</translation>
+-<translation id="6644868143085860957">Ezin izan da gorde txartela Google Wallet-en. Horren ordez, gailu honetako Chrome-n gorde da.</translation>
++<translation id="6644868143085860957">Ezin izan da gorde txartela Google Wallet-en. Horren ordez, gailu honetako Vanadium-n gorde da.</translation>
  <translation id="6645291930348198241">Cookieak eta webguneko datuak atzitu.</translation>
  <translation id="6645478838938543427">Helbide honetara bidaliko dira prezio-jaitsieren alertak: <ph name="EMAIL_ADDRESS" /></translation>
 -<translation id="6648459603387803038">Administratzaileak urrunetik alda dezake arakatzailearen konfigurazioa. Baliteke gailu honetako jarduerak Chrome-tik kanpo ere kudeatzea.</translation>
@@ -122398,7 +122398,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="6934236486840930310"><ph name="BEGIN_BOLD" />Bilatzaile lehenetsiari esker, sareko bilaketak egin ditzakezu, baita Chrome-ren eginbideak erabili ere,<ph name="END_BOLD" /> hala nola helbide-barraren eta web-orrietako irudien bidez bilaketak egiteko eginbideak. Baliteke eginbideren bat erabili ezin izatea, bilatzaileak onartzen ez badu.</translation>
 +<translation id="6934236486840930310"><ph name="BEGIN_BOLD" />Bilatzaile lehenetsiari esker, sareko bilaketak egin ditzakezu, baita Vanadium-ren eginbideak erabili ere,<ph name="END_BOLD" /> hala nola helbide-barraren eta web-orrietako irudien bidez bilaketak egiteko eginbideak. Baliteke eginbideren bat erabili ezin izatea, bilatzaileak onartzen ez badu.</translation>
  <translation id="6934672428414710184">Izen hori Google-ko kontukoa da</translation>
- <translation id="6935077351544118151">Orain, fideltasun-txartelak automatikoki bete ditzakezu Google Diru-zorroa zerbitzutik</translation>
+ <translation id="6935077351544118151">Orain, fideltasun-txartelak automatikoki bete ditzakezu Google Wallet-etik</translation>
  <translation id="6935179587384421592"><ph name="SIZE" />. Webgune batzuk agian mantsoago kargatuko dira bisitatzen dituzun hurrengoan.</translation>
  <translation id="6936976777388162184">Sorta batean dagoen gailu bat da hau eta ezin da erregistratu kiosko eta seinaleztatze moduaren bertsio berrian.</translation>
  <translation id="6942444979237658241">Iruzkinak (<ph name="GROUP_NAME" />)</translation>
@@ -122432,7 +122432,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 @@ -3582,12 +3582,12 @@ Geroago ordaintzeko aukerak ezkutatzeko, joan <ph name="BEGIN_LINK" />Ordainketa
  <translation id="7058774143982824355">Pasahitzen CSV formatuko fitxategiak analizatzeko zerbitzua</translation>
  <translation id="7059913660448028407">Une honetan ez dago erabilgarri</translation>
- <translation id="7062344833049251424">Hurrengoan bizkorrago ordaintzeko, gorde txartela eta fakturazio-helbidea Google Diru-zorroa zerbitzuan</translation>
+ <translation id="7062344833049251424">Hurrengoan bizkorrago ordaintzeko, gorde txartela eta fakturazio-helbidea Google Wallet-en</translation>
 -<translation id="706295145388601875">Gehitu eta kudeatu helbideak Chrome-ren ezarpenetan</translation>
 +<translation id="706295145388601875">Gehitu eta kudeatu helbideak Vanadium-ren ezarpenetan</translation>
  <translation id="7063157783216323487">Berdea</translation>
@@ -122594,7 +122594,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="7569952961197462199">Kreditu-txartela Chrome-tik kendu nahi duzu?</translation>
 +<translation id="7569952961197462199">Kreditu-txartela Vanadium-tik kendu nahi duzu?</translation>
  <translation id="7569983096843329377">Beltza</translation>
- <translation id="7570524564113479209">Eguneratu nortasun-agiria Google Diru-zorroa zerbitzuan</translation>
+ <translation id="7570524564113479209">Eguneratu nortasun-agiria Google Wallet-en</translation>
  <translation id="7570862164055912832">Redress zenbakiak</translation>
 @@ -3912,11 +3912,11 @@ Xehetasun gehiago:
  <translation id="7610193165460212391">Balioa barrutitik kanpo dago: <ph name="VALUE" />.</translation>
@@ -122651,8 +122651,8 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="7751971323486164747">Kudeatu letra-tamaina eta -tipoa Vanadium-n</translation>
  <translation id="7752995774971033316">Kudeatu gabe</translation>
  <translation id="7755624218968747854">Arrabola nagusia</translation>
--<translation id="7756441544371887150">Txartel hau Google Diru-zorroa zerbitzuan gordeta dagoenean, bete automatikoki Chrome-n zerbait erostean</translation>
-+<translation id="7756441544371887150">Txartel hau Google Diru-zorroa zerbitzuan gordeta dagoenean, bete automatikoki Vanadium-n zerbait erostean</translation>
+-<translation id="7756441544371887150">Txartel hau Google Wallet-en gordeta dagoenean, bete automatikoki Chrome-n zerbait erostean</translation>
++<translation id="7756441544371887150">Txartel hau Google Wallet-en gordeta dagoenean, bete automatikoki Vanadium-n zerbait erostean</translation>
  <translation id="7758069387465995638">Baliteke suebakiak edo birusen aurkako softwareak konexioa eten izatea.</translation>
  <translation id="7759147511335618829">MIDI gailuak kontrolatzea eta berriro programatzea</translation>
  <translation id="7759809451544302770">Aukerakoa</translation>
@@ -122761,7 +122761,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="815805690561372740">Chrome-k segurtasun-eginbide integratuak ditu, arakatzen duzun bitartean babesten zaituztenak. Google-ren Arakatze segurua eginbide horietako bat da, eta <ph name="BEGIN_LINK" />duela gutxi malwarea aurkitu du<ph name="END_LINK" /> bisitatu nahi duzun webgunean.</translation>
 +<translation id="815805690561372740">Vanadium-k segurtasun-eginbide integratuak ditu, arakatzen duzun bitartean babesten zaituztenak. Google-ren Arakatze segurua eginbide horietako bat da, eta <ph name="BEGIN_LINK" />duela gutxi malwarea aurkitu du<ph name="END_LINK" /> bisitatu nahi duzun webgunean.</translation>
  <translation id="8161095570253161196">Berrekin arakatzeari</translation>
- <translation id="8163468049564974856">Aktibatu betetze automatikoa sarean modu seguruan ordaintzeko. Txartelaren xehetasunak enkriptatuta daude Google Diru-zorroa zerbitzuan.</translation>
+ <translation id="8163468049564974856">Aktibatu betetze automatikoa sarean modu seguruan ordaintzeko. Txartelaren xehetasunak enkriptatuta daude Google Wallet-en.</translation>
  <translation id="8163866351304776260">Lau zulo ezkerrean</translation>
 @@ -4234,10 +4234,10 @@ Xehetasun gehiago:
  <translation id="8172809706700703589">Sortu bidaian eraman beharreko gauzen zerrenda bat</translation>
@@ -122795,7 +122795,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
  <translation id="8280630997017109758">11. erretilua</translation>
  <translation id="8281886186245836920">Saltatu</translation>
 @@ -4297,7 +4297,7 @@ Xehetasun gehiago:
- <translation id="828282277746732142">Gorde IBANa Google Diru-zorroa zerbitzuan</translation>
+ <translation id="828282277746732142">Gorde IBANa Google Wallet-en</translation>
  <translation id="8282947398454257691">Ezagutu zure gailu-identifikatzaile esklusiboa</translation>
  <translation id="8283946103133796868">Kalkulatu nire batez besteko kalifikazio haztatua</translation>
 -<translation id="8284769179630993263">Kudeatu Arakatze segurua eta beste gauza batzuk Chrome-ren ezarpenetan</translation>
@@ -122916,7 +122916,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="8715198179991802709">Chrome-k bisitatu nahi zenuen webgune bat markatu du. Lagun iezaguzu abisu hauek hobetzen minutu bateko inkesta bati erantzunez.</translation>
 +<translation id="8715198179991802709">Vanadium-k bisitatu nahi zenuen webgune bat markatu du. Lagun iezaguzu abisu hauek hobetzen minutu bateko inkesta bati erantzunez.</translation>
  <translation id="8716983145825913456">Gorde ibilgailua modu seguruan</translation>
- <translation id="8717177139469452440">Gorde pasaportea modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="8717177139469452440">Gorde pasaportea modu seguruan Google Wallet-en</translation>
  <translation id="8718314106902482036">Ez da ordaindu</translation>
 @@ -4544,7 +4544,7 @@ Xehetasun gehiago:
  <translation id="8736059027199600831">76,2 × 101,6 cm (30 × 40 in)</translation>
@@ -122947,7 +122947,7 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 +<translation id="8816395686387277279"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT" />: sakatu tabuladorea eta, ondoren, sakatu Sartu Vanadium eguneratzeko Vanadium-ren ezarpenetan</translation>
  <translation id="8816960833040967795">Kontuz ibili webgune honetan</translation>
  <translation id="8819155700324279105">Gehitu beste babes-geruza bat sareko mehatxuen aurka</translation>
- <translation id="8819855907485254989">Gorde garraio-txartela Diru-zorroa zerbitzuan</translation>
+ <translation id="8819855907485254989">Gorde garraio-txartela Wallet-en</translation>
 @@ -4607,16 +4607,16 @@ Xehetasun gehiago:
  <translation id="883848425547221593">Beste laster-markak</translation>
  <translation id="8842351563145134519">Haien eremuak sakatzean automatikoki beteko diren ordainketa-metodoen zerrenda altuera erdian irekita dago.</translation>
@@ -122963,8 +122963,8 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="8858065207712248076"><ph name="BEGIN_BOLD" /><ph name="ORG_NAME" /><ph name="END_BOLD" /> pasahitza beste webgune batzuetan ere erabili baduzu, hura berrezartzea gomendatzen du Chrome-k.</translation>
 +<translation id="8858065207712248076"><ph name="BEGIN_BOLD" /><ph name="ORG_NAME" /><ph name="END_BOLD" /> pasahitza beste webgune batzuetan ere erabili baduzu, hura berrezartzea gomendatzen du Vanadium-k.</translation>
  <translation id="885906927438988819">Behar bezala idatzita badago, <ph name="BEGIN_LINK" />exekutatu Windows-en sare-diagnostikoak<ph name="END_LINK" />.</translation>
--<translation id="8861482055962701239">Informazioa ezin izan da Google Diru-zorroa zerbitzuan gorde. Horren ordez, gailu honetako Chrome-n gorde da. Hura erabiltzen duzun hurrengoan, Chrome-k Diru-zorroa zerbitzuan gorde nahi duzun galdetuko dizu.</translation>
-+<translation id="8861482055962701239">Informazioa ezin izan da Google Diru-zorroa zerbitzuan gorde. Horren ordez, gailu honetako Vanadium-n gorde da. Hura erabiltzen duzun hurrengoan, Vanadium-k Diru-zorroa zerbitzuan gorde nahi duzun galdetuko dizu.</translation>
+-<translation id="8861482055962701239">Informazioa ezin izan da Google Wallet-en gorde. Horren ordez, gailu honetako Chrome-n gorde da. Hura erabiltzen duzun hurrengoan, Chrome-k Wallet-en gorde nahi duzun galdetuko dizu.</translation>
++<translation id="8861482055962701239">Informazioa ezin izan da Google Wallet-en gorde. Horren ordez, gailu honetako Vanadium-n gorde da. Hura erabiltzen duzun hurrengoan, Vanadium-k Wallet-en gorde nahi duzun galdetuko dizu.</translation>
  <translation id="8863218129525348270">Hurrengoan bizkorrago ordaintzeko, gorde txartela gailuan</translation>
  <translation id="8866481888320382733">Errore bat gertatu da gidalerro-ezarpenak analizatzean</translation>
  <translation id="8866928039507595380">Tolestu</translation>
@@ -123097,17 +123097,17 @@ index eb9c7cb6522ec..fd68b77e830bc 100644
 -<translation id="963734905955638680">Zure lurraldeko lege bat dela eta, Chromium-ek bilatzaile lehenetsia aukeratzeko eskatzen dizu. Bilatzaile hauek asko erabiltzen dira zure lurraldean, eta ausaz zerrendatzen dira.</translation>
 +<translation id="963734905955638680">Zure lurraldeko lege bat dela eta, Vanadium-ek bilatzaile lehenetsia aukeratzeko eskatzen dizu. Bilatzaile hauek asko erabiltzen dira zure lurraldean, eta ausaz zerrendatzen dira.</translation>
  <translation id="963837307749850257">Erabiltzaile guztiak</translation>
- <translation id="963988220224168636">Gehitu zuzenketa-zenbakia modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="963988220224168636">Gehitu zuzenketa-zenbakia modu seguruan Google Wallet-en</translation>
  <translation id="964050462028070434">Kudeatu pasahitzak eta sarbide-gakoak…</translation>
 @@ -4867,7 +4867,7 @@ Xehetasun gehiago:
  <translation id="973788791897303708">Fitxa talde hau beteta dago</translation>
  <translation id="975560348586398090">{COUNT,plural, =0{Bat ere ez}=1{1 elementu}other{# elementu}}</translation>
  <translation id="976522784004777030">12,7 × 20,32 cm (5 × 8 in)</translation>
--<translation id="978750072783101994">Txartel hau Google Diru-zorroa zerbitzuan gordeta dagoenean, bete automatikoki Chromium-en zerbait erostean</translation>
-+<translation id="978750072783101994">Txartel hau Google Diru-zorroa zerbitzuan gordeta dagoenean, bete automatikoki Vanadium-en zerbait erostean</translation>
+-<translation id="978750072783101994">Txartel hau Google Wallet-en gordeta dagoenean, bete automatikoki Chromium-en zerbait erostean</translation>
++<translation id="978750072783101994">Txartel hau Google Wallet-en gordeta dagoenean, bete automatikoki Vanadium-en zerbait erostean</translation>
  <translation id="979107176848483472"><ph name="DOMAIN" /> domeinuak kudeatzen ditu zure arakatzailea eta profila</translation>
  <translation id="981121421437150478">Konexiorik gabekoak</translation>
- <translation id="98237783946365638">Gorde nortasun-agiria modu seguruan Google Diru-zorroa zerbitzuan</translation>
+ <translation id="98237783946365638">Gorde nortasun-agiria modu seguruan Google Wallet-en</translation>
 diff --git a/components/strings/components_strings_fa.xtb b/components/strings/components_strings_fa.xtb
 index e1c4f142a1d9f..c108d6b50d272 100644
 --- a/components/strings/components_strings_fa.xtb
@@ -131317,7 +131317,7 @@ index bc2b7c4f9ca68..60448efa33606 100644
  <translation id="981121421437150478">Hors ligne</translation>
  <translation id="98237783946365638">Enregistrer la carte d'identité en toute sécurité dans Google Portefeuille</translation>
 diff --git a/components/strings/components_strings_fr.xtb b/components/strings/components_strings_fr.xtb
-index 72747d0062194..ab0fbdd2089c5 100644
+index 875aaf18076d0..451a55b347b9d 100644
 --- a/components/strings/components_strings_fr.xtb
 +++ b/components/strings/components_strings_fr.xtb
 @@ -11,7 +11,7 @@
@@ -131805,7 +131805,7 @@ index 72747d0062194..ab0fbdd2089c5 100644
  <translation id="2701514975700770343">Vers le bas</translation>
 @@ -1036,7 +1036,7 @@ Vous pouvez supprimer cette suggestion de Chrome. Votre source d'origine ne sera
  <translation id="2705137772291741111">La copie enregistrée (en cache) de ce site est illisible.</translation>
- <translation id="2709516037105925701">Saisir automatiquement</translation>
+ <translation id="2709516037105925701">Saisie automatique</translation>
  <translation id="2713444072780614174">Blanc</translation>
 -<translation id="2715612312510870559"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT" /> : appuyer sur Tabulation, puis sur Entrée pour gérer vos paiements et informations sur vos cartes de crédit dans les paramètres Chrome</translation>
 +<translation id="2715612312510870559"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT" /> : appuyer sur Tabulation, puis sur Entrée pour gérer vos paiements et informations sur vos cartes de crédit dans les paramètres Vanadium</translation>
@@ -133621,7 +133621,7 @@ index 72747d0062194..ab0fbdd2089c5 100644
  <translation id="981121421437150478">Hors connexion</translation>
  <translation id="98237783946365638">Enregistrez votre pièce d'identité de manière sécurisée dans Google Wallet</translation>
 diff --git a/components/strings/components_strings_gl.xtb b/components/strings/components_strings_gl.xtb
-index ed0c5c3c91c7b..b9c20914271bc 100644
+index 495fda8b476fe..cbe74af5f6389 100644
 --- a/components/strings/components_strings_gl.xtb
 +++ b/components/strings/components_strings_gl.xtb
 @@ -11,7 +11,7 @@
@@ -133650,7 +133650,7 @@ index ed0c5c3c91c7b..b9c20914271bc 100644
  <translation id="1067029985695494416">Detalles do buscador</translation>
  <translation id="1068467933609179019">Configuración dos servizos de autocompletar</translation>
 @@ -62,10 +62,10 @@
- <translation id="1095093219235104018">Buscar e completar información con Gemini</translation>
+ <translation id="1095093219235104018">Buscar e completar con Gemini</translation>
  <translation id="1096545575934602868">Este campo non debe ter máis de <ph name="MAX_ITEMS_LIMIT" /> entradas. Descartaranse todas as restantes.</translation>
  <translation id="1099928364755383720">pantalla superposta automática</translation>
 -<translation id="1100782917270858593">Botón para retomar o percorrido. Para retomar o percorrido e ver a actividade relevante do teu historial de Chrome, preme Introducir</translation>
@@ -137482,7 +137482,7 @@ index 075899e84109e..397258e103985 100644
  <translation id="963988220224168636">Google Walletમાં નિવારણ નંબર સુરક્ષિત રીતે ઉમેરો</translation>
  <translation id="964050462028070434">પાસવર્ડ અને પાસકી મેનેજ કરો…</translation>
 diff --git a/components/strings/components_strings_hi.xtb b/components/strings/components_strings_hi.xtb
-index 6a85c093a5dea..9ce0f2ef8e38a 100644
+index 392cbde3596c0..811d1fe821ba1 100644
 --- a/components/strings/components_strings_hi.xtb
 +++ b/components/strings/components_strings_hi.xtb
 @@ -11,7 +11,7 @@
@@ -150105,7 +150105,7 @@ index af51a7438cfd6..998365f0568fb 100644
  <translation id="981121421437150478">Ónettengt</translation>
  <translation id="98237783946365638">Vistaðu skilríki á öruggan hátt í Google-veski</translation>
 diff --git a/components/strings/components_strings_it.xtb b/components/strings/components_strings_it.xtb
-index 7e3386b971700..0dd997cd20bf0 100644
+index 947eb6e5c4fde..3b8cfd207f4fc 100644
 --- a/components/strings/components_strings_it.xtb
 +++ b/components/strings/components_strings_it.xtb
 @@ -11,7 +11,7 @@
@@ -152393,7 +152393,7 @@ index 7e3386b971700..0dd997cd20bf0 100644
  <translation id="981121421437150478">Offline</translation>
  <translation id="98237783946365638">Salva la carta d'identità in modo sicuro in Google Wallet</translation>
 diff --git a/components/strings/components_strings_iw.xtb b/components/strings/components_strings_iw.xtb
-index 47214be4a7204..dffdd8101bc86 100644
+index 2fc4c878a7ed4..544c32093f087 100644
 --- a/components/strings/components_strings_iw.xtb
 +++ b/components/strings/components_strings_iw.xtb
 @@ -11,7 +11,7 @@
@@ -154687,7 +154687,7 @@ index 47214be4a7204..dffdd8101bc86 100644
  <translation id="981121421437150478">לא מקוון</translation>
  <translation id="98237783946365638">‏שמירת התעודה המזהה באופן מאובטח ב-Google Wallet</translation>
 diff --git a/components/strings/components_strings_ja.xtb b/components/strings/components_strings_ja.xtb
-index 1b32024a414da..5ae432e54d60a 100644
+index e5de0d3e9c098..649947187068e 100644
 --- a/components/strings/components_strings_ja.xtb
 +++ b/components/strings/components_strings_ja.xtb
 @@ -11,7 +11,7 @@
@@ -155490,7 +155490,7 @@ index 1b32024a414da..5ae432e54d60a 100644
 +<translation id="4271652479722040953">拡張機能が Vanadium に追加されると、これらの拡張機能に関するデータが分析のため第三者に送信され、管理者に公開される可能性があります。こうしたデータには、名前、インストール時間、インストール元などの拡張機能に関する情報と、拡張機能に関連するアクティビティ（タブの変更、ウェブサイトへの接続、Cookie へのアクセスなど）が含まれます。このデータは、Vanadium ウェブストアからインストールされた拡張機能と、ストア以外からインストールされた拡張機能の両方について収集されます。</translation>
  <translation id="4275788652681621337">サイドパネルを閉じる</translation>
  <translation id="4275830172053184480">デバイスの再起動</translation>
- <translation id="4276974990916607331">今はしない</translation>
+ <translation id="4276974990916607331">スキップ</translation>
 @@ -1988,7 +1988,7 @@ Chrome からこの提案を削除できます。元のソースは削除され
  <translation id="4306349443295056740">OCSP 署名</translation>
  <translation id="4306529830550717874">住所を保存しますか？</translation>
@@ -165955,7 +165955,7 @@ index 3a70524891312..c4417b3675e5e 100644
  <translation id="981121421437150478">ಆಫ್‌ಲೈನ್</translation>
  <translation id="98237783946365638">Google Wallet ನಲ್ಲಿ ಐಡೆಂಟಿಟಿ ಕಾರ್ಡ್ ಅನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಸೇವ್ ಮಾಡಿ</translation>
 diff --git a/components/strings/components_strings_ko.xtb b/components/strings/components_strings_ko.xtb
-index 254e05b449091..1d5e225540aad 100644
+index 0981fadad120b..94b5f247b13ea 100644
 --- a/components/strings/components_strings_ko.xtb
 +++ b/components/strings/components_strings_ko.xtb
 @@ -31,7 +31,7 @@
@@ -166392,7 +166392,7 @@ index 254e05b449091..1d5e225540aad 100644
  <translation id="4276974990916607331">나중에</translation>
 @@ -1988,7 +1988,7 @@ Chrome에서 이 추천을 삭제할 수 있습니다. 원본 소스는 삭제
  <translation id="4306349443295056740">OCSP 서명</translation>
- <translation id="4306529830550717874">주소를 저장하시겠습니까?</translation>
+ <translation id="4306529830550717874">주소를 저장하시겠어요?</translation>
  <translation id="4306812610847412719">클립보드</translation>
 -<translation id="4308567447483056043">사용자가 제휴되어 있지 않으므로 이 정책은 무시됩니다. 이 정책을 적용하려면 Chrome 브라우저와 프로필을 관리 콘솔에서 같은 조직으로 관리해야 합니다.</translation>
 +<translation id="4308567447483056043">사용자가 제휴되어 있지 않으므로 이 정책은 무시됩니다. 이 정책을 적용하려면 Vanadium 브라우저와 프로필을 관리 콘솔에서 같은 조직으로 관리해야 합니다.</translation>
@@ -171593,7 +171593,7 @@ index 5ba66f9ebc8c8..eccd1e2b75e9b 100644
  <translation id="981121421437150478">ອອຟລາຍນ໌</translation>
  <translation id="98237783946365638">ບັນທຶກບັດປະຈຳຕົວໄວ້ໃນ Google Wallet ຢ່າງປອດໄພ</translation>
 diff --git a/components/strings/components_strings_lt.xtb b/components/strings/components_strings_lt.xtb
-index 73e0d2028bb3e..0de96ed7fa7c7 100644
+index 6f65dc941f759..75f0624abb5a3 100644
 --- a/components/strings/components_strings_lt.xtb
 +++ b/components/strings/components_strings_lt.xtb
 @@ -11,7 +11,7 @@
@@ -173905,7 +173905,7 @@ index 73e0d2028bb3e..0de96ed7fa7c7 100644
  <translation id="981121421437150478">Neprisijungus</translation>
  <translation id="98237783946365638">Išsaugokite asmens tapatybės kortelės duomenis sistemoje „Google Wallet“</translation>
 diff --git a/components/strings/components_strings_lv.xtb b/components/strings/components_strings_lv.xtb
-index 7fd0c00c16286..537d2437426e6 100644
+index c3dfa3ee6ce05..008aeb9222a64 100644
 --- a/components/strings/components_strings_lv.xtb
 +++ b/components/strings/components_strings_lv.xtb
 @@ -11,7 +11,7 @@
@@ -194603,7 +194603,7 @@ index e3f9db7cd0e0a..2faf7c815959f 100644
  <translation id="981121421437150478">Offline</translation>
  <translation id="98237783946365638">Identiteitskaart beveiligd opslaan in Google Wallet</translation>
 diff --git a/components/strings/components_strings_no.xtb b/components/strings/components_strings_no.xtb
-index b154c7b129d3d..3c739daf6a4e7 100644
+index c68f065238045..08aba9a1b02e1 100644
 --- a/components/strings/components_strings_no.xtb
 +++ b/components/strings/components_strings_no.xtb
 @@ -11,7 +11,7 @@
@@ -203075,7 +203075,7 @@ index ee8ec90c4e63e..c2565453b99b5 100644
  <translation id="981121421437150478">Offline</translation>
  <translation id="98237783946365638">Bezpiecznie zapisz dowód tożsamości w Portfelu Google</translation>
 diff --git a/components/strings/components_strings_pt-BR.xtb b/components/strings/components_strings_pt-BR.xtb
-index 6ae2160ccb276..2a447f740116e 100644
+index bdb72b0c7f7b0..bb02fdb3d1594 100644
 --- a/components/strings/components_strings_pt-BR.xtb
 +++ b/components/strings/components_strings_pt-BR.xtb
 @@ -11,7 +11,7 @@
@@ -203104,7 +203104,7 @@ index 6ae2160ccb276..2a447f740116e 100644
  <translation id="1067029985695494416">Detalhes do mecanismo de pesquisa</translation>
  <translation id="1068467933609179019">Configurações do preenchimento automático</translation>
 @@ -62,10 +62,10 @@
- <translation id="1095093219235104018">Encontrar e preencher com o Gemini</translation>
+ <translation id="1095093219235104018">Encontre e preencha com o Gemini</translation>
  <translation id="1096545575934602868">Esse campo não pode ter mais que <ph name="MAX_ITEMS_LIMIT" /> entradas. Todas as outras entradas serão descartadas.</translation>
  <translation id="1099928364755383720">picture-in-picture automático</translation>
 -<translation id="1100782917270858593">Botão "Retomar jornada". Pressione Enter para retomar a jornada e ver as atividades relevantes no seu histórico do Chrome</translation>
@@ -205365,7 +205365,7 @@ index 6ae2160ccb276..2a447f740116e 100644
  <translation id="981121421437150478">Off-line</translation>
  <translation id="98237783946365638">Salvar documento de identidade com segurança na Carteira do Google</translation>
 diff --git a/components/strings/components_strings_pt-PT.xtb b/components/strings/components_strings_pt-PT.xtb
-index 87a882475b79f..65585dc96a59f 100644
+index c896faafdb885..c8116e5191d58 100644
 --- a/components/strings/components_strings_pt-PT.xtb
 +++ b/components/strings/components_strings_pt-PT.xtb
 @@ -11,7 +11,7 @@
@@ -205948,8 +205948,8 @@ index 87a882475b79f..65585dc96a59f 100644
  <translation id="3019738915977809060">Guarde o cartão de embarque na Carteira</translation>
  <translation id="3022959067768579802">Continue a escrever</translation>
  <translation id="3024663005179499861">Tipo de política incorreto</translation>
--<translation id="3027857899292697441">O Chrome detetou detalhes que são comuns em sites associados a phishing, software malicioso ou fraudes. <ph name="BEGIN_LINK" />Saiba mais<ph name="END_LINK" /></translation>
-+<translation id="3027857899292697441">O Vanadium detetou detalhes que são comuns em sites associados a phishing, software malicioso ou fraudes. <ph name="BEGIN_LINK" />Saiba mais<ph name="END_LINK" /></translation>
+-<translation id="3027857899292697441">O Chrome detetou detalhes que são comuns em sites associados a phishing, malware ou fraudes. <ph name="BEGIN_LINK" />Saiba mais<ph name="END_LINK" /></translation>
++<translation id="3027857899292697441">O Vanadium detetou detalhes que são comuns em sites associados a phishing, malware ou fraudes. <ph name="BEGIN_LINK" />Saiba mais<ph name="END_LINK" /></translation>
  <translation id="3027915437837548462">Imagem SVG</translation>
  <translation id="3030331669969285614">Estas sinalizações evitam ou revertem uma alteração interruptiva e estão disponíveis apenas por tempo limitado.</translation>
  <translation id="3033200136993730761">A sua morada de casa pode ajudar a realizar tarefas nos serviços Google, como resultados da pesquisa mais relevantes e direções no Google Maps. Pode editar ou eliminar a sua morada na <ph name="BEGIN_LINK" />Conta Google <ph name="ACCOUNT" /><ph name="END_LINK" />.</translation>
@@ -207311,8 +207311,8 @@ index 87a882475b79f..65585dc96a59f 100644
  <translation id="8151185429379586178">Ferramentas para programadores</translation>
  <translation id="8153865548451212769">{0,plural, =1{A política do administrador não recomenda a transferência deste ficheiro para <ph name="DESTINATION_NAME" />}other{A política do administrador não recomenda a transferência destes ficheiros para <ph name="DESTINATION_NAME" />}}</translation>
  <translation id="8155253549374198915">Últimos separadores abertos</translation>
--<translation id="815805690561372740">O Chrome tem funcionalidades de segurança integradas para proteger o utilizador enquanto navega, como a Navegação Segura do Google, que <ph name="BEGIN_LINK" />encontrou recentemente software malicioso<ph name="END_LINK" /> no site que tentou visitar.</translation>
-+<translation id="815805690561372740">O Vanadium tem funcionalidades de segurança integradas para proteger o utilizador enquanto navega, como a Navegação Segura do Google, que <ph name="BEGIN_LINK" />encontrou recentemente software malicioso<ph name="END_LINK" /> no site que tentou visitar.</translation>
+-<translation id="815805690561372740">O Chrome tem funcionalidades de segurança integradas para proteger o utilizador enquanto navega, como a Navegação Segura do Google, que <ph name="BEGIN_LINK" />encontrou recentemente malware<ph name="END_LINK" /> no site que tentou visitar.</translation>
++<translation id="815805690561372740">O Vanadium tem funcionalidades de segurança integradas para proteger o utilizador enquanto navega, como a Navegação Segura do Google, que <ph name="BEGIN_LINK" />encontrou recentemente malware<ph name="END_LINK" /> no site que tentou visitar.</translation>
  <translation id="8161095570253161196">Retomar navegação</translation>
  <translation id="8163468049564974856">Ative o preenchimento automático para fazer pagamentos online em segurança. As informações do cartão são encriptadas na Carteira do Google.</translation>
  <translation id="8163866351304776260">Perfuração quádrupla à esquerda</translation>
@@ -209965,7 +209965,7 @@ index c363f816f6927..fc9bc4843a9cc 100644
  <translation id="981121421437150478">Offline</translation>
  <translation id="98237783946365638">Salvează în siguranță cartea de identitate în Portofelul Google</translation>
 diff --git a/components/strings/components_strings_ru.xtb b/components/strings/components_strings_ru.xtb
-index 973f96b05a32f..39851a7d1fe87 100644
+index 3b372dd383f0b..4f91685d941e4 100644
 --- a/components/strings/components_strings_ru.xtb
 +++ b/components/strings/components_strings_ru.xtb
 @@ -31,13 +31,13 @@
@@ -222114,7 +222114,7 @@ index 4716cd0b07964..a185d9b056862 100644
  <translation id="981121421437150478">Oflajn</translation>
  <translation id="98237783946365638">Bezbedno sačuvajte ličnu kartu u Google novčaniku</translation>
 diff --git a/components/strings/components_strings_sr.xtb b/components/strings/components_strings_sr.xtb
-index 620d073a3a119..0b07f247be568 100644
+index 8ae3c1979bdd3..aa5f48d6228aa 100644
 --- a/components/strings/components_strings_sr.xtb
 +++ b/components/strings/components_strings_sr.xtb
 @@ -11,7 +11,7 @@
@@ -224426,7 +224426,7 @@ index 620d073a3a119..0b07f247be568 100644
  <translation id="981121421437150478">Офлајн</translation>
  <translation id="98237783946365638">Безбедно сачувајте личну карту у Google новчанику</translation>
 diff --git a/components/strings/components_strings_sv.xtb b/components/strings/components_strings_sv.xtb
-index 0be301ccb33c4..eb795a62ade00 100644
+index d83b826f8cae2..c1e59cde9ebca 100644
 --- a/components/strings/components_strings_sv.xtb
 +++ b/components/strings/components_strings_sv.xtb
 @@ -11,7 +11,7 @@
@@ -232348,7 +232348,7 @@ index af5e08312767e..f2753bd2ec496 100644
  <translation id="963988220224168636">Google Walletకు రెడ్రెస్ నంబర్‌ను సురక్షితంగా జోడించండి</translation>
  <translation id="964050462028070434">పాస్‌వర్డ్‌లను, పాస్-కీలను మేనేజ్ చేయండి…</translation>
 diff --git a/components/strings/components_strings_th.xtb b/components/strings/components_strings_th.xtb
-index 6e42c404cf50a..e5229132797e2 100644
+index f79b97274cc06..8661a267fa976 100644
 --- a/components/strings/components_strings_th.xtb
 +++ b/components/strings/components_strings_th.xtb
 @@ -11,7 +11,7 @@
@@ -234660,7 +234660,7 @@ index 6e42c404cf50a..e5229132797e2 100644
  <translation id="981121421437150478">ออฟไลน์</translation>
  <translation id="98237783946365638">บันทึกบัตรประจำตัวไว้ใน Google Wallet อย่างปลอดภัย</translation>
 diff --git a/components/strings/components_strings_tr.xtb b/components/strings/components_strings_tr.xtb
-index 659f9f0aa3f95..d69a644963125 100644
+index 9d7fd6f998468..8170906010c90 100644
 --- a/components/strings/components_strings_tr.xtb
 +++ b/components/strings/components_strings_tr.xtb
 @@ -11,7 +11,7 @@
@@ -243532,7 +243532,7 @@ index 53d33055baf9c..935585d102818 100644
  <translation id="981121421437150478">Oflayn</translation>
  <translation id="98237783946365638">ID kartani Google Walletga saqlang</translation>
 diff --git a/components/strings/components_strings_vi.xtb b/components/strings/components_strings_vi.xtb
-index d642439bf7a8e..4de16578bd807 100644
+index 81ad4c303fcd6..2e0eb7a5b4aaa 100644
 --- a/components/strings/components_strings_vi.xtb
 +++ b/components/strings/components_strings_vi.xtb
 @@ -11,7 +11,7 @@
@@ -245822,7 +245822,7 @@ index d642439bf7a8e..4de16578bd807 100644
  <translation id="981121421437150478">Ngoại tuyến</translation>
  <translation id="98237783946365638">Lưu thẻ căn cước một cách an toàn vào Google Wallet</translation>
 diff --git a/components/strings/components_strings_zh-CN.xtb b/components/strings/components_strings_zh-CN.xtb
-index 16c1a8736b292..fcbc99bc5c108 100644
+index bcd1eabfe34ca..ab0896a4dcb6f 100644
 --- a/components/strings/components_strings_zh-CN.xtb
 +++ b/components/strings/components_strings_zh-CN.xtb
 @@ -11,7 +11,7 @@
@@ -246144,8 +246144,8 @@ index 16c1a8736b292..fcbc99bc5c108 100644
  <translation id="2224337661447660594">未连接到互联网</translation>
  <translation id="2225927550500503913">虚拟卡已开启</translation>
  <translation id="2226636330183131181"><ph name="BEGIN_LINK" />登录<ph name="END_LINK" /> Wi-Fi 网络</translation>
--<translation id="2228057197024893428">此地址目前已保存到 Chrome。如需在所有 Google 产品中使用此地址，请将它保存到您的 Google 账号 (<ph name="ACCOUNT" />) 中。</translation>
-+<translation id="2228057197024893428">此地址目前已保存到 Vanadium。如需在所有 Google 产品中使用此地址，请将它保存到您的 Google 账号 (<ph name="ACCOUNT" />) 中。</translation>
+-<translation id="2228057197024893428">此地址目前已保存在 Chrome 中。如需在各 Google 产品中通用，请将其保存到您的 Google 账号：<ph name="ACCOUNT" />。</translation>
++<translation id="2228057197024893428">此地址目前已保存在 Vanadium 中。如需在各 Google 产品中通用，请将其保存到您的 Google 账号：<ph name="ACCOUNT" />。</translation>
  <translation id="2229456043301340598">已忽略重复的快捷字词：<ph name="SHORTCUT_NAME" /></translation>
  <translation id="222962001646502673">深灰色 2</translation>
  <translation id="2233041017768270281">{COUNT,plural, =1{1 个标签页}other{# 个标签页}}</translation>
@@ -246632,7 +246632,7 @@ index 16c1a8736b292..fcbc99bc5c108 100644
  <translation id="3748647055058832337">此商家不可用</translation>
 -<translation id="3749600200023337912">系统可能会使用您已保存的自动支付方式来支付此款项。如需在 Chrome 中关闭电子钱包或支付应用，请前往<ph name="BEGIN_LINK1" />支付设置<ph name="END_LINK1" /></translation>
 +<translation id="3749600200023337912">系统可能会使用您已保存的自动支付方式来支付此款项。如需在 Vanadium 中关闭电子钱包或支付应用，请前往<ph name="BEGIN_LINK1" />支付设置<ph name="END_LINK1" /></translation>
- <translation id="3752181611900535304">是否将地址保存到账号？</translation>
+ <translation id="3752181611900535304">要将地址保存到账号吗？</translation>
  <translation id="3752543821772132562">已忽略，因为未设置 <ph name="POLICY_NAME" />。</translation>
  <translation id="3754210790023674521">退出“画中画”模式</translation>
 @@ -1641,11 +1641,11 @@
@@ -246848,7 +246848,7 @@ index 16c1a8736b292..fcbc99bc5c108 100644
 @@ -2143,7 +2143,7 @@
  <translation id="4622292761762557753">仍然转移</translation>
  <translation id="4622647778991854660">在通知中心内启用通知。打开<ph name="LINK" />。</translation>
- <translation id="4623894491222334521">身份文件</translation>
+ <translation id="4623894491222334521">身份证件</translation>
 -<translation id="4627675673814409125">此政策无法在 Chrome 个人资料级别设置，因而会被忽略。</translation>
 +<translation id="4627675673814409125">此政策无法在 Vanadium 个人资料级别设置，因而会被忽略。</translation>
  <translation id="4628948037717959914">照片</translation>
@@ -246953,7 +246953,7 @@ index 16c1a8736b292..fcbc99bc5c108 100644
  <translation id="4968522289500246572">此应用是专为移动设备设计的，可能无法妥当地调整大小。此应用可能会出现问题或重启。</translation>
  <translation id="4968665849807487749">可以询问能否管理您的所有显示屏上的窗口</translation>
 @@ -2389,9 +2389,9 @@
- <translation id="5019293549442035120">您可以在各种 Google 产品中使用已保存的地址。此地址将保存到您的 Google 账号 <ph name="USER_EMAIL" />。</translation>
+ <translation id="5019293549442035120">保存的地址可在各 Google 产品中通用。此地址将保存至您的 Google 账号：<ph name="USER_EMAIL" />。</translation>
  <translation id="5019819206251569004">移动传感器和光传感器</translation>
  <translation id="5019952743397118625">已设置 <ph name="EXTENSION_DEVELOPER_MODE_SETTINGS_POLICY_NAME" /> 政策。<ph name="DEVELOPER_TOOLS_AVAILABILITY_POLICY_NAME" /> 不会控制开发者模式在扩展程序页面上的使用情况。</translation>
 -<translation id="5020862932518041900">无论您是采纳还是忽略建议，Chrome 都会不断学习，确保只为您呈现与您相关的内容</translation>

@@ -2996,7 +2996,7 @@ index 67405dc31ca70..5ad7347a29f5c 100644
  <translation id="5746204836956568669">Nhóm <ph name="NUMBER_OF_TABS" /> thẻ lại với nhau để làm việc nhanh hơn?</translation>
  <translation id="5773295109010386583">Tự động đóng các mục không hoạt động</translation>
 diff --git a/chrome/android/features/tab_ui/java/strings/translations/android_chrome_tab_ui_strings_zh-CN.xtb b/chrome/android/features/tab_ui/java/strings/translations/android_chrome_tab_ui_strings_zh-CN.xtb
-index 06de1fec4239c..3aa9ea2577ad1 100644
+index 69c6d7e001fe9..80bce9f08a978 100644
 --- a/chrome/android/features/tab_ui/java/strings/translations/android_chrome_tab_ui_strings_zh-CN.xtb
 +++ b/chrome/android/features/tab_ui/java/strings/translations/android_chrome_tab_ui_strings_zh-CN.xtb
 @@ -4,7 +4,7 @@
@@ -86918,7 +86918,7 @@ index 71a19b9b9d34a..5772a24381473 100644
  </translationbundle>
 \ No newline at end of file
 diff --git a/chrome/app/resources/chromium_strings_pt-PT.xtb b/chrome/app/resources/chromium_strings_pt-PT.xtb
-index 665219b687ddf..a7ff77398cc98 100644
+index 5662e0fe86605..ef6f5317ffe92 100644
 --- a/chrome/app/resources/chromium_strings_pt-PT.xtb
 +++ b/chrome/app/resources/chromium_strings_pt-PT.xtb
 @@ -3,559 +3,559 @@
@@ -87199,9 +87199,9 @@ index 665219b687ddf..a7ff77398cc98 100644
  <translation id="2738871930057338499">Não é possível ligar à Internet. HTTP 403 proibido. Verifique a sua configuração de proxy.</translation>
  <translation id="2753623023919742414">Clique para pesquisar</translation>
 -<translation id="2768103863314748511">Defina o Chromium como o seu visualizador de PDFs predefinido</translation>
--<translation id="2785438272836277133">Esta extensão contém software malicioso e não é segura. Remova-a do Chromium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
+-<translation id="2785438272836277133">Esta extensão contém malware e não é segura. Remova-a do Chromium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
 +<translation id="2768103863314748511">Defina o Vanadium como o seu visualizador de PDFs predefinido</translation>
-+<translation id="2785438272836277133">Esta extensão contém software malicioso e não é segura. Remova-a do Vanadium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
++<translation id="2785438272836277133">Esta extensão contém malware e não é segura. Remova-a do Vanadium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
  <translation id="2799223571221894425">Reiniciar</translation>
 -<translation id="2803971713792056305">O seu Chromium</translation>
 +<translation id="2803971713792056305">O seu Vanadium</translation>
@@ -87449,7 +87449,7 @@ index 665219b687ddf..a7ff77398cc98 100644
 +<translation id="4415566066719264597">Permitir que o Vanadium seja executado em segundo plano</translation>
 +<translation id="4419831163359812184">{NUM_EXTENSIONS,plural, =1{O Vanadium recomenda que a remova. <ph name="BEGIN_LINK" />Saiba mais sobre as extensões suportadas<ph name="END_LINK" />}other{O Vanadium recomenda que as remova. <ph name="BEGIN_LINK" />Saiba mais sobre as extensões suportadas<ph name="END_LINK" />}}</translation>
 +<translation id="4423735387467980091">Personalizar e controlar o Vanadium</translation>
- <translation id="4427306783828095590">A proteção melhorada vai mais além para bloquear o phishing e o software malicioso.</translation>
+ <translation id="4427306783828095590">A proteção melhorada vai mais além para bloquear o phishing e o malware.</translation>
  <translation id="4434353761996769206">Erro do instalador: <ph name="INSTALLER_ERROR" /></translation>
 -<translation id="4438870983368648614">A <ph name="MANAGER" /> gere o Chromium</translation>
 -<translation id="444069871276811466">Adicionar perfil do Chromium</translation>
@@ -87657,9 +87657,9 @@ index 665219b687ddf..a7ff77398cc98 100644
 +<translation id="5862307444128926510">Damos-lhe as boas-vindas ao Vanadium</translation>
 +<translation id="5867606647614813312">Ativa funcionalidades adicionais para oferecer as proteções mais avançadas do Vanadium</translation>
  <translation id="5871205389137001634">Clique para sair da pesquisa de imagens</translation>
--<translation id="5883558403894052917">O Chromium encontrou software malicioso nestes itens:</translation>
+-<translation id="5883558403894052917">O Chromium encontrou malware nestes itens:</translation>
 -<translation id="5889361821821684993">O Chromium verifica regularmente se o navegador tem as definições mais seguras. Entraremos em contacto consigo se precisar de revisão.</translation>
-+<translation id="5883558403894052917">O Vanadium encontrou software malicioso nestes itens:</translation>
++<translation id="5883558403894052917">O Vanadium encontrou malware nestes itens:</translation>
 +<translation id="5889361821821684993">O Vanadium verifica regularmente se o navegador tem as definições mais seguras. Entraremos em contacto consigo se precisar de revisão.</translation>
  <translation id="5895138241574237353">Reiniciar</translation>
  <translation id="5903106910045431592"><ph name="PAGE_TITLE" /> – Início de sessão na rede</translation>
@@ -87852,8 +87852,8 @@ index 665219b687ddf..a7ff77398cc98 100644
  <translation id="6859580922007887573">Toque para continuar</translation>
  <translation id="6862030660799253820">Pesquise esta imagem com a pesquisa de imagens</translation>
  <translation id="6869568587896659271">Acesso fácil a Websites abaixo da barra de endereço</translation>
--<translation id="6873893289264747459">O Chromium encontrou software malicioso na extensão "<ph name="EXTENSION_NAME" />"</translation>
-+<translation id="6873893289264747459">O Vanadium encontrou software malicioso na extensão "<ph name="EXTENSION_NAME" />"</translation>
+-<translation id="6873893289264747459">O Chromium encontrou malware na extensão "<ph name="EXTENSION_NAME" />"</translation>
++<translation id="6873893289264747459">O Vanadium encontrou malware na extensão "<ph name="EXTENSION_NAME" />"</translation>
  <translation id="6877155553248388166">canto inferior direito da área de pesquisa: direita <ph name="RIGHT" />%, parte inferior <ph name="BOTTOM" />%</translation>
  <translation id="6896758677409633944">Copiar</translation>
  <translation id="6898028264630240901">Pode fixar as Tarefas contextuais para fazer perguntas enquanto navega</translation>
@@ -88235,7 +88235,7 @@ index 665219b687ddf..a7ff77398cc98 100644
 -<translation id="9019929317751753759">Para tornar o Chromium mais seguro, desativámos a seguinte extensão, que não está listada na <ph name="IDS_EXTENSION_WEB_STORE_TITLE" />, e é possível que tenha sido adicionada sem o seu conhecimento.</translation>
 -<translation id="9022552996538154597">Iniciar sessão no Chromium</translation>
 -<translation id="9035791714111278917">Mostrar a pesquisa com o Chromium na barra de menu do Mac e ativar o atalho de teclado</translation>
--<translation id="904366664621834601">O Chromium bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar software malicioso</translation>
+-<translation id="904366664621834601">O Chromium bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar malware</translation>
 -<translation id="9053882453960391422">Mantenha as suas palavras-passe, marcadores e histórico perfeitamente sincronizados entre dispositivos. Atualize o navegador predefinido para o Chromium e aceda facilmente às funcionalidades que conhece e adora. O Chromium vai ser afixado à barra de tarefas para um acesso rápido.</translation>
 -<translation id="9056398481763999048">Use as melhores ferramentas de IA da Google com a app Chromium no telemóvel</translation>
 -<translation id="9062666675513499497">Inicie sessão no Chromium quando inicia sessão noutros serviços Google</translation>
@@ -88245,7 +88245,7 @@ index 665219b687ddf..a7ff77398cc98 100644
 +<translation id="9019929317751753759">Para tornar o Vanadium mais seguro, desativámos a seguinte extensão, que não está listada na <ph name="IDS_EXTENSION_WEB_STORE_TITLE" />, e é possível que tenha sido adicionada sem o seu conhecimento.</translation>
 +<translation id="9022552996538154597">Iniciar sessão no Vanadium</translation>
 +<translation id="9035791714111278917">Mostrar a pesquisa com o Vanadium na barra de menu do Mac e ativar o atalho de teclado</translation>
-+<translation id="904366664621834601">O Vanadium bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar software malicioso</translation>
++<translation id="904366664621834601">O Vanadium bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar malware</translation>
 +<translation id="9053882453960391422">Mantenha as suas palavras-passe, marcadores e histórico perfeitamente sincronizados entre dispositivos. Atualize o navegador predefinido para o Vanadium e aceda facilmente às funcionalidades que conhece e adora. O Vanadium vai ser afixado à barra de tarefas para um acesso rápido.</translation>
 +<translation id="9056398481763999048">Use as melhores ferramentas de IA da Google com a app Vanadium no telemóvel</translation>
 +<translation id="9062666675513499497">Inicie sessão no Vanadium quando inicia sessão noutros serviços Google</translation>
@@ -112297,7 +112297,7 @@ index 17073cf67cd17..0ddec06a6135b 100644
  </translationbundle>
 \ No newline at end of file
 diff --git a/chrome/app/resources/chromium_strings_zh-CN.xtb b/chrome/app/resources/chromium_strings_zh-CN.xtb
-index 6db1c558a5d5e..00ef8dbedf5ef 100644
+index 42a2fb99a4494..6e74e2525be93 100644
 --- a/chrome/app/resources/chromium_strings_zh-CN.xtb
 +++ b/chrome/app/resources/chromium_strings_zh-CN.xtb
 @@ -2,560 +2,560 @@
@@ -113500,7 +113500,7 @@ index 6db1c558a5d5e..00ef8dbedf5ef 100644
 +<translation id="8359544530202147897">请更新 Vanadium，以便继续使用 Google 账号 <ph name="ACCOUNT_EMAIL" /> 中的 Vanadium 数据</translation>
 +<translation id="8360718212975266891">若要接收后续 Vanadium 更新，您需使用 Windows 10 或更高版本。此计算机目前使用的是 Windows 8。</translation>
  <translation id="8362914115861174987">目标语言</translation>
- <translation id="8367705492654390392">有问题，尽管问</translation>
+ <translation id="8367705492654390392">尽情提问</translation>
  <translation id="8370517070665726704">版权所有 <ph name="YEAR" /> Google LLC. 保留所有权利。</translation>
 -<translation id="8372327902843331129">如需获取您所有设备上的密码等信息，请登录 Chromium。登录后，该密码将保存到您的 Google 账号。</translation>
 -<translation id="837460953767177950">然后，您需要重启 Chromium。</translation>
@@ -119732,7 +119732,7 @@ index f00765e2c83ea..612aaa8e2d147 100644
  <translation id="998747458861718449">Ondersoek</translation>
  <translation id="998852291477823323">Die handeling is nie deur die opgestelde beleide toegelaat nie.</translation>
 diff --git a/chrome/app/resources/generated_resources_am.xtb b/chrome/app/resources/generated_resources_am.xtb
-index 9022607749e1a..d043546847b4d 100644
+index dad0e7b9c5c93..897cd157f1817 100644
 --- a/chrome/app/resources/generated_resources_am.xtb
 +++ b/chrome/app/resources/generated_resources_am.xtb
 @@ -98,7 +98,7 @@
@@ -120609,7 +120609,7 @@ index 9022607749e1a..d043546847b4d 100644
  <translation id="964903383988132751">ስለ ቀዳሚው ትር Googleን ጠይቅ፦ <ph name="TAB_TITLE" /></translation>
  <translation id="96535553604365597">Google Cast ላይ ያለውን ችግር ሪፖርት ያድርጉ</translation>
 diff --git a/chrome/app/resources/generated_resources_ar.xtb b/chrome/app/resources/generated_resources_ar.xtb
-index 9c3f85030bf7e..383ea85ba4075 100644
+index 1240f46ccd2ff..3e2cc940f829d 100644
 --- a/chrome/app/resources/generated_resources_ar.xtb
 +++ b/chrome/app/resources/generated_resources_ar.xtb
 @@ -68,7 +68,7 @@
@@ -133515,7 +133515,7 @@ index d41b3776aae88..58926bb2c6de2 100644
  <translation id="964903383988132751">Postavljanje pitanja Googleu o prethodnoj kartici: <ph name="TAB_TITLE" /></translation>
  <translation id="96535553604365597">Prijavite problem s Google Castom</translation>
 diff --git a/chrome/app/resources/generated_resources_ca.xtb b/chrome/app/resources/generated_resources_ca.xtb
-index 03c994ab9ba78..8268e4828171e 100644
+index 34dcb663075a8..10aad1bc30060 100644
 --- a/chrome/app/resources/generated_resources_ca.xtb
 +++ b/chrome/app/resources/generated_resources_ca.xtb
 @@ -68,7 +68,7 @@
@@ -139135,7 +139135,7 @@ index ffe3d4411e244..be4a26d9f04d2 100644
  <translation id="998747458861718449">A&amp;rchwilio</translation>
  <translation id="998852291477823323">Ni chaniatawyd y weithred gan y polisïau a ffurfweddwyd.</translation>
 diff --git a/chrome/app/resources/generated_resources_da.xtb b/chrome/app/resources/generated_resources_da.xtb
-index 057dd424b5e72..9a847df9754f0 100644
+index 45a5b212249df..6826d5926cf56 100644
 --- a/chrome/app/resources/generated_resources_da.xtb
 +++ b/chrome/app/resources/generated_resources_da.xtb
 @@ -68,7 +68,7 @@
@@ -140186,7 +140186,7 @@ index 057dd424b5e72..9a847df9754f0 100644
 -<translation id="4983159853748980742">Din adgangskode blev ikke delt. Tjek din internetforbindelse, og sørg for, at du er logget ind i Chrome. Prøv derefter igen.</translation>
 +<translation id="4983159853748980742">Din adgangskode blev ikke delt. Tjek din internetforbindelse, og sørg for, at du er logget ind i Vanadium. Prøv derefter igen.</translation>
  <translation id="498624032394115435">Alle med linket kan redigere alle faner.</translation>
- <translation id="4986706507552097681">Du kan altid vælge, hvad der skal synkroniseres, i indstillingerne. Google kan personligt tilpasse Søgning og andre tjenester baseret på din historik.</translation>
+ <translation id="4986706507552097681">Du kan altid vælge, hvad der skal synkroniseres, i indstillingerne. Google kan tilpasse Søgning og andre tjenester personligt baseret på din historik.</translation>
  <translation id="4986728572522335985">Denne handling sletter alle data på sikkerhedsnøglen, bl.a. pinkoden</translation>
 @@ -5266,7 +5266,7 @@ Brug Ctrl+Alt+Lysstyrke ned for at zoome ud.</translation>
  <translation id="4989966318180235467">Undersøg &amp;baggrundsside</translation>
@@ -141173,7 +141173,7 @@ index 057dd424b5e72..9a847df9754f0 100644
  <translation id="998747458861718449">U&amp;ndersøg</translation>
  <translation id="998852291477823323">Handlingen var ikke tilladt i henhold til de konfigurerede politikker.</translation>
 diff --git a/chrome/app/resources/generated_resources_de.xtb b/chrome/app/resources/generated_resources_de.xtb
-index c6bd9b99b5150..770f45a445d05 100644
+index 60eab4fa78e8a..21965f3f5a48d 100644
 --- a/chrome/app/resources/generated_resources_de.xtb
 +++ b/chrome/app/resources/generated_resources_de.xtb
 @@ -68,7 +68,7 @@
@@ -141383,7 +141383,7 @@ index c6bd9b99b5150..770f45a445d05 100644
 -<translation id="1784707308176068866">Im Hintergrund ausführen, wenn dies von einer mit Chrome zusammenarbeitenden nativen Anwendung angefordert wird</translation>
 +<translation id="1784707308176068866">Im Hintergrund ausführen, wenn dies von einer mit Vanadium zusammenarbeitenden nativen Anwendung angefordert wird</translation>
  <translation id="1784849162047402014">Gerät verfügt über wenig Speicherplatz</translation>
- <translation id="1784864038959330497">{NUM_SUB_APPS,plural, =1{Durch das Deinstallieren von „<ph name="APP_NAME" />“ wird auch diese App deinstalliert:}other{Durch das Deinstallieren von „<ph name="APP_NAME" />“ werden auch diese Apps deinstalliert:}}</translation>
+ <translation id="1784864038959330497">{NUM_SUB_APPS,plural, =1{Durch das Deinstallieren von <ph name="APP_NAME" /> wird auch diese App deinstalliert:}other{Durch das Deinstallieren von <ph name="APP_NAME" /> werden auch diese Apps deinstalliert:}}</translation>
  <translation id="1785698972112179866">Melde dich an, um auf deine Lesezeichen und weitere Daten von <ph name="DEVICE" /> zuzugreifen</translation>
 @@ -1048,7 +1048,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER" /> p
  <translation id="1805888043020974594">Druckserver</translation>
@@ -145582,7 +145582,7 @@ index 15aa0c3b28a3a..2a67367ff6d00 100644
  <translation id="998747458861718449">Έ&amp;λεγχος</translation>
  <translation id="998852291477823323">Η ενέργεια δεν επιτρέπεται από τις διαμορφωμένες πολιτικές.</translation>
 diff --git a/chrome/app/resources/generated_resources_en-GB.xtb b/chrome/app/resources/generated_resources_en-GB.xtb
-index cb44fcd4353f9..415c763cd3d55 100644
+index a995197490fc3..0f0b4758a2991 100644
 --- a/chrome/app/resources/generated_resources_en-GB.xtb
 +++ b/chrome/app/resources/generated_resources_en-GB.xtb
 @@ -68,7 +68,7 @@
@@ -147761,7 +147761,7 @@ index cb44fcd4353f9..415c763cd3d55 100644
  <translation id="998747458861718449">I&amp;nspect</translation>
  <translation id="998852291477823323">The action was disallowed by the configured policies.</translation>
 diff --git a/chrome/app/resources/generated_resources_es-419.xtb b/chrome/app/resources/generated_resources_es-419.xtb
-index bead5c87ecc19..44ae33e58f10a 100644
+index df4056a0f282f..27974b13fd086 100644
 --- a/chrome/app/resources/generated_resources_es-419.xtb
 +++ b/chrome/app/resources/generated_resources_es-419.xtb
 @@ -68,7 +68,7 @@
@@ -149883,7 +149883,7 @@ index bead5c87ecc19..44ae33e58f10a 100644
  <translation id="998747458861718449">Inspeccionar</translation>
  <translation id="998852291477823323">Las políticas configuradas no permiten la acción.</translation>
 diff --git a/chrome/app/resources/generated_resources_es.xtb b/chrome/app/resources/generated_resources_es.xtb
-index 0970cce795450..4fdbe8e8e7197 100644
+index cfac9fa5147b8..5966a6aeddbc7 100644
 --- a/chrome/app/resources/generated_resources_es.xtb
 +++ b/chrome/app/resources/generated_resources_es.xtb
 @@ -68,7 +68,7 @@
@@ -154164,7 +154164,7 @@ index efbc94fbbc08c..179d170c8d230 100644
  <translation id="998747458861718449">I&amp;nspekteeri</translation>
  <translation id="998852291477823323">Seadistatud eeskirjad ei lubanud toimingut.</translation>
 diff --git a/chrome/app/resources/generated_resources_eu.xtb b/chrome/app/resources/generated_resources_eu.xtb
-index 96515f945275d..f2770eac6e079 100644
+index d8bb3d23af6a1..c3aa23c97d922 100644
 --- a/chrome/app/resources/generated_resources_eu.xtb
 +++ b/chrome/app/resources/generated_resources_eu.xtb
 @@ -68,7 +68,7 @@
@@ -154364,7 +154364,7 @@ index 96515f945275d..f2770eac6e079 100644
  <translation id="1756963401828337401">Aukeratu pantaila bat haren argazki bat ateratzeko</translation>
 -<translation id="17584710573359123">Ikusi Chrome Web Store-n</translation>
 +<translation id="17584710573359123">Ikusi Vanadium Web Store-n</translation>
- <translation id="176013700366797492">Joan Google Diru-zorroa zerbitzura <ph name="BEGIN_LINK1" />datuen eta pribatutasunaren hobespenak<ph name="END_LINK1" /> kontrolatzeko edo <ph name="BEGIN_LINK2" />ordainketa-metodoak<ph name="END_LINK2" /> eta <ph name="BEGIN_LINK3" />txartelak<ph name="END_LINK3" /> kudeatzeko, hala nola fideltasun-txartelak eta nortasun-agiriak</translation>
+ <translation id="176013700366797492">Joan Google Wallet-era <ph name="BEGIN_LINK1" />datuen eta pribatutasunaren hobespenak<ph name="END_LINK1" /> kontrolatzeko edo <ph name="BEGIN_LINK2" />ordainketa-metodoak<ph name="END_LINK2" /> eta <ph name="BEGIN_LINK3" />txartelak<ph name="END_LINK3" /> kudeatzeko, hala nola fideltasun-txartelak eta nortasun-agiriak</translation>
  <translation id="1761402971842586829"><ph name="BUTTON_NAME" /> botoiari <ph name="REMAPPING_OPTION" /> ekintza esleitu zaio.</translation>
  <translation id="1761845175367251960"><ph name="NAME" /> erabiltzailearen kontuak</translation>
 @@ -1048,7 +1048,7 @@ Egiaztatu pasahitzak <ph name="GOOGLE_PASSWORD_MANAGER" /> zerbitzuan.</translat
@@ -155460,7 +155460,7 @@ index 96515f945275d..f2770eac6e079 100644
 -<translation id="5785583009707899920">Chrome-ren fitxategietarako zerbitzu-aplikazioak</translation>
 +<translation id="5785583009707899920">Vanadium-ren fitxategietarako zerbitzu-aplikazioak</translation>
  <translation id="5787420647064736989">Gailuaren izena</translation>
- <translation id="5787582109651427233"><ph name="BEGIN_LINK_LOYALTY_CARDS" />Fideltasun-txartelak<ph name="END_LINK_LOYALTY_CARDS" /> edo Google Pay-ko <ph name="BEGIN_LINK_PAYMENT_METHODS" />ordainketa-metodoak<ph name="END_LINK_PAYMENT_METHODS" /> gehitzeko edo kudeatzeko, joan Google Diru-zorroa zerbitzura</translation>
+ <translation id="5787582109651427233"><ph name="BEGIN_LINK_LOYALTY_CARDS" />Fideltasun-txartelak<ph name="END_LINK_LOYALTY_CARDS" /> edo Google Pay-ko <ph name="BEGIN_LINK_PAYMENT_METHODS" />ordainketa-metodoak<ph name="END_LINK_PAYMENT_METHODS" /> gehitzeko edo kudeatzeko, joan Google Wallet-era</translation>
  <translation id="5789581866075720267">Pasahitzak <ph name="BRAND" /> zerbitzura inportatzeko gailu honetan, hautatu CSV fitxategi bat.</translation>
 @@ -6230,7 +6230,7 @@ Erabilerraztasun-etengailu bat baino gehiago eslei diezazkiokezu ekintza horri.<
  <translation id="5794034487966529952">Arakatzailearen <ph name="NUM_BROWSERS" /> leiho daude irekita <ph name="DESK_TITLE" /> lan-eremuan</translation>
@@ -156322,7 +156322,7 @@ index 96515f945275d..f2770eac6e079 100644
  <translation id="998747458861718449">I&amp;kuskatu</translation>
  <translation id="998852291477823323">Konfiguratutako gidalerroek debekatu dute ekintza.</translation>
 diff --git a/chrome/app/resources/generated_resources_fa.xtb b/chrome/app/resources/generated_resources_fa.xtb
-index 302510ce07075..9b174f53e8b29 100644
+index a8e290329b4d8..6aa653e7c20e9 100644
 --- a/chrome/app/resources/generated_resources_fa.xtb
 +++ b/chrome/app/resources/generated_resources_fa.xtb
 @@ -68,7 +68,7 @@
@@ -164069,7 +164069,7 @@ index 2a9836d6f2ed4..9be1e76e2f98e 100644
  <translation id="998747458861718449">I&amp;nspecter</translation>
  <translation id="998852291477823323">L'action n'a pas été autorisée par les politiques configurées.</translation>
 diff --git a/chrome/app/resources/generated_resources_fr.xtb b/chrome/app/resources/generated_resources_fr.xtb
-index 995afd736824e..ab31b2ed453dc 100644
+index f801b19856967..95aa4c636ce1b 100644
 --- a/chrome/app/resources/generated_resources_fr.xtb
 +++ b/chrome/app/resources/generated_resources_fr.xtb
 @@ -68,7 +68,7 @@
@@ -169868,7 +169868,7 @@ index 5a744e19eb72a..e514e3ba263e1 100644
  <translation id="998747458861718449">ત&amp;પાસ કરો</translation>
  <translation id="998852291477823323">ગોઠવેલી પૉલિસીઓ દ્વારા આ ઍક્શનને મંજૂરી આપવામાં આવી ન હતી.</translation>
 diff --git a/chrome/app/resources/generated_resources_hi.xtb b/chrome/app/resources/generated_resources_hi.xtb
-index cb5fe17132b7d..bf677dd47fdc5 100644
+index fda24db210f88..72eb15ef96589 100644
 --- a/chrome/app/resources/generated_resources_hi.xtb
 +++ b/chrome/app/resources/generated_resources_hi.xtb
 @@ -68,7 +68,7 @@
@@ -181818,7 +181818,7 @@ index dd3e125bb49c5..390ffbe9446c1 100644
  <translation id="998747458861718449">S&amp;koða</translation>
  <translation id="998852291477823323">Stillingar reglnanna leyfðu ekki aðgerðina.</translation>
 diff --git a/chrome/app/resources/generated_resources_it.xtb b/chrome/app/resources/generated_resources_it.xtb
-index 947f175418857..2d9974ea091be 100644
+index 7363d39ce5641..eabcdab1fac6e 100644
 --- a/chrome/app/resources/generated_resources_it.xtb
 +++ b/chrome/app/resources/generated_resources_it.xtb
 @@ -68,7 +68,7 @@
@@ -183916,7 +183916,7 @@ index 947f175418857..2d9974ea091be 100644
  <translation id="998747458861718449">I&amp;speziona</translation>
  <translation id="998852291477823323">L'azione non è stata consentita dalle policy configurate.</translation>
 diff --git a/chrome/app/resources/generated_resources_iw.xtb b/chrome/app/resources/generated_resources_iw.xtb
-index 7765ad54ab1b2..05724c0ca65a8 100644
+index 0d5c7773917a7..7a1bd152b3b0b 100644
 --- a/chrome/app/resources/generated_resources_iw.xtb
 +++ b/chrome/app/resources/generated_resources_iw.xtb
 @@ -68,7 +68,7 @@
@@ -186020,7 +186020,7 @@ index 7765ad54ab1b2..05724c0ca65a8 100644
  <translation id="998747458861718449">&amp;בדיקה</translation>
  <translation id="998852291477823323">כללי המדיניות שהוגדרו אוסרים על ביצוע הפעולה הזאת.</translation>
 diff --git a/chrome/app/resources/generated_resources_ja.xtb b/chrome/app/resources/generated_resources_ja.xtb
-index b6314691982ef..230570dc4932a 100644
+index db8a39711b91e..a016fdbf5ba25 100644
 --- a/chrome/app/resources/generated_resources_ja.xtb
 +++ b/chrome/app/resources/generated_resources_ja.xtb
 @@ -68,7 +68,7 @@
@@ -196368,7 +196368,7 @@ index f4be95d4e93b5..90056d4f0cc0f 100644
  <translation id="998747458861718449">ಪ&amp;ರಿಶೀಲಿಸಿ</translation>
  <translation id="998852291477823323">ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾದ ನೀತಿಗಳಿಂದ ಕ್ರಿಯೆಯನ್ನು ಅನುಮತಿಸಲಾಗಿಲ್ಲ.</translation>
 diff --git a/chrome/app/resources/generated_resources_ko.xtb b/chrome/app/resources/generated_resources_ko.xtb
-index c0389eee45b63..b8f1073ce14aa 100644
+index 9df00a876b15b..97ea9ea01fdaa 100644
 --- a/chrome/app/resources/generated_resources_ko.xtb
 +++ b/chrome/app/resources/generated_resources_ko.xtb
 @@ -122,10 +122,10 @@
@@ -201782,7 +201782,7 @@ index a7c49bb0391f6..ad870fb52acc7 100644
  <translation id="998747458861718449">ກວດ​ກາ</translation>
  <translation id="998852291477823323">ນະໂຍບາຍທີ່ຕັ້ງຄ່າໄວ້ບໍ່ອະນຸຍາດໃຫ້ດຳເນີນການນີ້.</translation>
 diff --git a/chrome/app/resources/generated_resources_lt.xtb b/chrome/app/resources/generated_resources_lt.xtb
-index 95c12e27fe116..ad02d2dd8de9f 100644
+index e821bdbbc395c..9cad7ddc3c6f7 100644
 --- a/chrome/app/resources/generated_resources_lt.xtb
 +++ b/chrome/app/resources/generated_resources_lt.xtb
 @@ -68,7 +68,7 @@
@@ -203934,7 +203934,7 @@ index 95c12e27fe116..ad02d2dd8de9f 100644
  <translation id="998747458861718449">A&amp;pžiūrėti</translation>
  <translation id="998852291477823323">Veiksmas nebuvo leistas dėl sukonfigūruotos politikos.</translation>
 diff --git a/chrome/app/resources/generated_resources_lv.xtb b/chrome/app/resources/generated_resources_lv.xtb
-index d131be30afa43..4fd5089897d1a 100644
+index 3d432e91bcb03..29397b4615835 100644
 --- a/chrome/app/resources/generated_resources_lv.xtb
 +++ b/chrome/app/resources/generated_resources_lv.xtb
 @@ -68,7 +68,7 @@
@@ -206113,7 +206113,7 @@ index d131be30afa43..4fd5089897d1a 100644
  <translation id="998747458861718449">Pārbaudīt</translation>
  <translation id="998852291477823323">Šī darbība tika aizliegta, pamatojoties uz konfigurētajām politikām.</translation>
 diff --git a/chrome/app/resources/generated_resources_mk.xtb b/chrome/app/resources/generated_resources_mk.xtb
-index 985ff4f7b3d80..6d9af21bce562 100644
+index b0fdb22c7b6ab..622ac6f11b220 100644
 --- a/chrome/app/resources/generated_resources_mk.xtb
 +++ b/chrome/app/resources/generated_resources_mk.xtb
 @@ -68,7 +68,7 @@
@@ -220982,7 +220982,7 @@ index 54cc0764d8d2a..3b1e1c9371b05 100644
  <translation id="998747458861718449">निरीक्षण गर्नुहोस्</translation>
  <translation id="998852291477823323">कन्फिगर गरिएका नीतिहरूका कारण यो कार्य गर्न सकिएन।</translation>
 diff --git a/chrome/app/resources/generated_resources_nl.xtb b/chrome/app/resources/generated_resources_nl.xtb
-index 79e304de8610e..a1fc420957110 100644
+index 4fc970bd75aba..ab0f3f04ab120 100644
 --- a/chrome/app/resources/generated_resources_nl.xtb
 +++ b/chrome/app/resources/generated_resources_nl.xtb
 @@ -68,7 +68,7 @@
@@ -222491,7 +222491,7 @@ index 79e304de8610e..a1fc420957110 100644
 @@ -7298,7 +7298,7 @@ Je hebt nog # gehackte wachtwoorden. Google Wachtwoordmanager raadt je aan deze
  <translation id="6619801788773578757">Kiosk-app toevoegen</translation>
  <translation id="6619990499523117484">Je pincode bevestigen</translation>
- <translation id="6621282332208609777">Vraag het aan Google of typ een URL</translation>
+ <translation id="6621282332208609777">Vraag het Google of typ een URL</translation>
 -<translation id="6621391692573306628">Als je dit tabblad naar een ander apparaat wilt sturen, log je op beide apparaten in bij Chrome</translation>
 +<translation id="6621391692573306628">Als je dit tabblad naar een ander apparaat wilt sturen, log je op beide apparaten in bij Vanadium</translation>
  <translation id="6622980291894852883">Afbeeldingen blijven blokkeren</translation>
@@ -230888,7 +230888,7 @@ index 8b5f0f1735af4..32f1935cff230 100644
  <translation id="998747458861718449">&amp;Zbadaj</translation>
  <translation id="998852291477823323">Działanie zostało zablokowane przez skonfigurowane zasady.</translation>
 diff --git a/chrome/app/resources/generated_resources_pt-BR.xtb b/chrome/app/resources/generated_resources_pt-BR.xtb
-index 3733f05189715..149e5a0a42882 100644
+index ddf91a7cb9310..20fc384f1d0f3 100644
 --- a/chrome/app/resources/generated_resources_pt-BR.xtb
 +++ b/chrome/app/resources/generated_resources_pt-BR.xtb
 @@ -68,7 +68,7 @@
@@ -232992,7 +232992,7 @@ index 3733f05189715..149e5a0a42882 100644
  <translation id="998747458861718449">I&amp;nspecionar</translation>
  <translation id="998852291477823323">As políticas configuradas não permitem esta ação.</translation>
 diff --git a/chrome/app/resources/generated_resources_pt-PT.xtb b/chrome/app/resources/generated_resources_pt-PT.xtb
-index 21568dde81a84..8697667449f58 100644
+index 53bd0a4cda035..03915257ff780 100644
 --- a/chrome/app/resources/generated_resources_pt-PT.xtb
 +++ b/chrome/app/resources/generated_resources_pt-PT.xtb
 @@ -68,7 +68,7 @@
@@ -233010,7 +233010,7 @@ index 21568dde81a84..8697667449f58 100644
  <translation id="1064236804542808595">Restaurar atalhos da organização</translation>
 -<translation id="1065369186007547872">O Chrome considera que não quer receber notificações deste site. Por isso, os pedidos são ocultados para reduzir as interrupções.</translation>
 +<translation id="1065369186007547872">O Vanadium considera que não quer receber notificações deste site. Por isso, os pedidos são ocultados para reduzir as interrupções.</translation>
- <translation id="1066964438793906105">Analisar quanto à existência de software malicioso</translation>
+ <translation id="1066964438793906105">Analisar quanto à existência de malware</translation>
  <translation id="1067661089446014701">Para maior segurança, pode encriptar as palavras-passe no seu dispositivo antes de serem guardadas na sua Conta Google</translation>
  <translation id="1067922213147265141">Outros serviços Google</translation>
 @@ -122,10 +122,10 @@
@@ -233723,7 +233723,7 @@ index 21568dde81a84..8697667449f58 100644
  <translation id="3513563267917474897">Controlador de deslize da tonalidade de <ph name="MIN_VALUE" /> a <ph name="MAX_VALUE" /></translation>
 -<translation id="3514647716686280777">Vai obter a proteção de segurança padrão. Para obter mais proteção contra Websites, transferências e extensões perigosos, ative a Navegação segura melhorada nas definições do Chrome.</translation>
 +<translation id="3514647716686280777">Vai obter a proteção de segurança padrão. Para obter mais proteção contra Websites, transferências e extensões perigosos, ative a Navegação segura melhorada nas definições do Vanadium.</translation>
- <translation id="3514681096978190000">Este ficheiro de arquivo inclui outros ficheiros que podem ocultar software malicioso</translation>
+ <translation id="3514681096978190000">Este ficheiro de arquivo inclui outros ficheiros que podem ocultar malware</translation>
  <translation id="3515783508789430906">Está disponível uma nova versão (<ph name="VERSION" />). Reinicie a app para aplicar a atualização. Pode perder os dados não guardados.</translation>
  <translation id="3515983984924808886">Toque novamente na chave de segurança para confirmar a reposição. Todas as informações armazenadas na chave de segurança, incluindo o respetivo PIN, serão eliminadas.</translation>
 @@ -3355,7 +3355,7 @@ Quer pará-lo?</translation>
@@ -234075,7 +234075,7 @@ index 21568dde81a84..8697667449f58 100644
 @@ -5243,7 +5243,7 @@ Use Ctrl + Alt + Diminuir o brilho para diminuir o zoom.</translation>
  <translation id="4979263087381759787">Opções de programador</translation>
  <translation id="4979510648199782334">Configuração do Microsoft 365 concluída</translation>
- <translation id="4980805016576257426">Esta extensão contém um software malicioso.</translation>
+ <translation id="4980805016576257426">Esta extensão contém um malware.</translation>
 -<translation id="4983159853748980742">A sua palavra-passe não foi partilhada. Verifique a ligação à Internet e certifique-se de que tem sessão iniciada no Chrome. Em seguida, tente novamente.</translation>
 +<translation id="4983159853748980742">A sua palavra-passe não foi partilhada. Verifique a ligação à Internet e certifique-se de que tem sessão iniciada no Vanadium. Em seguida, tente novamente.</translation>
  <translation id="498624032394115435">Qualquer pessoa com o link pode editar todos os separadores.</translation>
@@ -237314,7 +237314,7 @@ index 344fc2b329c92..0682b205004aa 100644
  <translation id="998747458861718449">I&amp;nspectează</translation>
  <translation id="998852291477823323">Acțiunea a fost interzisă de politicile configurate.</translation>
 diff --git a/chrome/app/resources/generated_resources_ru.xtb b/chrome/app/resources/generated_resources_ru.xtb
-index b4583382b2646..900c1ea75062a 100644
+index bee094da9a981..a6bb3bae718f4 100644
 --- a/chrome/app/resources/generated_resources_ru.xtb
 +++ b/chrome/app/resources/generated_resources_ru.xtb
 @@ -68,7 +68,7 @@
@@ -248974,7 +248974,7 @@ index 0999268400121..9dd997755d4e6 100644
  <translation id="998747458861718449">P&amp;regledaj</translation>
  <translation id="998852291477823323">Konfigurisane smernice nisu dozvolile radnju.</translation>
 diff --git a/chrome/app/resources/generated_resources_sr.xtb b/chrome/app/resources/generated_resources_sr.xtb
-index eb1c485195302..9215b29756800 100644
+index a04c178267136..84f092bc1ad5d 100644
 --- a/chrome/app/resources/generated_resources_sr.xtb
 +++ b/chrome/app/resources/generated_resources_sr.xtb
 @@ -68,7 +68,7 @@
@@ -251158,7 +251158,7 @@ index eb1c485195302..9215b29756800 100644
  <translation id="998747458861718449">П&amp;регледај</translation>
  <translation id="998852291477823323">Конфигурисане смернице нису дозволиле радњу.</translation>
 diff --git a/chrome/app/resources/generated_resources_sv.xtb b/chrome/app/resources/generated_resources_sv.xtb
-index 17d8e996ba2c1..e41fb0bb476da 100644
+index 6e1c13be19651..2d9966d357b64 100644
 --- a/chrome/app/resources/generated_resources_sv.xtb
 +++ b/chrome/app/resources/generated_resources_sv.xtb
 @@ -68,7 +68,7 @@
@@ -258265,7 +258265,7 @@ index 7b18aba56848d..dee182cc1ade4 100644
  <translation id="998747458861718449">ప&amp;ర్యవేక్షించు</translation>
  <translation id="998852291477823323">కాన్ఫిగర్ చేసిన పాలసీల ద్వారా చర్య అనుమతించబడలేదు.</translation>
 diff --git a/chrome/app/resources/generated_resources_th.xtb b/chrome/app/resources/generated_resources_th.xtb
-index 627bfb685a30e..f6c94d427ab77 100644
+index 0f2a7ae6720d8..66b997285926f 100644
 --- a/chrome/app/resources/generated_resources_th.xtb
 +++ b/chrome/app/resources/generated_resources_th.xtb
 @@ -68,7 +68,7 @@
@@ -260451,7 +260451,7 @@ index 627bfb685a30e..f6c94d427ab77 100644
  <translation id="998747458861718449">&amp;ตรวจสอบ</translation>
  <translation id="998852291477823323">นโยบายที่กำหนดค่าไว้ไม่อนุญาตให้ดำเนินการนี้</translation>
 diff --git a/chrome/app/resources/generated_resources_tr.xtb b/chrome/app/resources/generated_resources_tr.xtb
-index 09606fd274add..f6b45e0e69caf 100644
+index a90f80b3ab7fd..b8a565a5d9e26 100644
 --- a/chrome/app/resources/generated_resources_tr.xtb
 +++ b/chrome/app/resources/generated_resources_tr.xtb
 @@ -68,7 +68,7 @@
@@ -268772,7 +268772,7 @@ index 0ea8aebbc64cb..a3a2868fcf23c 100644
  <translation id="998747458861718449">Kodini ko‘rish</translation>
  <translation id="998852291477823323">Amal sozlangan siyosatlar tomonidan taqiqlangan.</translation>
 diff --git a/chrome/app/resources/generated_resources_vi.xtb b/chrome/app/resources/generated_resources_vi.xtb
-index 3fbff4fb230bb..e7201d0b7b6b0 100644
+index 7d37ff7b75f57..aeecae4103402 100644
 --- a/chrome/app/resources/generated_resources_vi.xtb
 +++ b/chrome/app/resources/generated_resources_vi.xtb
 @@ -68,7 +68,7 @@
@@ -270872,7 +270872,7 @@ index 3fbff4fb230bb..e7201d0b7b6b0 100644
  <translation id="998747458861718449">K&amp;iểm tra</translation>
  <translation id="998852291477823323">Hành động này không được phép theo các chính sách đã thiết lập.</translation>
 diff --git a/chrome/app/resources/generated_resources_zh-CN.xtb b/chrome/app/resources/generated_resources_zh-CN.xtb
-index 9dde0488ac56f..d272f1d3e2710 100644
+index 95ba8508c3700..27508901001c0 100644
 --- a/chrome/app/resources/generated_resources_zh-CN.xtb
 +++ b/chrome/app/resources/generated_resources_zh-CN.xtb
 @@ -68,7 +68,7 @@
@@ -270968,7 +270968,7 @@ index 9dde0488ac56f..d272f1d3e2710 100644
  <translation id="1500297251995790841">未知设备 [<ph name="VENDOR_ID" />:<ph name="PRODUCT_ID" />]</translation>
 -<translation id="1500801317528437432">详细了解不受支持的 Chrome 应用</translation>
 +<translation id="1500801317528437432">详细了解不受支持的 Vanadium 应用</translation>
- <translation id="1501480321619201731">删除群组</translation>
+ <translation id="1501480321619201731">删除标签页组</translation>
  <translation id="150411034776756821">移除 <ph name="SITE" /></translation>
  <translation id="1504253885059472207">固定拆分视图</translation>
 @@ -670,7 +670,7 @@
@@ -271321,7 +271321,7 @@ index 9dde0488ac56f..d272f1d3e2710 100644
 -<translation id="2670168377011445813">如果 Chrome 发现您的密码在公开数据泄露事件中外泄，Google 密码管理工具可能会在您登录时建议更改密码。<ph name="BEGIN_LINK" />详细了解自动更改密码<ph name="END_LINK" /></translation>
 +<translation id="2670102641511624474"><ph name="APP_NAME" /> 正在共享 Vanadium 标签页。</translation>
 +<translation id="2670168377011445813">如果 Vanadium 发现您的密码在公开数据泄露事件中外泄，Google 密码管理工具可能会在您登录时建议更改密码。<ph name="BEGIN_LINK" />详细了解自动更改密码<ph name="END_LINK" /></translation>
- <translation id="2670350619068134931">经过简化的动画</translation>
+ <translation id="2670350619068134931">减弱动画效果</translation>
  <translation id="2670403088701171361">不允许网站查看您剪贴板中的文字或图片</translation>
  <translation id="2671423594960767771">共享分组</translation>
  <translation id="2671451824761031126">您的书签和设置已就绪</translation>
@@ -271378,7 +271378,7 @@ index 9dde0488ac56f..d272f1d3e2710 100644
 @@ -2479,7 +2479,7 @@
  <translation id="2893318819023133318">反转视图</translation>
  <translation id="2894596417096093634">崩溃报告标识符</translation>
- <translation id="2894757982205307093">在分组内添加新标签页</translation>
+ <translation id="2894757982205307093">在组内添加新标签页</translation>
 -<translation id="2895194086130800590">仅当此设备处于唤醒状态且 Chrome 正在运行时，Gemini Spark 才能在此设备上使用自动浏览功能。</translation>
 +<translation id="2895194086130800590">仅当此设备处于唤醒状态且 Vanadium 正在运行时，Gemini Spark 才能在此设备上使用自动浏览功能。</translation>
  <translation id="289695669188700754">密钥 ID：<ph name="KEY_ID" /></translation>
@@ -272645,7 +272645,7 @@ index 9dde0488ac56f..d272f1d3e2710 100644
 -<translation id="7517959947270534934">您的家庭成员目前无法接收密码。请让他们更新 Chrome 并同步其密码。</translation>
 +<translation id="7517959947270534934">您的家庭成员目前无法接收密码。请让他们更新 Vanadium 并同步其密码。</translation>
  <translation id="7518079994230200553">目前无法使用此选项。</translation>
- <translation id="752021853309481824">如需在您的所有设备上获取已保存的信息等，请以 <ph name="EMAIL" /> 的身份登录</translation>
+ <translation id="752021853309481824">如需获取您所有设备上保存的各种信息，请以 <ph name="EMAIL" /> 的身份登录</translation>
  <translation id="7520766081042531487">无痕式门户网站：<ph name="SUBFRAME_SITE" /></translation>
 @@ -8627,11 +8627,11 @@
  <translation id="764178579712141045">已添加 <ph name="USER_EMAIL" /></translation>
@@ -275237,7 +275237,7 @@ index be968d516fcfb..c0bc655529d8a 100644
  <translation id="998747458861718449">檢查(&amp;N)</translation>
  <translation id="998852291477823323">所設定的政策不允許此操作。</translation>
 diff --git a/chrome/app/resources/generated_resources_zh-TW.xtb b/chrome/app/resources/generated_resources_zh-TW.xtb
-index 6ca522f4c8cb7..08c4dcaef2a99 100644
+index 0645313e13b8d..c57dec790d860 100644
 --- a/chrome/app/resources/generated_resources_zh-TW.xtb
 +++ b/chrome/app/resources/generated_resources_zh-TW.xtb
 @@ -68,7 +68,7 @@
@@ -276925,7 +276925,7 @@ index 6ca522f4c8cb7..08c4dcaef2a99 100644
  <translation id="7181976109296206547">查看標誌、名稱和網址更新</translation>
  <translation id="7182051712900867547">使用其他帳戶</translation>
 @@ -8165,7 +8165,7 @@
- <translation id="7287949630503871403">儲存在應用程式中的資料量：</translation>
+ <translation id="7287949630503871403">儲存在應用程式中的資料量</translation>
  <translation id="7288676996127329262"><ph name="HORIZONTAL_DPI" />x<ph name="VERTICAL_DPI" /> dpi</translation>
  <translation id="7288761372977133974">最近的<ph name="SUBJECT" /> AI 主題 <ph name="INDEX" /></translation>
 -<translation id="7289049772085228972">目前採用 Chrome 最強大的安全防護機制</translation>
@@ -352566,7 +352566,7 @@ index 854c18e0d86e8..ca49b5f96c03b 100644
  </translationbundle>
 \ No newline at end of file
 diff --git a/chrome/app/resources/google_chrome_strings_nl.xtb b/chrome/app/resources/google_chrome_strings_nl.xtb
-index 6b0ccb19a06cf..b3199ce40aa8b 100644
+index 2c5e794419071..2bb8e3f510dba 100644
 --- a/chrome/app/resources/google_chrome_strings_nl.xtb
 +++ b/chrome/app/resources/google_chrome_strings_nl.xtb
 @@ -1,64 +1,64 @@
@@ -353466,11 +353466,11 @@ index 6b0ccb19a06cf..b3199ce40aa8b 100644
 +<translation id="6177442314419606057">Zoeken in Vanadium</translation>
 +<translation id="6180522807229584611">Dit tabblad gebruikt extra resources. Sta toe dat Vanadium het inactief maakt om de prestaties te verbeteren.</translation>
  <translation id="6182736845697986886">De installatie is mislukt vanwege een interne fout met de updateserver.</translation>
--<translation id="6192058120268468905">Je account in Chrome</translation>
+-<translation id="6192058120268468905">Account in Chrome</translation>
 -<translation id="6195202018542972563">Zoeken met Chrome tonen in systeemvak en sneltoets aanzetten</translation>
 -<translation id="6235018212288296708">Inkomende regel zodat Google Chrome mDNS-verkeer toestaat.</translation>
 -<translation id="624230925347970731">Chrome wordt zo meteen gesloten</translation>
-+<translation id="6192058120268468905">Je account in Vanadium</translation>
++<translation id="6192058120268468905">Account in Vanadium</translation>
 +<translation id="6195202018542972563">Zoeken met Vanadium tonen in systeemvak en sneltoets aanzetten</translation>
 +<translation id="6235018212288296708">Inkomende regel zodat Vanadium mDNS-verkeer toestaat.</translation>
 +<translation id="624230925347970731">Vanadium wordt zo meteen gesloten</translation>
@@ -353774,7 +353774,7 @@ index 6b0ccb19a06cf..b3199ce40aa8b 100644
 -<translation id="778331955594035129">Chrome heeft locatierechten nodig voor deze site</translation>
 -<translation id="7787950393032327779">Het profiel lijkt te worden gebruikt door een ander proces in Google Chrome (<ph name="PROCESS_ID" />) op een andere computer (<ph name="HOST_NAME" />). Het profiel is vergrendeld zodat het niet wordt beschadigd. Als je zeker weet dat dit profiel niet door andere processen wordt gebruikt, kun je het profiel ontgrendelen en Chrome opnieuw starten.</translation>
 -<translation id="7801699035218095297">Google Chrome probeert wachtwoorden te kopiëren. Geef je Windows-wachtwoord op om dit toe te staan.</translation>
--<translation id="7804364787702057554">Je account in Chrome</translation>
+-<translation id="7804364787702057554">Account in Chrome</translation>
 -<translation id="7804947029129221742">Je zoekmachine is gewijzigd buiten Chrome om. Chrome heeft deze gereset naar de oorspronkelijke standaardinstelling om je te beschermen. <ph name="LEARN_MORE_LINK" /></translation>
 -<translation id="7808348361785373670">Verwijderen uit Chrome…</translation>
 -<translation id="7827099906024714326">Chrome moet verifiëren dat jij het bent voordat bepaalde gegevens kunnen worden opgeslagen in je Google-account en op al je apparaten kunnen worden gebruikt. Als je nu uitlogt, worden deze gegevens verwijderd.</translation>
@@ -353786,7 +353786,7 @@ index 6b0ccb19a06cf..b3199ce40aa8b 100644
 +<translation id="778331955594035129">Vanadium heeft locatierechten nodig voor deze site</translation>
 +<translation id="7787950393032327779">Het profiel lijkt te worden gebruikt door een ander proces in Vanadium (<ph name="PROCESS_ID" />) op een andere computer (<ph name="HOST_NAME" />). Het profiel is vergrendeld zodat het niet wordt beschadigd. Als je zeker weet dat dit profiel niet door andere processen wordt gebruikt, kun je het profiel ontgrendelen en Vanadium opnieuw starten.</translation>
 +<translation id="7801699035218095297">Vanadium probeert wachtwoorden te kopiëren. Geef je Windows-wachtwoord op om dit toe te staan.</translation>
-+<translation id="7804364787702057554">Je account in Vanadium</translation>
++<translation id="7804364787702057554">Account in Vanadium</translation>
 +<translation id="7804947029129221742">Je zoekmachine is gewijzigd buiten Vanadium om. Vanadium heeft deze gereset naar de oorspronkelijke standaardinstelling om je te beschermen. <ph name="LEARN_MORE_LINK" /></translation>
 +<translation id="7808348361785373670">Verwijderen uit Vanadium…</translation>
 +<translation id="7827099906024714326">Vanadium moet verifiëren dat jij het bent voordat bepaalde gegevens kunnen worden opgeslagen in je Google-account en op al je apparaten kunnen worden gebruikt. Als je nu uitlogt, worden deze gegevens verwijderd.</translation>
@@ -361142,7 +361142,7 @@ index 6afd2bebf6b68..efb7050adad78 100644
  </translationbundle>
 \ No newline at end of file
 diff --git a/chrome/app/resources/google_chrome_strings_pt-PT.xtb b/chrome/app/resources/google_chrome_strings_pt-PT.xtb
-index c268ab847c3eb..4ad1c4ce40f8b 100644
+index d52a7058324b1..7aec353ea27ac 100644
 --- a/chrome/app/resources/google_chrome_strings_pt-PT.xtb
 +++ b/chrome/app/resources/google_chrome_strings_pt-PT.xtb
 @@ -1,62 +1,62 @@
@@ -361375,20 +361375,20 @@ index c268ab847c3eb..4ad1c4ce40f8b 100644
 +<translation id="2301513536169703857">Para aceder às suas palavras-passe, marcadores e muito mais em todos os seus dispositivos, inicie sessão no Vanadium</translation>
  <translation id="2307973900865360088">Manter na Dock</translation>
 -<translation id="2309047409763057870">Esta é uma instalação secundária do Google Chrome, pelo que não pode tornar-se o navegador predefinido.</translation>
--<translation id="2345992953227471816">O Chrome encontrou software malicioso nestas extensões:</translation>
+-<translation id="2345992953227471816">O Chrome encontrou malware nestas extensões:</translation>
 +<translation id="2309047409763057870">Esta é uma instalação secundária do Vanadium, pelo que não pode tornar-se o navegador predefinido.</translation>
-+<translation id="2345992953227471816">O Vanadium encontrou software malicioso nestas extensões:</translation>
++<translation id="2345992953227471816">O Vanadium encontrou malware nestas extensões:</translation>
  <translation id="2359808026110333948">Continuar</translation>
  <translation id="2403703063067034158">Erro de arranque: está a ser executada outra instância da configuração. Tente mais tarde.</translation>
 -<translation id="2409816192575564775">{NUM_DEVICES,plural, =0{Uma ou mais extensões do Chrome estavam a aceder a 1 dispositivo HID}=1{Uma ou mais extensões do Chrome estão a aceder a 1 dispositivo HID}other{Uma ou mais extensões do Chrome estão a aceder a # dispositivos HID}}</translation>
 -<translation id="2424440923901031101">Esta extensão viola a Política da Web Store do Chrome e pode não ser segura. Remova-a do Chrome para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
 -<translation id="2467438592969358367">O Google Chrome quer exportar as suas palavras-passe. Escreva a sua palavra-passe do Windows para permitir esta ação.</translation>
--<translation id="2472092250898121027">Esta extensão contém software malicioso e não é segura. Remova-a do Chrome para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
+-<translation id="2472092250898121027">Esta extensão contém malware e não é segura. Remova-a do Chrome para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
 -<translation id="2482846200327569645"><ph name="EXISTING_USER" /> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Chrome no seu perfil como <ph name="USER_EMAIL_ADDRESS" />. Também tem acesso aos seus marcadores e muito mais do <ph name="DEVICE" />.</translation>
 +<translation id="2409816192575564775">{NUM_DEVICES,plural, =0{Uma ou mais extensões do Vanadium estavam a aceder a 1 dispositivo HID}=1{Uma ou mais extensões do Vanadium estão a aceder a 1 dispositivo HID}other{Uma ou mais extensões do Vanadium estão a aceder a # dispositivos HID}}</translation>
 +<translation id="2424440923901031101">Esta extensão viola a Política da Web Store do Vanadium e pode não ser segura. Remova-a do Vanadium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
 +<translation id="2467438592969358367">O Vanadium quer exportar as suas palavras-passe. Escreva a sua palavra-passe do Windows para permitir esta ação.</translation>
-+<translation id="2472092250898121027">Esta extensão contém software malicioso e não é segura. Remova-a do Vanadium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
++<translation id="2472092250898121027">Esta extensão contém malware e não é segura. Remova-a do Vanadium para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo as suas informações pessoais.</translation>
 +<translation id="2482846200327569645"><ph name="EXISTING_USER" /> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Vanadium no seu perfil como <ph name="USER_EMAIL_ADDRESS" />. Também tem acesso aos seus marcadores e muito mais do <ph name="DEVICE" />.</translation>
  <translation id="2485422356828889247">Desinstalar</translation>
  <translation id="2513154137948333830">Reinício necessário: <ph name="INSTALL_SUCCESS" /></translation>
@@ -361513,11 +361513,11 @@ index c268ab847c3eb..4ad1c4ce40f8b 100644
  <translation id="310459126943037700">Falha ao terminar as tarefas.</translation>
  <translation id="3104828284009500087">Pesquise qualquer conteúdo na página</translation>
 -<translation id="3112458742631356345">O Chrome bloqueou esta transferência porque o ficheiro não é habitualmente transferido e pode ser perigoso</translation>
--<translation id="3119573284443908657">O Chrome bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar software malicioso</translation>
+-<translation id="3119573284443908657">O Chrome bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar malware</translation>
 -<translation id="3124332159330678621">Personalize o Chrome para dar um novo aspeto ao seu navegador</translation>
 -<translation id="3125851611828811913">Pesquisar e fazer perguntas em qualquer lugar, mesmo que o Chrome esteja minimizado. Permite que o Chrome seja executado em segundo plano.</translation>
 +<translation id="3112458742631356345">O Vanadium bloqueou esta transferência porque o ficheiro não é habitualmente transferido e pode ser perigoso</translation>
-+<translation id="3119573284443908657">O Vanadium bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar software malicioso</translation>
++<translation id="3119573284443908657">O Vanadium bloqueou esta transferência porque o ficheiro de arquivo inclui outros ficheiros que podem ocultar malware</translation>
 +<translation id="3124332159330678621">Personalize o Vanadium para dar um novo aspeto ao seu navegador</translation>
 +<translation id="3125851611828811913">Pesquisar e fazer perguntas em qualquer lugar, mesmo que o Vanadium esteja minimizado. Permite que o Vanadium seja executado em segundo plano.</translation>
  <translation id="3130333203120345554">Nova pesquisa</translation>
@@ -361607,9 +361607,9 @@ index c268ab847c3eb..4ad1c4ce40f8b 100644
 +<translation id="3635073343384702370">O Vanadium consegue verificar as suas palavras-passe quando as guarda</translation>
 +<translation id="3636970668267555808">Defina o Vanadium como o seu navegador predefinido para ter acesso fácil às funcionalidades que conhece, adora e em que confia.</translation>
  <translation id="3667616615096815454">Não é possível instalar. O servidor não reconhece a aplicação.</translation>
--<translation id="3673813398384385993">O Chrome encontrou software malicioso na extensão "<ph name="EXTENSION_NAME" />"</translation>
+-<translation id="3673813398384385993">O Chrome encontrou malware na extensão "<ph name="EXTENSION_NAME" />"</translation>
 -<translation id="3697952514309507634">Outros perfis do Chrome</translation>
-+<translation id="3673813398384385993">O Vanadium encontrou software malicioso na extensão "<ph name="EXTENSION_NAME" />"</translation>
++<translation id="3673813398384385993">O Vanadium encontrou malware na extensão "<ph name="EXTENSION_NAME" />"</translation>
 +<translation id="3697952514309507634">Outros perfis do Vanadium</translation>
  <translation id="3703994572283698466">A criação do ChromeOS foi possível devido a <ph name="BEGIN_LINK_CROS_OSS" />software de código aberto<ph name="END_LINK_CROS_OSS" /> adicional, como o <ph name="BEGIN_LINK_LINUX_OSS" />ambiente de programação Linux<ph name="END_LINK_LINUX_OSS" />.</translation>
  <translation id="3716540481907974026">Versão do ChromeOS Flex</translation>
@@ -361730,7 +361730,7 @@ index c268ab847c3eb..4ad1c4ce40f8b 100644
 +<translation id="4381814455597163081">Está a ajudar a melhorar o Vanadium enviando estatísticas de utilização e relatórios de falhas para a Google. <ph name="BEGIN_LINK" />Faça a gestão<ph name="END_LINK" /></translation>
 +<translation id="4389991535395284064">Ao navegar no Modo de navegação anónima, o Vanadium envia-lhe um aviso antes de carregar um site através de uma ligação insegura</translation>
  <translation id="4400772909124543403">Nenhuma atualização disponível</translation>
- <translation id="4427306783828095590">A proteção melhorada vai mais além para bloquear o phishing e o software malicioso.</translation>
+ <translation id="4427306783828095590">A proteção melhorada vai mais além para bloquear o phishing e o malware.</translation>
  <translation id="4434353761996769206">Erro do instalador: <ph name="INSTALLER_ERROR" /></translation>
 -<translation id="4437295824090654417">Partilhe este documento com o Gemini no Chrome para obter uma vista geral rápida e fazer perguntas de seguimento</translation>
 -<translation id="4450664632294415862">Chrome – Início de sessão na rede – <ph name="PAGE_TITLE" /></translation>
@@ -380821,7 +380821,7 @@ index f4f8b5c410945..7249a7d561826 100644
  </translationbundle>
 \ No newline at end of file
 diff --git a/chrome/app/resources/google_chrome_strings_tr.xtb b/chrome/app/resources/google_chrome_strings_tr.xtb
-index 4e2b81f547c6f..0f0b5d7226292 100644
+index d73c79778f46c..afa460b74fbed 100644
 --- a/chrome/app/resources/google_chrome_strings_tr.xtb
 +++ b/chrome/app/resources/google_chrome_strings_tr.xtb
 @@ -1,62 +1,62 @@
@@ -381200,8 +381200,8 @@ index 4e2b81f547c6f..0f0b5d7226292 100644
 +<translation id="3124332159330678621">Tarayıcınıza yeni bir görünüm kazandırmak için Vanadium'u özelleştirin</translation>
 +<translation id="3125851611828811913">Vanadium simge durumuna küçültülmüş olsa bile her yerden arama yapın ve soru sorun. Vanadium'un arka planda çalışmasına izin verir.</translation>
  <translation id="3130333203120345554">Yeni arama</translation>
--<translation id="3135560418014806498">Chrome Profili Ekle</translation>
-+<translation id="3135560418014806498">Vanadium Profili Ekle</translation>
+-<translation id="3135560418014806498">Chrome Profili Ekleyin</translation>
++<translation id="3135560418014806498">Vanadium Profili Ekleyin</translation>
  <translation id="3137969841538672700">Aramak için sürükleyin</translation>
 -<translation id="3140883423282498090">Yaptığınız değişiklikler Google Chrome'u yeniden başlattığınızda geçerli olacak.</translation>
 -<translation id="3149510190863420837">Chrome Uygulamaları</translation>
@@ -382182,11 +382182,11 @@ index 4e2b81f547c6f..0f0b5d7226292 100644
  <translation id="8712637175834984815">Anladım</translation>
 -<translation id="8712767363896337380">Güncel hale gelmek üzere. Güncellemenin tamamlanması için Chrome'u yeniden başlatın.</translation>
 -<translation id="8717554232729236539"><ph name="EXISTING_USER" /> zaten oturum açmış durumda. Göz atma işlemlerinizi ayrı tutmak için Chrome'da kendi profilinizde <ph name="USER_EMAIL_ADDRESS" /> olarak oturum açın. Ayrıca, <ph name="DEVICE" /> içindeki okuma listenize ve diğer öğelere de erişebilirsiniz.</translation>
--<translation id="8718062187489036808">Chrome Oturumunu Kapat</translation>
+-<translation id="8718062187489036808">Chrome Oturumunuzu Kapatın</translation>
 -<translation id="873133009373065397">Google Chrome, varsayılan tarayıcıyı tespit edemiyor veya ayarlayamıyor</translation>
 +<translation id="8712767363896337380">Güncel hale gelmek üzere. Güncellemenin tamamlanması için Vanadium'u yeniden başlatın.</translation>
 +<translation id="8717554232729236539"><ph name="EXISTING_USER" /> zaten oturum açmış durumda. Göz atma işlemlerinizi ayrı tutmak için Vanadium'da kendi profilinizde <ph name="USER_EMAIL_ADDRESS" /> olarak oturum açın. Ayrıca, <ph name="DEVICE" /> içindeki okuma listenize ve diğer öğelere de erişebilirsiniz.</translation>
-+<translation id="8718062187489036808">Vanadium Oturumunu Kapat</translation>
++<translation id="8718062187489036808">Vanadium Oturumunuzu Kapatın</translation>
 +<translation id="873133009373065397">Vanadium, varsayılan tarayıcıyı tespit edemiyor veya ayarlayamıyor</translation>
  <translation id="8747073452963259673">arama alanının sol alt köşesi: sol %<ph name="LEFT" />, alt %<ph name="BOTTOM" /></translation>
 -<translation id="8748735421235723888">Chrome, etkin olmayan sekmelerdeki belleği boşaltır. Böylece, etkin sekmeler ile diğer uygulamalar daha fazla bilgisayar kaynağına sahip olur ve Chrome hızlı çalışmaya devam eder. Geri döndüğünüz etkin olmayan sekmeler otomatik olarak tekrar etkin hale gelir. <ph name="BEGIN_LINK" />Bellek Tasarrufu hakkında daha fazla bilgi edinin<ph name="END_LINK" />.</translation>
@@ -388067,7 +388067,7 @@ index 23288721b5d9e..a4395c955fe64 100644
  </translationbundle>
 \ No newline at end of file
 diff --git a/chrome/app/resources/google_chrome_strings_zh-CN.xtb b/chrome/app/resources/google_chrome_strings_zh-CN.xtb
-index 162d10ae8d7ed..12a42aa51dacb 100644
+index e663df0429268..10e2638ff63d2 100644
 --- a/chrome/app/resources/google_chrome_strings_zh-CN.xtb
 +++ b/chrome/app/resources/google_chrome_strings_zh-CN.xtb
 @@ -1,62 +1,62 @@
@@ -388942,9 +388942,9 @@ index 162d10ae8d7ed..12a42aa51dacb 100644
 +<translation id="6177442314419606057">在 Vanadium 中搜索</translation>
 +<translation id="6180522807229584611">此标签页正在占用额外的资源。请通过 Vanadium 将其设为非活跃状态，以便提升性能。</translation>
  <translation id="6182736845697986886">更新服务器出现内部错误，因此安装失败。</translation>
--<translation id="6192058120268468905">设置 Chrome 账号</translation>
+-<translation id="6192058120268468905">您在 Chrome 中的账号</translation>
 -<translation id="6195202018542972563">在系统任务栏中显示“使用 Chrome 搜索”并开启键盘快捷键</translation>
-+<translation id="6192058120268468905">设置 Vanadium 账号</translation>
++<translation id="6192058120268468905">您在 Vanadium 中的账号</translation>
 +<translation id="6195202018542972563">在系统任务栏中显示“使用 Vanadium 搜索”并开启键盘快捷键</translation>
  <translation id="6235018212288296708">Google Chrome的入站规则，允许mDNS流量。</translation>
 -<translation id="624230925347970731">Chrome 即将关闭</translation>
@@ -389248,13 +389248,13 @@ index 162d10ae8d7ed..12a42aa51dacb 100644
 -<translation id="778331955594035129">Chrome 需要为此网站授予位置信息权限</translation>
 -<translation id="7787950393032327779">其他计算机 (<ph name="HOST_NAME" />) 的另一个 Google Chrome 进程 (<ph name="PROCESS_ID" />) 好像正在使用此个人资料。Chrome 已锁定此个人资料以防止其受损。如果您确定其他进程目前未使用此个人资料，请为其解锁并重新启动 Chrome。</translation>
 -<translation id="7801699035218095297">Google Chrome 正在尝试复制密码。请输入您的 Windows 密码以允许此操作。</translation>
--<translation id="7804364787702057554">设置 Chrome 账号</translation>
+-<translation id="7804364787702057554">您在 Chrome 中的账号</translation>
 -<translation id="7804947029129221742">搜索引擎已被 Chrome 之外的其他应用更改。为保护您的安全，Chrome 已将其重置为原始默认设置。<ph name="LEARN_MORE_LINK" /></translation>
 +<translation id="7777080907402804672">如果图片缺少有用的说明，则 Vanadium 会尝试为您提供一条说明。为便于创建说明，系统会将图片发送给 Google。您可以随时在“设置”中关闭此功能。</translation>
 +<translation id="778331955594035129">Vanadium 需要为此网站授予位置信息权限</translation>
 +<translation id="7787950393032327779">其他计算机 (<ph name="HOST_NAME" />) 的另一个 Vanadium 进程 (<ph name="PROCESS_ID" />) 好像正在使用此个人资料。Vanadium 已锁定此个人资料以防止其受损。如果您确定其他进程目前未使用此个人资料，请为其解锁并重新启动 Vanadium。</translation>
 +<translation id="7801699035218095297">Vanadium 正在尝试复制密码。请输入您的 Windows 密码以允许此操作。</translation>
-+<translation id="7804364787702057554">设置 Vanadium 账号</translation>
++<translation id="7804364787702057554">您在 Vanadium 中的账号</translation>
 +<translation id="7804947029129221742">搜索引擎已被 Vanadium 之外的其他应用更改。为保护您的安全，Vanadium 已将其重置为原始默认设置。<ph name="LEARN_MORE_LINK" /></translation>
  <translation id="7808348361785373670">从Chrome中移除…</translation>
 -<translation id="7827099906024714326">Chrome 需要先验证您的身份，然后才能将某些数据保存到您的 Google 账号中，供您在所有设备上使用。如果现在就退出账号，这些数据将被删除。</translation>
@@ -389355,7 +389355,7 @@ index 162d10ae8d7ed..12a42aa51dacb 100644
  <translation id="8362914115861174987">目标语言</translation>
 -<translation id="8366770919198174997">降低性能，但提高 Chrome 防范攻击的能力</translation>
 +<translation id="8366770919198174997">降低性能，但提高 Vanadium 防范攻击的能力</translation>
- <translation id="8367705492654390392">有问题，尽管问</translation>
+ <translation id="8367705492654390392">尽情提问</translation>
 -<translation id="8367950957770994118">随时随需快速打开 Chrome 中的 Gemini</translation>
 +<translation id="8367950957770994118">随时随需快速打开 Vanadium 中的 Gemini</translation>
  <translation id="8370517070665726704">版权所有 <ph name="YEAR" /> Google LLC. 保留所有权利。</translation>
@@ -395531,7 +395531,7 @@ index 774b2a77f2c96..004b4fd735d5c 100644
  <translation id="8705308553596171387">Parooli pole</translation>
  <translation id="879180780857354295">Klaviatuuri kohal on saadaval alternatiivsed täitevõimalused</translation>
 diff --git a/chrome/browser/keyboard_accessory/android/internal/java/strings/translations/android_keyboard_accessory_strings_eu.xtb b/chrome/browser/keyboard_accessory/android/internal/java/strings/translations/android_keyboard_accessory_strings_eu.xtb
-index ebcce9a20d5b4..60fd3261c64d2 100644
+index dbd833b2b9072..e2d9eff800893 100644
 --- a/chrome/browser/keyboard_accessory/android/internal/java/strings/translations/android_keyboard_accessory_strings_eu.xtb
 +++ b/chrome/browser/keyboard_accessory/android/internal/java/strings/translations/android_keyboard_accessory_strings_eu.xtb
 @@ -32,7 +32,7 @@
@@ -423513,7 +423513,7 @@ index 970428b5cbf79..e4c6b6b083515 100644
  <translation id="963246339335003378">Ava tegumihaldur</translation>
  <translation id="966337994629449077">Olete sisse logitud kasutajana <ph name="FROM_EMAIL" />.\n\nArvutis jätkamiseks vahetage kontot <ph name="TO_EMAIL" />. Saate selle konto paroolid, järjehoidjad ja muu.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_eu.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_eu.xtb
-index 3d68c12492be5..7b69e89545ff5 100644
+index f5d280e00e193..dbfe00ffe3f64 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_eu.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_eu.xtb
 @@ -12,7 +12,7 @@
@@ -423760,7 +423760,7 @@ index 3d68c12492be5..7b69e89545ff5 100644
  <translation id="2433507940547922241">Itxura</translation>
 -<translation id="2449931042095204989">Google-ren webgune edo aplikazio batek orriko estekak modu pribatuan aurrez kargatzeko eskatzen duenean, Chrome-k Google-ren zerbitzarien bidez enkriptatzen eta aurrez kargatzen ditu orri horiek, cookierik gabe. Horrela, zure identitatea ezkutatzen zaio aurrez kargatutako webguneari.</translation>
 +<translation id="2449931042095204989">Google-ren webgune edo aplikazio batek orriko estekak modu pribatuan aurrez kargatzeko eskatzen duenean, Vanadium-k Google-ren zerbitzarien bidez enkriptatzen eta aurrez kargatzen ditu orri horiek, cookierik gabe. Horrela, zure identitatea ezkutatzen zaio aurrez kargatutako webguneari.</translation>
- <translation id="2450019289047528273">Ordainketa-metodoak eta Google Diru-zorroa zerbitzuko bestelako informazioa</translation>
+ <translation id="2450019289047528273">Ordainketa-metodoak eta Google Wallet-eko bestelako informazioa</translation>
  <translation id="2450083983707403292">Berriro hasi nahi duzu <ph name="FILE_NAME" /> deskargatzen?</translation>
  <translation id="2451607499823206582">Jarraipena egiten</translation>
 @@ -373,19 +373,19 @@ Zure pasaesaldia dakitenek soilik irakur ditzakete zure datu enkriptatuak. Googl
@@ -424541,7 +424541,7 @@ index 3d68c12492be5..7b69e89545ff5 100644
 -<translation id="7165972437814027679">Lortu informazio gehiago Chrome-k fitxategi batzuk blokeatzeko arrazoiei buruz</translation>
 +<translation id="7165972437814027679">Lortu informazio gehiago Vanadium-k fitxategi batzuk blokeatzeko arrazoiei buruz</translation>
  <translation id="7168323970702333693"><ph name="USER_NAME" /> gisa hasi duzu saioa. Ezarpenak irekitzen ditu.</translation>
- <translation id="7170930892977483182">Zure gailuan eta Google Diru-zorroa zerbitzuan gordetako segurtasun-kode guztiak ezabatuko dira</translation>
+ <translation id="7170930892977483182">Zure gailuan eta Google Wallet-en gordetako segurtasun-kode guztiak ezabatuko dira</translation>
  <translation id="7173114856073700355">Ireki Ezarpenak</translation>
 @@ -1602,7 +1602,7 @@ Ezarpen hori aldatzeko, <ph name="BEGIN_LINK" />ezabatu kontuko Chrome-ko datuak
  <translation id="719791532916917144">Lasterbidea</translation>
@@ -424952,7 +424952,7 @@ index 3d68c12492be5..7b69e89545ff5 100644
  <translation id="963246339335003378">Ireki Ataza-kudeatzailea</translation>
  <translation id="966337994629449077"><ph name="FROM_EMAIL" /> gisa hasi duzu saioa.\n\nOrdenagailuan jarraitzeko, aldatu <ph name="TO_EMAIL" /> kontura. Kontu honetako pasahitzak, laster-markak eta bestelakoak lortuko dituzu.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_fa.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_fa.xtb
-index f471ba5d2e8da..5ebeded1b67ac 100644
+index 82f0503a98435..da3e3ca2fc306 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_fa.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_fa.xtb
 @@ -12,7 +12,7 @@
@@ -426361,8 +426361,8 @@ index f471ba5d2e8da..5ebeded1b67ac 100644
  <translation id="916607977885256133">تصویر در تصویر</translation>
  <translation id="9168847423516963845">انتقال نوار نشانی به پایین</translation>
  <translation id="9169507124922466868">سابقه «پیمایش» نیمه‌باز است</translation>
--<translation id="9183563643084679152">‏برای وارد شدن به سیستم Chrome، رمزینه پاسخ‌سریعی را اسکن کردید. گذرواژه‌ها، نشانک‌ها، و… را از این حساب دریافت خواهید کرد.</translation>
-+<translation id="9183563643084679152">‏برای وارد شدن به سیستم Vanadium، رمزینه پاسخ‌سریعی را اسکن کردید. گذرواژه‌ها، نشانک‌ها، و… را از این حساب دریافت خواهید کرد.</translation>
+-<translation id="9183563643084679152">‏برای وارد شدن به سیستم Chrome، رمزینه پاسخ‌سریعی را اسکن کردید. گذرواژه‌ها، نشانک‌ها، و غیره را از این حساب دریافت خواهید کرد.</translation>
++<translation id="9183563643084679152">‏برای وارد شدن به سیستم Vanadium، رمزینه پاسخ‌سریعی را اسکن کردید. گذرواژه‌ها، نشانک‌ها، و غیره را از این حساب دریافت خواهید کرد.</translation>
  <translation id="9189607089796819144">‏آیا می‌خواهید «<ph name="FILE_NAME" />» (‎<ph name="FILE_SIZE" />) را درهرصورت بارگیری کنید؟</translation>
  <translation id="9190276265094487094">سابقه‌تان در همه دستگاه‌های همگام‌سازی‌شده دردسترس خواهد بود تا بتوانید آنچه را انجام می‌دادید ادامه دهید</translation>
  <translation id="9190355771000652811">در نوار نشانی، از این میان‌بر صفحه‌کلید با میان‌برهای موتورهای جستجو و جستجوی سایت استفاده کنید.</translation>
@@ -430091,7 +430091,7 @@ index eba07c23a328b..97a3b61377636 100644
  <translation id="963246339335003378">Ouvrir le gestionnaire de tâches</translation>
  <translation id="966337994629449077">Vous êtes connecté en tant que <ph name="FROM_EMAIL" />.\n\nPour continuer à partir de votre ordinateur, passez à <ph name="TO_EMAIL" />. Vous obtiendrez les mots de passe, les favoris et plus encore à partir de ce compte.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_fr.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_fr.xtb
-index 0fd05d5710c90..e5107fc81b280 100644
+index ed28cb75d444a..0941244d6c6a6 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_fr.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_fr.xtb
 @@ -12,7 +12,7 @@
@@ -431446,7 +431446,7 @@ index 0fd05d5710c90..e5107fc81b280 100644
 @@ -2054,32 +2054,32 @@ Pour modifier ce paramètre, <ph name="BEGIN_LINK" />supprimez les données Chro
  <translation id="8970887620466824814">Un problème est survenu</translation>
  <translation id="8972098258593396643">Télécharger dans le dossier par défaut ?</translation>
- <translation id="8987736167266086032">Reprenez là où vous vous étiez arrêté</translation>
+ <translation id="8987736167266086032">Reprenez là où vous en étiez</translation>
 -<translation id="8992769679401294069">Vos données sont chiffrées avec votre phrase secrète. Saisissez-la pour utiliser et enregistrer les données Chrome dans votre compte Google.</translation>
 +<translation id="8992769679401294069">Vos données sont chiffrées avec votre phrase secrète. Saisissez-la pour utiliser et enregistrer les données Vanadium dans votre compte Google.</translation>
  <translation id="8993760627012879038">Ouvrir un nouvel onglet en mode navigation privée</translation>
@@ -431496,8 +431496,8 @@ index 0fd05d5710c90..e5107fc81b280 100644
  <translation id="916607977885256133">Picture-in-picture</translation>
  <translation id="9168847423516963845">Déplacer la barre d'adresse vers le bas</translation>
  <translation id="9169507124922466868">L'historique de navigation est ouvert à moitié</translation>
--<translation id="9183563643084679152">Vous avez scanné un QR code pour vous connecter à Chrome. Vous pourrez accéder aux mots de passe, aux favoris et à d'autres données de ce compte.</translation>
-+<translation id="9183563643084679152">Vous avez scanné un QR code pour vous connecter à Vanadium. Vous pourrez accéder aux mots de passe, aux favoris et à d'autres données de ce compte.</translation>
+-<translation id="9183563643084679152">Vous avez scanné un QR code pour vous connecter à Chrome. Vous pourrez accéder aux mots de passe et aux favoris de ce compte, et plus encore.</translation>
++<translation id="9183563643084679152">Vous avez scanné un QR code pour vous connecter à Vanadium. Vous pourrez accéder aux mots de passe et aux favoris de ce compte, et plus encore.</translation>
  <translation id="9189607089796819144">Voulez-vous quand même télécharger "<ph name="FILE_NAME" />" (<ph name="FILE_SIZE" />) ?</translation>
  <translation id="9190276265094487094">Comme vous aurez votre historique sur tous vos appareils synchronisés, vous pourrez continuer vos activités</translation>
  <translation id="9190355771000652811">Dans la barre d'adresse, utilisez ce raccourci clavier avec les raccourcis des moteurs de recherche et de la recherche sur les sites.</translation>
@@ -441983,7 +441983,7 @@ index 6216bfa00d56c..f709626bc00aa 100644
  <translation id="963246339335003378">Opna verkstjórn</translation>
  <translation id="966337994629449077">Þú ert skráð(ur) inn sem <ph name="FROM_EMAIL" />.\n\nTil að halda áfram í tölvunni þinni skaltu skipta yfir í <ph name="TO_EMAIL" />. Þú færð aðgangsorðin, bókamerkin og fleira af þessum reikningi.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_it.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_it.xtb
-index e6bac9f9cb66d..7c244b3ca5df0 100644
+index cdce4f1e5e4d6..7b2fb5d48470d 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_it.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_it.xtb
 @@ -12,7 +12,7 @@
@@ -442173,8 +442173,8 @@ index e6bac9f9cb66d..7c244b3ca5df0 100644
  <translation id="200114059308480249">Vuoi includere il testo circostante nelle ricerche Google?</translation>
  <translation id="2004096469149679223"><ph name="TAB_TITLE" />, scheda Incognito con audio disattivato fissata</translation>
  <translation id="2021896219286479412">Controlli sito a schermo intero</translation>
--<translation id="2022369817198611683">Ottieni il meglio di Gemini dalla barra degli strumenti di Chrome. Tieni premuto per personalizzare.</translation>
-+<translation id="2022369817198611683">Ottieni il meglio di Gemini dalla barra degli strumenti di Vanadium. Tieni premuto per personalizzare.</translation>
+-<translation id="2022369817198611683">Sfrutta al meglio Gemini dalla barra degli strumenti di Chrome. Tieni premuto per personalizzare.</translation>
++<translation id="2022369817198611683">Sfrutta al meglio Gemini dalla barra degli strumenti di Vanadium. Tieni premuto per personalizzare.</translation>
  <translation id="2024195579772565064">Elimina motore di ricerca</translation>
  <translation id="2029669011553795746">Attivazione delle notifiche di suggerimenti aperta nella parte inferiore dello schermo</translation>
  <translation id="2038563949887743358">Attiva Richiedi sito desktop</translation>
@@ -443348,7 +443348,7 @@ index e6bac9f9cb66d..7c244b3ca5df0 100644
 @@ -2054,32 +2054,32 @@ Per modificare questa impostazione, <ph name="BEGIN_LINK" />elimina i dati di Ch
  <translation id="8970887620466824814">C'è stato un problema.</translation>
  <translation id="8972098258593396643">Scaricare nella cartella predefinita?</translation>
- <translation id="8987736167266086032">Riprendi da dove eri rimasto</translation>
+ <translation id="8987736167266086032">Riprendi da dove hai interrotto</translation>
 -<translation id="8992769679401294069">I dati sono criptati con la tua passphrase. Inseriscila per utilizzare e salvare i dati di Chrome nel tuo Account Google.</translation>
 +<translation id="8992769679401294069">I dati sono criptati con la tua passphrase. Inseriscila per utilizzare e salvare i dati di Vanadium nel tuo Account Google.</translation>
  <translation id="8993760627012879038">Apri nuova scheda in mod. di navigaz. in incognito</translation>
@@ -443398,8 +443398,8 @@ index e6bac9f9cb66d..7c244b3ca5df0 100644
  <translation id="916607977885256133">Picture in picture</translation>
  <translation id="9168847423516963845">Sposta la barra degli indirizzi in basso</translation>
  <translation id="9169507124922466868">La cronologia di navigazione è aperta fino a metà</translation>
--<translation id="9183563643084679152">Hai eseguito l'accesso a Chrome tramite la scansione di un codice QR. Potrai usare le password, i preferiti e altri dati di questo account.</translation>
-+<translation id="9183563643084679152">Hai eseguito l'accesso a Vanadium tramite la scansione di un codice QR. Potrai usare le password, i preferiti e altri dati di questo account.</translation>
+-<translation id="9183563643084679152">Hai usato la scansione di un codice QR per accedere a Chrome. Potrai usare le password, i preferiti e altri dati di questo account.</translation>
++<translation id="9183563643084679152">Hai usato la scansione di un codice QR per accedere a Vanadium. Potrai usare le password, i preferiti e altri dati di questo account.</translation>
  <translation id="9189607089796819144">Scaricare comunque "<ph name="FILE_NAME" />" (<ph name="FILE_SIZE" />)?</translation>
  <translation id="9190276265094487094">La tua cronologia sarà disponibile su tutti i dispositivi sincronizzati per poter continuare ciò che stavi facendo</translation>
  <translation id="9190355771000652811">Nella barra degli indirizzi, utilizza questa scorciatoia da tastiera con le scorciatoie per motori di ricerca e ricerca su sito.</translation>
@@ -443434,7 +443434,7 @@ index e6bac9f9cb66d..7c244b3ca5df0 100644
 +<translation id="95817756606698420">Vanadium può usare <ph name="BEGIN_BOLD" />Sogou<ph name="END_BOLD" /> per le ricerche in Cina. Puoi modificare questa preferenza nelle <ph name="BEGIN_LINK" />Impostazioni<ph name="END_LINK" />.</translation>
  <translation id="961856697154696964">Elimina dati navigazione</translation>
  <translation id="963246339335003378">Apri Task Manager</translation>
- <translation id="966337994629449077">Hai effettuato l'accesso come <ph name="FROM_EMAIL" />.\n\nPer continuare dal computer, passa a <ph name="TO_EMAIL" />. Potrai usare le password, i preferiti e altri dati di questo account.</translation>
+ <translation id="966337994629449077">Hai usato <ph name="FROM_EMAIL" /> per accedere.\n\nPer continuare dal computer, passa a <ph name="TO_EMAIL" />. Potrai usare le password, i preferiti e altri dati di questo account.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_iw.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_iw.xtb
 index ec09af5967d87..ed3dc5ba621f8 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_iw.xtb
@@ -444883,7 +444883,7 @@ index ec09af5967d87..ed3dc5ba621f8 100644
  <translation id="963246339335003378">פתיחת מנהל המשימות</translation>
  <translation id="966337994629449077">‏נכנסת בתור <ph name="FROM_EMAIL" />.\n\nכדי להמשיך מהמחשב צריך לעבור אל <ph name="TO_EMAIL" />. הסיסמאות, הסימניות ועוד נתונים שלך מהחשבון הזה יופיעו שם.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_ja.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_ja.xtb
-index 8da38d1ee075e..f2b366c7bf7d9 100644
+index beb4fc847fac3..9bc1f92825762 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_ja.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_ja.xtb
 @@ -12,7 +12,7 @@
@@ -446154,7 +446154,7 @@ index 8da38d1ee075e..f2b366c7bf7d9 100644
 @@ -2054,32 +2054,32 @@ Chrome を使いやすくするためにデータを使用するその他の設
  <translation id="8970887620466824814">エラーが発生しました。</translation>
  <translation id="8972098258593396643">デフォルトのフォルダにダウンロードしますか？</translation>
- <translation id="8987736167266086032">同じところから再開</translation>
+ <translation id="8987736167266086032">中断したところから再開する</translation>
 -<translation id="8992769679401294069">データはパスフレーズで暗号化されます。Google アカウントで Chrome のデータを使用、保存するには、パスフレーズを入力してください。</translation>
 +<translation id="8992769679401294069">データはパスフレーズで暗号化されます。Google アカウントで Vanadium のデータを使用、保存するには、パスフレーズを入力してください。</translation>
  <translation id="8993760627012879038">新しいタブをシークレット モードで開く</translation>
@@ -468604,7 +468604,7 @@ index 20c2a1cdf810f..ede3951c43a0a 100644
  <translation id="963246339335003378">टास्क म्यानेजर खोल्नुहोस्</translation>
  <translation id="966337994629449077">तपाईंले <ph name="FROM_EMAIL" /> मार्फत साइन इन गर्नुभएको छ।\n\nआफ्नो कम्प्युटरबाट जारी राख्न <ph name="TO_EMAIL" /> प्रयोग गर्नुहोस्। तपाईं यो खातामा भएका पासवर्ड, बुकमार्क र अन्य कुराहरू प्राप्त गर्नु हुने छ।</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_nl.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_nl.xtb
-index 932743f278f60..51fe9f491e60a 100644
+index 114a7f848d8ed..28ff2d357ed03 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_nl.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_nl.xtb
 @@ -12,7 +12,7 @@
@@ -469739,8 +469739,8 @@ index 932743f278f60..51fe9f491e60a 100644
  <translation id="7792388396321542707">Delen stoppen</translation>
  <translation id="780287761701992588">Gebruik je bookmarks, wachtwoorden en meer op al je apparaten</translation>
  <translation id="780301667611848630">Nee, bedankt</translation>
--<translation id="7804364787702057554">Je account in Chrome</translation>
-+<translation id="7804364787702057554">Je account in Vanadium</translation>
+-<translation id="7804364787702057554">Account in Chrome</translation>
++<translation id="7804364787702057554">Account in Vanadium</translation>
  <translation id="7810647596859435254">Openen met…</translation>
  <translation id="7814066895362068701">{FILE_COUNT,plural, =1{Alle bestanden, 1 bestand in lijst}other{Alle bestanden, # bestanden in lijst}}</translation>
  <translation id="7815484226266492798">Lang screenshot</translation>
@@ -475352,7 +475352,7 @@ index 2ba9b3db6305a..0fb42d9963f07 100644
  <translation id="963246339335003378">Otwórz menedżera zadań</translation>
  <translation id="966337994629449077">Korzystasz z konta <ph name="FROM_EMAIL" />.\n\nAby kontynuować na komputerze, przełącz się na konto <ph name="TO_EMAIL" />. Będziesz mieć dostęp do haseł, zakładek i innych danych z tego konta.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-BR.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-BR.xtb
-index 4a7fd634433a3..8124eeb36b1df 100644
+index dde0adae5f3c5..96cf164b0f27f 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-BR.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-BR.xtb
 @@ -12,7 +12,7 @@
@@ -476716,7 +476716,7 @@ index 4a7fd634433a3..8124eeb36b1df 100644
 @@ -2055,32 +2055,32 @@ Para mudar essa configuração, <ph name="BEGIN_LINK" />exclua os dados do Chrom
  <translation id="8970887620466824814">Algo deu errado.</translation>
  <translation id="8972098258593396643">Fazer o download para a pasta padrão?</translation>
- <translation id="8987736167266086032">Recomece de onde você parou</translation>
+ <translation id="8987736167266086032">Continue de onde parou</translation>
 -<translation id="8992769679401294069">Seus dados são criptografados com a senha longa. Digite-a para usar e salvar os dados do Chrome na sua Conta do Google.</translation>
 +<translation id="8992769679401294069">Seus dados são criptografados com a senha longa. Digite-a para usar e salvar os dados do Vanadium na sua Conta do Google.</translation>
  <translation id="8993760627012879038">Abrir uma nova guia no modo de navegação anônima</translation>
@@ -476766,8 +476766,8 @@ index 4a7fd634433a3..8124eeb36b1df 100644
  <translation id="916607977885256133">Picture-in-picture</translation>
  <translation id="9168847423516963845">Mover a barra de endereço para baixo</translation>
  <translation id="9169507124922466868">Histórico de navegação parcialmente aberto</translation>
--<translation id="9183563643084679152">Você leu um QR code para fazer login no Chrome, então vai receber as senhas, os favoritos e outros itens desta conta.</translation>
-+<translation id="9183563643084679152">Você leu um QR code para fazer login no Vanadium, então vai receber as senhas, os favoritos e outros itens desta conta.</translation>
+-<translation id="9183563643084679152">Você leu um QR code para fazer login no Chrome. Por isso, vai receber as senhas, os favoritos e outros itens dessa conta.</translation>
++<translation id="9183563643084679152">Você leu um QR code para fazer login no Vanadium. Por isso, vai receber as senhas, os favoritos e outros itens dessa conta.</translation>
  <translation id="9189607089796819144">Quer baixar "<ph name="FILE_NAME" />" (<ph name="FILE_SIZE" />) mesmo assim?</translation>
  <translation id="9190276265094487094">Seu histórico vai ser mostrado em todos os dispositivos sincronizados para que você possa continuar o que estava fazendo</translation>
  <translation id="9190355771000652811">Na barra de endereço, use os atalhos no teclado para mecanismos de pesquisa e pesquisas em sites</translation>
@@ -476801,9 +476801,9 @@ index 4a7fd634433a3..8124eeb36b1df 100644
 +<translation id="95817756606698420">O Vanadium pode usar o <ph name="BEGIN_BOLD" />Sogou<ph name="END_BOLD" /> para fazer pesquisas na China. É possível alterar essa opção nas <ph name="BEGIN_LINK" />Configurações<ph name="END_LINK" />.</translation>
  <translation id="961856697154696964">Excluir dados de navegação</translation>
  <translation id="963246339335003378">Abrir o gerenciador de tarefas</translation>
- <translation id="966337994629449077">A conta <ph name="FROM_EMAIL" /> está conectada.\n\nPara continuar no computador, mude para <ph name="TO_EMAIL" />. Você vai receber as senhas, os favoritos e outros itens dessa conta.</translation>
+ <translation id="966337994629449077">A conta <ph name="FROM_EMAIL" /> está conectada.\n\nPara continuar pelo computador, mude para <ph name="TO_EMAIL" />. Você vai receber as senhas, os favoritos e outros itens dessa conta.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-PT.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-PT.xtb
-index 447685ff50562..7f083ec9a1255 100644
+index bedf130ade1e5..a11e4aaccac9c 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-PT.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_pt-PT.xtb
 @@ -12,7 +12,7 @@
@@ -493651,7 +493651,7 @@ index f2b62dc92227f..f1a618fd67e42 100644
  <translation id="963246339335003378">టాస్క్ మేనేజర్‌ను తెరవండి</translation>
  <translation id="966337994629449077">మీరు <ph name="FROM_EMAIL" />‌గా సైన్-ఇన్ చేశారు.\n\nమీ కంప్యూటర్‌లో కొనసాగడానికి, <ph name="TO_EMAIL" />‌కు మారండి. మీరు ఈ ఖాతా నుండి పాస్‌వర్డ్‌లు, బుక్‌మార్క్‌లు, ఇంకా మరిన్నింటిని పొందుతారు.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_th.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_th.xtb
-index 181b57d3cd87d..ee77ae7a5191c 100644
+index 5a94ce89b8d56..1572178e53a67 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_th.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_th.xtb
 @@ -12,7 +12,7 @@
@@ -495010,7 +495010,7 @@ index 181b57d3cd87d..ee77ae7a5191c 100644
 @@ -2054,32 +2054,32 @@
  <translation id="8970887620466824814">เกิดข้อผิดพลาด</translation>
  <translation id="8972098258593396643">ดาวน์โหลดลงโฟลเดอร์เริ่มต้นไหม</translation>
- <translation id="8987736167266086032">ทำสิ่งที่ค้างไว้ต่อจากคราวที่แล้ว</translation>
+ <translation id="8987736167266086032">ดำเนินการต่อจากที่ค้างไว้</translation>
 -<translation id="8992769679401294069">ข้อมูลของคุณมีการเข้ารหัสด้วยพาสเฟรส ป้อนพาสเฟรสเพื่อใช้และบันทึกข้อมูล Chrome ในบัญชี Google</translation>
 +<translation id="8992769679401294069">ข้อมูลของคุณมีการเข้ารหัสด้วยพาสเฟรส ป้อนพาสเฟรสเพื่อใช้และบันทึกข้อมูล Vanadium ในบัญชี Google</translation>
  <translation id="8993760627012879038">เปิดแท็บใหม่ในโหมดไม่ระบุตัวตน</translation>
@@ -495096,7 +495096,7 @@ index 181b57d3cd87d..ee77ae7a5191c 100644
 +<translation id="95817756606698420">Vanadium สามารถใช้ <ph name="BEGIN_BOLD" />Sogou<ph name="END_BOLD" /> สำหรับการค้นหาในประเทศจีน คุณสามารถเปลี่ยนเครื่องมือค้นหาเริ่มต้นนี้ได้ใน<ph name="BEGIN_LINK" />การตั้งค่า<ph name="END_LINK" /></translation>
  <translation id="961856697154696964">ลบข้อมูลการท่องเว็บ</translation>
  <translation id="963246339335003378">เปิดตัวจัดการงาน</translation>
- <translation id="966337994629449077">คุณลงชื่อเข้าใช้ในฐานะ <ph name="FROM_EMAIL" />\n\nหากต้องการดำเนินการต่อจากคอมพิวเตอร์ ให้เปลี่ยนไปใช้ <ph name="TO_EMAIL" /> คุณจะได้รับรหัสผ่าน บุ๊กมาร์ก และข้อมูลอื่นๆ จากบัญชีนี้</translation>
+ <translation id="966337994629449077">คุณลงชื่อเข้าใช้ด้วย <ph name="FROM_EMAIL" />\n\nหากต้องการดำเนินการต่อจากคอมพิวเตอร์ ให้เปลี่ยนไปใช้ <ph name="TO_EMAIL" /> คุณจะได้รับรหัสผ่าน บุ๊กมาร์ก และข้อมูลอื่นๆ จากบัญชีนี้</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_tr.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_tr.xtb
 index 574509a8ea392..8af4e90b7eefe 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_tr.xtb
@@ -500736,7 +500736,7 @@ index 0e160b450a61e..e8f152d9db190 100644
  <translation id="963246339335003378">Vazifalar boshqaruvini ochish</translation>
  <translation id="966337994629449077"><ph name="FROM_EMAIL" /> hisobidan kirgansiz.\n\nKompyuterda davom etish uchun <ph name="TO_EMAIL" /> hisobiga almashtiring. Bu hisobdan parollar, bukmarklar va boshqalarni olasiz.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_vi.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_vi.xtb
-index ac82e9441df33..010a4025f3e20 100644
+index 84c71751baaf2..86aa285562374 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_vi.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_vi.xtb
 @@ -12,7 +12,7 @@
@@ -502154,8 +502154,8 @@ index ac82e9441df33..010a4025f3e20 100644
  <translation id="916607977885256133">Ảnh trong ảnh</translation>
  <translation id="9168847423516963845">Chuyển thanh địa chỉ xuống dưới cùng</translation>
  <translation id="9169507124922466868">Lịch sử di chuyển đang mở ở nửa dưới màn hình</translation>
--<translation id="9183563643084679152">Bạn đã quét mã QR để đăng nhập vào Chrome. Bạn có thể sử dụng mật khẩu, dấu trang và nhiều nội dung khác từ tài khoản này.</translation>
-+<translation id="9183563643084679152">Bạn đã quét mã QR để đăng nhập vào Vanadium. Bạn có thể sử dụng mật khẩu, dấu trang và nhiều nội dung khác từ tài khoản này.</translation>
+-<translation id="9183563643084679152">Bạn đã quét mã QR để đăng nhập vào Chrome. Bạn có thể sử dụng mật khẩu, dấu trang và nhiều nội dung khác trong tài khoản này.</translation>
++<translation id="9183563643084679152">Bạn đã quét mã QR để đăng nhập vào Vanadium. Bạn có thể sử dụng mật khẩu, dấu trang và nhiều nội dung khác trong tài khoản này.</translation>
  <translation id="9189607089796819144">Bạn vẫn muốn tải "<ph name="FILE_NAME" />" (<ph name="FILE_SIZE" />) xuống?</translation>
  <translation id="9190276265094487094">Bạn sẽ thấy nhật ký duyệt web trên tất cả những thiết bị đã đồng bộ hoá, nhờ vậy bạn có thể tiếp tục những việc bạn đang làm</translation>
  <translation id="9190355771000652811">Trong thanh địa chỉ, hãy dùng phím tắt này với các lối tắt để tìm kiếm bằng công cụ tìm kiếm và tìm kiếm trên trang web.</translation>
@@ -502192,7 +502192,7 @@ index ac82e9441df33..010a4025f3e20 100644
  <translation id="963246339335003378">Mở Trình quản lý tác vụ</translation>
  <translation id="966337994629449077">Bạn đã đăng nhập bằng tài khoản <ph name="FROM_EMAIL" />.\n\nĐể tiếp tục trên máy tính, hãy chuyển sang tài khoản <ph name="TO_EMAIL" />. Bạn có thể sử dụng mật khẩu, dấu trang và nhiều dữ liệu khác từ tài khoản này.</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-CN.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-CN.xtb
-index 6b97b659fa127..baa1a037a6348 100644
+index 6acdc415cd558..c5155720bd3c9 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-CN.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-CN.xtb
 @@ -12,7 +12,7 @@
@@ -502572,7 +502572,7 @@ index 6b97b659fa127..baa1a037a6348 100644
  <translation id="3430670036890315772">关闭个人资料锁定功能将移除您已保存的信息</translation>
 @@ -609,21 +609,21 @@
  <translation id="3435738964857648380">安全</translation>
- <translation id="3435914367318771664">将标签页添加到新分组</translation>
+ <translation id="3435914367318771664">添加到新标签页组</translation>
  <translation id="3436118221454753036">问问 AI 模式</translation>
 -<translation id="3438681572027105609">如需将密码等信息同步到您的所有设备上，请登录 Chrome</translation>
 +<translation id="3438681572027105609">如需将密码等信息同步到您的所有设备上，请登录 Vanadium</translation>
@@ -502619,7 +502619,7 @@ index 6b97b659fa127..baa1a037a6348 100644
  <translation id="3714430408451673233">标签页底部动作条已半屏打开。</translation>
 -<translation id="3718765429352682176">您可能会看到在 Chrome 中打开了链接的其他应用的历史记录。</translation>
 +<translation id="3718765429352682176">您可能会看到在 Vanadium 中打开了链接的其他应用的历史记录。</translation>
- <translation id="3721119614952978349">您与 Google</translation>
+ <translation id="3721119614952978349">我与 Google</translation>
  <translation id="3727000368239390918">登录后即可将标签页等信息同步到您的所有设备上</translation>
  <translation id="3731865955999508196">立体</translation>
 @@ -735,14 +735,14 @@
@@ -503331,8 +503331,8 @@ index 6b97b659fa127..baa1a037a6348 100644
  <translation id="7792388396321542707">停止分享</translation>
  <translation id="780287761701992588">在所有设备上获取保存的书签、密码等信息</translation>
  <translation id="780301667611848630">不用了</translation>
--<translation id="7804364787702057554">设置 Chrome 账号</translation>
-+<translation id="7804364787702057554">设置 Vanadium 账号</translation>
+-<translation id="7804364787702057554">您在 Chrome 中的账号</translation>
++<translation id="7804364787702057554">您在 Vanadium 中的账号</translation>
  <translation id="7810647596859435254">打开方式…</translation>
  <translation id="7814066895362068701">{FILE_COUNT,plural, =1{所有文件，列表中有 1 个文件}other{所有文件，列表中有 # 个文件}}</translation>
  <translation id="7815484226266492798">长屏幕截图</translation>
@@ -505090,7 +505090,7 @@ index 4aa98eae519de..02ba2a4158e31 100644
  <translation id="963246339335003378">開啟工作管理員</translation>
  <translation id="966337994629449077">你目前登入的帳戶是 <ph name="FROM_EMAIL" />。\n\n如要透過電腦繼續使用，請切換至 <ph name="TO_EMAIL" />。你將可使用此帳戶的密碼、書籤和其他資料。</translation>
 diff --git a/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-TW.xtb b/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-TW.xtb
-index 06b3c4ac0c3f7..71d944a7d92c1 100644
+index 3b83c0cad6eba..916f1fa800c67 100644
 --- a/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-TW.xtb
 +++ b/chrome/browser/ui/android/strings/translations/android_chrome_strings_zh-TW.xtb
 @@ -12,7 +12,7 @@
@@ -506139,7 +506139,7 @@ index 06b3c4ac0c3f7..71d944a7d92c1 100644
  <translation id="7207760545532569765">將 <ph name="TAB_COUNT" /> 個分頁還原為新的背景分頁。</translation>
 -<translation id="7217781228893594884">系統會在你離開 Chrome 後鎖定無痕分頁</translation>
 +<translation id="7217781228893594884">系統會在你離開 Vanadium 後鎖定無痕分頁</translation>
- <translation id="7221869452894271364">重新載入此網頁</translation>
+ <translation id="7221869452894271364">重新載入網頁</translation>
  <translation id="722681077040152344">已取消訂閱 <ph name="COUNT" /> 個網站</translation>
  <translation id="7227218174981371415">{FILE_COUNT,plural, =1{1 項下載作業仍待處理}other{# 項下載作業仍待處理}}</translation>
 @@ -1617,7 +1617,7 @@
