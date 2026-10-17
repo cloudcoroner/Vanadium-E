@@ -54,7 +54,14 @@ fi
 gh release view "$tag" --repo "$REPO" >/dev/null 2>&1 && die "release $tag already exists"
 
 # --- the APKs, and proof they carry the right signing key
-apks=(TrichromeLibrary.apk TrichromeChrome.apk VanadiumConfig.apk)
+# Current Vanadium builds a standalone browser APK; older releases used the Trichrome library layout.
+if [[ -s $APK_DIR/VanadiumBrowser.apk ]]; then
+    apks=(VanadiumBrowser.apk VanadiumConfig.apk)
+    install_note='**Install both:** `VanadiumBrowser.apk` and `VanadiumConfig.apk` (the config app carries the ad-blocking rules; install it with the browser, in either order).'
+else
+    apks=(TrichromeLibrary.apk TrichromeChrome.apk VanadiumConfig.apk)
+    install_note='**Install in this order:** `TrichromeLibrary.apk`, `TrichromeChrome.apk`, `VanadiumConfig.apk`.'
+fi
 for a in "${apks[@]}"; do [[ -s $APK_DIR/$a ]] || die "missing $APK_DIR/$a (run: E/tools/build-ubuntu.sh sign)"; done
 digest=$(sed -n 's/^trichrome_certdigest = "\([0-9a-f]\{64\}\)"/\1/p' E/args.gn.overlay)
 digest=${digest:-${VANADIUM_E_CERT_DIGEST:-}}
@@ -73,7 +80,7 @@ for a in "${apks[@]}"; do cp "$APK_DIR/$a" "$stage/"; done
 cat > "$stage/notes.md" <<NOTES
 Unofficial Vanadium-E build on Chromium \`$version\`. Not affiliated with or endorsed by GrapheneOS.
 
-**Install in this order:** \`TrichromeLibrary.apk\`, \`TrichromeChrome.apk\`, \`VanadiumConfig.apk\`.
+$install_note
 Vanadium-E uses its own signing key: it installs alongside Vanadium and updates earlier Vanadium-E builds, but cannot replace Vanadium.
 
 **Signing certificate SHA-256:** \`$digest\`

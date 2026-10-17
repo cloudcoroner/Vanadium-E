@@ -123,15 +123,24 @@ p_gn() {
 
 p_build() {
     cd "$WORK/chromium/src"
-    # Browser + its shared library + config app. (WebView is not needed for a standalone browser.)
-    # Target names depend on the ABI config: *_64_32_apk exists only with a secondary ABI, otherwise *_64_apk.
+    # Browser + config app. (WebView is not needed for a standalone browser.)
+    # Current Vanadium builds the browser as one standalone APK (vanadium_browser_apk). Older Vanadium
+    # releases used the Trichrome layout (browser APK + shared library APK); keep supporting that.
     local all_targets targets=()
     all_targets=$(gn ls out/Default)
-    for t in chrome library; do
-        if grep -q ":trichrome_${t}_64_32_apk$" <<< "$all_targets"; then targets+=("trichrome_${t}_64_32_apk")
-        elif grep -q ":trichrome_${t}_64_apk$" <<< "$all_targets"; then targets+=("trichrome_${t}_64_apk")
-        else echo "no trichrome_${t} target found; closest:"; grep "trichrome_${t}" <<< "$all_targets" | head; exit 1; fi
-    done
+    if grep -q ":vanadium_browser_apk$" <<< "$all_targets"; then
+        targets+=(vanadium_browser_apk)
+    else
+        for t in chrome library; do
+            if grep -q ":trichrome_${t}_64_32_apk$" <<< "$all_targets"; then targets+=("trichrome_${t}_64_32_apk")
+            elif grep -q ":trichrome_${t}_64_apk$" <<< "$all_targets"; then targets+=("trichrome_${t}_64_apk")
+            else
+                echo "no browser build target found (looked for vanadium_browser_apk and trichrome_${t}_*apk); candidates:"
+                { grep -E "(vanadium|trichrome)_(browser|chrome|library)" <<< "$all_targets" | head -10; } || true
+                exit 1
+            fi
+        done
+    fi
     targets+=(vanadium_config_apk)
     echo "building: ${targets[*]}"
     # Parallel jobs: ~2 GiB RAM+swap per compile job, otherwise the OOM killer ends the build partway.

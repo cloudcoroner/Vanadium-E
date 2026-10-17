@@ -2,6 +2,7 @@
 
 # SPDX-License-Identifier: GPL-2.0-only
 # Vanadium-E copy of ../../generate-release: signs with the Vanadium-E key (alias vanadium-e).
+# WebView is not built for Vanadium-E, so it is not in the list.
 [[ $# -ge 1 ]] || exit 1
 
 set -o errexit -o nounset -o pipefail
@@ -9,9 +10,7 @@ set -o errexit -o nounset -o pipefail
 KEYSTORE=${VANADIUM_E_KEYSTORE:-$HOME/.vanadium-e/vanadium-e.keystore}
 APKSIGNER=$PWD/third_party/android_sdk/public/build-tools/37.0.0/apksigner
 readonly APPS=(
-    TrichromeChrome
-    TrichromeLibrary
-    TrichromeWebView
+    VanadiumBrowser
     VanadiumConfig
 )
 
