@@ -36,10 +36,10 @@ fi
 timed() { # timed <label> <logfile> <cmd...>: runs the command, prints "<seconds> s, peak <MB> MB"
     local label=$1 log=$2; shift 2
     if /usr/bin/time --version 2>&1 | grep -q GNU; then
-        /usr/bin/time -f "%e %M" -o "$log.time" "$@" >"$log.out" 2>"$log.err" || { echo "$label failed; see $log.err"; tail -3 "$log.err"; return 1; }
+        /usr/bin/time -f "%e %M" -o "$log.time" "$@" >"$log.out" 2>"$log.err" || { echo "  $label FAILED (exit $?); log: $log.err" >&2; tail -3 "$log.err" >&2; return 1; }
         awk '{printf "%.1f s, peak %.0f MB\n", $1, $2/1024}' "$log.time"
     else
-        local s=$SECONDS; "$@" >"$log.out" 2>"$log.err" || { echo "$label failed; see $log.err"; return 1; }
+        local s=$SECONDS; "$@" >"$log.out" 2>"$log.err" || { echo "  $label FAILED (exit $?); log: $log.err" >&2; tail -3 "$log.err" >&2; return 1; }
         echo "$(( SECONDS - s )) s (install 'time' for peak memory: sudo apt install time)"
     fi
 }
@@ -52,6 +52,7 @@ for spec in "$@"; do
     work=$OUT/run-$label
     [[ -e $work && ! -d $work ]] && { echo "$work exists and is not a folder; choose another OUT"; exit 1; }
     mkdir -p "$work"; text=0; conv_res="-"; skipped="-"
+    echo "measuring $label ..." >&2
     if [[ $spec == *.unindexed ]]; then
         unindexed=$spec
     else
@@ -60,21 +61,21 @@ for spec in "$@"; do
         for p in "${parts[@]}"; do
             if [[ $p == https://* ]]; then
                 f=$work/$(echo "$p" | cksum | cut -d' ' -f1).txt
-                curl -fsL -m 300 -A "Mozilla/5.0" -o "$f" "$p" || { echo "download failed: $p"; continue 2; }
+                curl -fsL -m 300 -A "Mozilla/5.0" -o "$f" "$p" || { echo "  -> $label skipped: download failed: $p" >&2; continue 2; }
                 files+=("$f")
             else
-                [[ -f $p ]] || { echo "not found: $p"; continue 2; }
+                [[ -f $p ]] || { echo "  -> $label skipped: file not found: $p" >&2; continue 2; }
                 files+=("$p")
             fi
         done
         for f in "${files[@]}"; do text=$(( text + $(wc -c < "$f") )); done
         unindexed=$work/ruleset.unindexed
         conv_res=$(timed convert "$work/convert" "$conv" --input_format=filter-list --output_format=unindexed-ruleset \
-                   --input_files="$(IFS=,; echo "${files[*]}")" --output_file="$unindexed") || continue
+                   --input_files="$(IFS=,; echo "${files[*]}")" --output_file="$unindexed") || { echo "  -> $label skipped: conversion failed" >&2; continue; }
         skipped=$(grep -c "error:" "$work/convert.err" 2>/dev/null || true)
     fi
     indexed=$work/ruleset.indexed
-    idx_res=$(timed index "$work/index" "$idx" "$unindexed" "$indexed") || continue
+    idx_res=$(timed index "$work/index" "$idx" "$unindexed" "$indexed") || { echo "  -> $label skipped: indexing failed" >&2; continue; }
     printf '%-24s %9s %10s %10s  %-22s %-22s %8s\n' "${label:0:24}" "$(human "$text")" "$(human "$(wc -c < "$unindexed")")" \
         "$(human "$(wc -c < "$indexed")")" "$conv_res" "$idx_res" "$skipped"
 done
