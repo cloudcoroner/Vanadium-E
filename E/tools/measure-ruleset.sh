@@ -21,17 +21,35 @@ export PATH=$HOME/depot_tools:$PATH
 mkdir -p "$OUT"
 cd "$SRC"
 
-find_tool() { find out/Default -name "$1" -type f -perm -u+x 2>/dev/null | head -1; }
-conv=$(find_tool ruleset_converter)
-[[ -n $conv ]] || { echo "ruleset_converter not found under $SRC/out/Default (finish a build first)"; exit 1; }
-idx=$(find_tool subresource_indexing_tool)
+# The tools must run on THIS machine. The Android build targets the phone's CPU, so a tool built in the default
+# toolchain (out/Default/<tool>) is an arm64 binary that cannot run here; the host-toolchain copy sits in a
+# subfolder such as out/Default/clang_x64/. Pick a binary whose ELF machine type matches the host.
+host_machine() { case ${HOST_ARCH:-$(uname -m)} in x86_64|amd64) echo 3e00 ;; aarch64|arm64) echo b700 ;; *) echo unknown ;; esac; }
+is_host_binary() {
+    [[ $(od -An -tx1 -N4 "$1" 2>/dev/null | tr -d ' \n') == 7f454c46 ]] || return 1          # ELF magic
+    [[ $(od -An -tx1 -j18 -N2 "$1" 2>/dev/null | tr -d ' \n') == "$(host_machine)" ]]       # e_machine
+}
+find_host_tool() {
+    local f
+    while IFS= read -r f; do
+        if is_host_binary "$f"; then echo "$f"; return 0; fi
+    done < <(find out/Default -name "$1" -type f -perm -u+x 2>/dev/null)
+    return 0
+}
+conv=$(find_host_tool ruleset_converter)
+[[ -n $conv ]] || { echo "no host-architecture ruleset_converter under $SRC/out/Default (finish a build first)"; exit 1; }
+idx=$(find_host_tool subresource_indexing_tool)
 if [[ -z $idx ]]; then
-    echo "building subresource_indexing_tool (one time)..."
-    autoninja -C out/Default subresource_indexing_tool >"$OUT/build-indexing-tool.log" 2>&1 \
-        || { echo "could not build it; see $OUT/build-indexing-tool.log. Targets available:"; gn ls out/Default 2>/dev/null | grep -i indexing | head -5; exit 1; }
-    idx=$(find_tool subresource_indexing_tool)
+    # Build it in the same toolchain as ruleset_converter, i.e. the host one (folder name taken from its path).
+    rel=${conv#out/Default/}
+    if [[ $rel == */* ]]; then target="${rel%/*}/subresource_indexing_tool"; else target=subresource_indexing_tool; fi
+    echo "building $target (host tool, one time)..." >&2
+    autoninja -C out/Default "$target" >"$OUT/build-indexing-tool.log" 2>&1 \
+        || { echo "could not build $target; see $OUT/build-indexing-tool.log. Targets available:" >&2; gn ls out/Default 2>/dev/null | grep -i indexing | head -5 >&2; exit 1; }
+    idx=$(find_host_tool subresource_indexing_tool)
 fi
-[[ -n $idx ]] || { echo "subresource_indexing_tool still not found after building"; exit 1; }
+[[ -n $idx ]] || { echo "no host-architecture subresource_indexing_tool found after building" >&2; exit 1; }
+echo "using: $conv and $idx" >&2
 
 timed() { # timed <label> <logfile> <cmd...>: runs the command, prints "<seconds> s, peak <MB> MB"
     local label=$1 log=$2; shift 2
