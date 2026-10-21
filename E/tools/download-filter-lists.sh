@@ -83,7 +83,9 @@ for entry in "${lists[@]}"; do
         echo "$name (empty, covered by the merged main list)" >> "$manifest"
         continue
     fi
-    if [[ -s $out && -z ${FORCE:-} ]]; then
+    # In merged mode the main list is a live source that is maintained elsewhere: always fetch it fresh, never
+    # trust a copy from an earlier run. Everything else is only downloaded when missing (FORCE=1 refreshes all).
+    if [[ -s $out && -z ${FORCE:-} && ! ( $mode == merged && $name == easylist ) ]]; then
         echo "have  $name"
     elif python3 "$root/tools/filter_lists/filter_list_download.py" --urls "$url" --output "$out.part" 2>"$out.err" && [[ -s $out.part ]]; then
         mv "$out.part" "$out"; rm -f "$out.err"; echo "ok    $name ($(wc -c < "$out") bytes)"
@@ -94,4 +96,13 @@ for entry in "${lists[@]}"; do
     echo "$(sha256 "$out")  $(wc -c < "$out") bytes  $name  $url" >> "$manifest"
 done
 (( failed )) && { echo "Some lists failed to download. Re-run to retry only the missing ones."; exit 1; }
+if [[ $mode == merged ]]; then
+    min=${E_MERGED_MIN_BYTES:-5000000}
+    size=$(wc -c < "$dest/filter_lists_easylist.txt")
+    if (( size < min )); then
+        echo "ERROR: the merged main list is only $size bytes (expected at least $min). The download probably returned an error page or an old copy; refusing to build with it." >&2
+        exit 1
+    fi
+    echo "merged main list: $size bytes"
+fi
 echo "all ${#lists[@]} filter lists present (main list mode: $mode)"
