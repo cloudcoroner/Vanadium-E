@@ -11,12 +11,13 @@
 #   a *.unindexed file     already a ruleset, e.g. pulled out of an APK:  unzip -p X.apk unindexed_ruleset > x.unindexed
 # Several lists can be joined into one measurement with commas:  a.txt,b.txt
 # Needs the host tools from a finished Chromium build; the indexing tool is built on first use.
-# Environment: SRC=<chromium src dir> (default ~/vanadium-e-build/chromium/src), OUT=<scratch dir>
+# Environment: SRC=<chromium src dir> (default ~/vanadium-e-build/chromium/src), OUT=<scratch dir, default ~/ruleset-measure-work>
 set -o errexit -o nounset -o pipefail
 SRC=${SRC:-$HOME/vanadium-e-build/chromium/src}
-OUT=${OUT:-$HOME/ruleset-measure}
+OUT=${OUT:-$HOME/ruleset-measure-work}   # scratch space; keep your inputs somewhere else
 export PATH=$HOME/depot_tools:$PATH
 [[ $# -ge 1 ]] || { sed -n '3,14p' "$0" | sed 's/^# \{0,1\}//'; exit 2; }
+[[ -e $OUT && ! -d $OUT ]] && { echo "OUT ($OUT) exists and is not a folder"; exit 1; }
 mkdir -p "$OUT"
 cd "$SRC"
 
@@ -46,9 +47,11 @@ human() { numfmt --to=iec --suffix=B "$1" 2>/dev/null || echo "$1 B"; }
 
 printf '\n%-24s %9s %10s %10s  %-22s %-22s %8s\n' "input" "text" "unindexed" "indexed" "convert" "index" "skipped"
 for spec in "$@"; do
-    label=$(basename "${spec%%,*}"); label=${label%.txt}; label=${label//[^A-Za-z0-9._-]/_}
+    label=$(basename "${spec%%,*}"); label=${label%.txt}; label=${label%.unindexed}; label=${label//[^A-Za-z0-9._-]/_}
     [[ $spec == *,* ]] && label="${label}+more"
-    work=$OUT/$label; mkdir -p "$work"; text=0; conv_res="-"; skipped="-"
+    work=$OUT/run-$label
+    [[ -e $work && ! -d $work ]] && { echo "$work exists and is not a folder; choose another OUT"; exit 1; }
+    mkdir -p "$work"; text=0; conv_res="-"; skipped="-"
     if [[ $spec == *.unindexed ]]; then
         unindexed=$spec
     else
