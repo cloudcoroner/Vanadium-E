@@ -13,6 +13,7 @@
 # Needs the host tools from a finished Chromium build; the indexing tool is built on first use.
 # Environment: SRC=<chromium src dir> (default ~/vanadium-e-build/chromium/src), OUT=<scratch dir, default ~/ruleset-measure-work>
 set -o errexit -o nounset -o pipefail
+here=$(cd "$(dirname "$0")" && pwd)   # resolve before any cd, so the helper below is found whatever the working directory
 SRC=${SRC:-$HOME/vanadium-e-build/chromium/src}
 OUT=${OUT:-$HOME/ruleset-measure-work}   # scratch space; keep your inputs somewhere else
 export PATH=$HOME/depot_tools:$PATH
@@ -36,9 +37,9 @@ find_host_tool() {
     done < <(find out/Default -name "$1" -type f -perm -u+x 2>/dev/null)
     return 0
 }
-conv=$(find_host_tool ruleset_converter)
+conv=${CONV_OVERRIDE:-$(find_host_tool ruleset_converter)}
 [[ -n $conv ]] || { echo "no host-architecture ruleset_converter under $SRC/out/Default (finish a build first)"; exit 1; }
-idx=$(find_host_tool subresource_indexing_tool)
+idx=${IDX_OVERRIDE:-$(find_host_tool subresource_indexing_tool)}
 if [[ -z $idx ]]; then
     # Build it in the same toolchain as ruleset_converter, i.e. the host one (folder name taken from its path).
     rel=${conv#out/Default/}
@@ -63,7 +64,8 @@ timed() { # timed <label> <logfile> <cmd...>: runs the command, prints "<seconds
 }
 human() { numfmt --to=iec --suffix=B "$1" 2>/dev/null || echo "$1 B"; }
 
-printf '\n%-24s %9s %10s %10s  %-22s %-22s %8s\n' "input" "text" "unindexed" "indexed" "convert" "index" "skipped"
+rc=0
+printf '\n%-24s %9s %10s %10s  %-22s %-22s %8s %16s\n' "input" "text" "unindexed" "indexed" "convert" "index" "skipped" "tables (max 1M)"
 for spec in "$@"; do
     label=$(basename "${spec%%,*}"); label=${label%.txt}; label=${label%.unindexed}; label=${label//[^A-Za-z0-9._-]/_}
     [[ $spec == *,* ]] && label="${label}+more"
@@ -94,10 +96,17 @@ for spec in "$@"; do
     fi
     indexed=$work/ruleset.indexed
     idx_res=$(timed index "$work/index" "$idx" "$unindexed" "$indexed") || { echo "  -> $label skipped: indexing failed" >&2; continue; }
-    printf '%-24s %9s %10s %10s  %-22s %-22s %8s\n' "${label:0:24}" "$(human "$text")" "$(human "$(wc -c < "$unindexed")")" \
-        "$(human "$(wc -c < "$indexed")")" "$conv_res" "$idx_res" "$skipped"
+    # Chromium rejects an indexed ruleset with more than 1,000,000 flatbuffers tables (nothing is then blocked).
+    trc=0; tcount_out=$(python3 "$here/count-ruleset-tables.py" "$indexed" 2>&1) || trc=$?
+    if (( trc == 0 )); then over=""; elif (( trc == 1 )); then over=" OVER"; rc=3; else over=" (count failed)"; rc=${rc:-0}; echo "  table count failed: $tcount_out" >&2; fi
+    tables=$(sed -n 's/.*tables verified *\([0-9,]*\).*/\1/p' <<< "$tcount_out")
+    pct=$(sed -n 's/.*(\([0-9]*%\)).*/\1/p' <<< "$tcount_out")
+    printf '%-24s %9s %10s %10s  %-22s %-22s %8s %16s\n' "${label:0:24}" "$(human "$text")" "$(human "$(wc -c < "$unindexed")")" \
+        "$(human "$(wc -c < "$indexed")")" "$conv_res" "$idx_res" "$skipped" "${tables:-?} ${pct:+($pct)}$over"
 done
 echo
+echo "'tables' must stay under 1,000,000 or the browser refuses to load the ruleset and blocks nothing (see count-ruleset-tables.py)."
 echo "'skipped' = rules the converter could not parse (unsupported options); harmless."
 echo "'indexed' is the size of the file the browser maps into memory; 'index' is what building it costs on THIS machine."
 echo "A phone is slower than a build workstation, so treat the index time here as a lower bound."
+exit $rc

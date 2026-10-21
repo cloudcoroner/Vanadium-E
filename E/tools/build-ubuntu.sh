@@ -172,6 +172,18 @@ p_sign() {
         fi
         echo "config app main ruleset: ${rsize} bytes (merged list included)"
     fi
+    # The browser silently refuses an indexed ruleset with more than 1,000,000 flatbuffers tables and then blocks
+    # nothing. Index the config app's main ruleset here with Chromium's own tool and refuse to sign if it is too big.
+    if [[ -z ${SKIP_RULESET_CHECK:-} && -f $cfg ]]; then
+        local chk=$WORK/ruleset-check
+        mkdir -p "$chk"
+        unzip -p "$cfg" unindexed_ruleset > "$chk/main.unindexed"
+        if ! SRC="$WORK/chromium/src" OUT="$chk/work" "$root/E/tools/measure-ruleset.sh" "$chk/main.unindexed"; then
+            echo "Refusing to sign: the config app's main ruleset failed the table-limit check above (see E/tools/count-ruleset-tables.py)."
+            echo "Trim the main list (about 250,000 blocking rules at most), or set SKIP_RULESET_CHECK=1 to override at your own risk."
+            exit 1
+        fi
+    fi
     "$root/E/tools/generate-release" out
     ls out/Default/apks/release/*.apk >/dev/null 2>&1 || { echo "Signing produced no APKs (wrong passphrase?)."; exit 1; }
     say "Signed APKs:"; ls -1 out/Default/apks/release/
