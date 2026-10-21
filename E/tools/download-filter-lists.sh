@@ -19,7 +19,12 @@ mode=${E_MAIN_LIST:-official}
 merged_url=${E_MERGED_LIST_URL:-https://saeos.com/proxyfilters/adblock_merged.txt}
 case $mode in official|merged) ;; *) echo "E_MAIN_LIST must be 'official' or 'merged' (got '$mode')"; exit 2 ;; esac
 marker=$dest/E-main-list-mode.txt
-if [[ -f $marker && $(cat "$marker") != "$mode" ]]; then
+# Without a marker we cannot know which source the existing main files came from (e.g. downloaded by an
+# older version of this script), so fetch them again rather than silently keep possibly wrong content.
+if [[ ! -f $marker ]]; then
+    echo "no record of which main list is in place: re-downloading the two main list files ($mode)"
+    rm -f "$dest/filter_lists_easylist.txt" "$dest/filter_lists_easyprivacy.txt"
+elif [[ $(cat "$marker") != "$mode" ]]; then
     echo "main list mode changed ($(cat "$marker") -> $mode): re-downloading the two main list files"
     rm -f "$dest/filter_lists_easylist.txt" "$dest/filter_lists_easyprivacy.txt"
 fi
