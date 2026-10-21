@@ -98,7 +98,12 @@ def main(paths):
             worst = 2
             continue
         bl = stats.get('blocklist', {})
-        verdict = 'OVER THE LIMIT: the browser will reject this ruleset' if w.tables > LIMIT else 'ok'
+        if w.tables > LIMIT:
+            verdict = 'OVER THE LIMIT: the browser will reject this ruleset'
+        elif w.tables > 0.9 * LIMIT:
+            verdict = 'ok, but within 10% of the limit: trim before adding anything'
+        else:
+            verdict = 'ok'
         print(f"{path}")
         print(f"   hash table slots {bl.get('slots', 0):>10,}   occupied {bl.get('occupied', 0):>9,}   "
               f"rules {bl.get('rules', 0) + bl.get('fallback', 0):>9,}")
