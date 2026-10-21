@@ -4,6 +4,7 @@
 #
 #   E/tools/publish-release.sh               create a DRAFT release (review it on GitHub, then publish there)
 #   E/tools/publish-release.sh --publish     create it already public
+#   E/tools/publish-release.sh --prerelease  mark it a pre-release (Obtainium skips these by default: use for test builds)
 #   E/tools/publish-release.sh --dry-run     check everything and show what would happen, change nothing
 #   E/tools/publish-release.sh --tag TAG     use this tag instead of <chromium version>-e<N>
 #
@@ -18,11 +19,11 @@ cd "$root"
 WORK=${WORK:-$HOME/vanadium-e-build}
 APK_DIR=${APK_DIR:-$WORK/chromium/src/out/Default/apks/release}
 APKSIGNER=${APKSIGNER:-$WORK/chromium/src/third_party/android_sdk/public/build-tools/37.0.0/apksigner}
-publish=0; dry=0; tag=""
+publish=0; dry=0; pre=0; tag=""
 while [[ $# -gt 0 ]]; do
     case $1 in
-        --publish) publish=1 ;; --dry-run) dry=1 ;; --tag) tag=${2:?--tag needs a value}; shift ;;
-        -h|--help) sed -n '2,13p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+        --publish) publish=1 ;; --prerelease) pre=1 ;; --dry-run) dry=1 ;; --tag) tag=${2:?--tag needs a value}; shift ;;
+        -h|--help) sed -n '2,14p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
         *) echo "unknown option: $1"; exit 2 ;;
     esac; shift
 done
@@ -103,11 +104,12 @@ NOTES
 echo
 echo "repo:    $REPO"
 echo "tag:     $tag   (commit ${commit:0:12})"
-echo "mode:    $([[ $publish == 1 ]] && echo PUBLIC || echo draft)"
+echo "mode:    $([[ $publish == 1 ]] && echo PUBLIC || echo draft)$([[ $pre == 1 ]] && echo ", pre-release")"
 echo "assets:  ${apks[*]} SHA256SUMS"
 if (( dry )); then echo; echo "dry run: nothing created"; exit 0; fi
 
 flags=(--draft); (( publish )) && flags=()
+(( pre )) && flags+=(--prerelease)
 gh release create "$tag" "$stage"/*.apk "$stage/SHA256SUMS" --repo "$REPO" --target "$commit" \
     --title "Vanadium-E $tag" --notes-file "$stage/notes.md" "${flags[@]}"
 echo "done. $([[ $publish == 1 ]] || echo "Review the draft at https://github.com/$REPO/releases and press Publish.")"
