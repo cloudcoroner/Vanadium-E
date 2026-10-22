@@ -159,18 +159,23 @@ p_sign() {
     cd "$WORK/chromium/src"
     ls out/Default/apks/Trichrome*.apk out/Default/apks/Vanadium*.apk >/dev/null 2>&1 \
         || { echo "No built APKs in out/Default/apks/. The build did not finish; run the build phase first."; exit 1; }
-    # In merged mode the compiled main ruleset must be large (~18 MB). A small one means the config app was built
-    # before the merged list was in place, and signing it would publish the wrong content.
+    # In merged mode the config app's main ruleset must have been built from the list that is on disk now. The
+    # compiled ruleset is consistently ~1.5x the size of its text (EasyList 1.5x, a 11 MB merged list 1.6x), so one
+    # far smaller than the list means the config app was built before this list was in place (an older list, or
+    # EasyList alone), and signing it would publish the wrong content. Relative to the list, so any list size works.
     local mode_file=vanadium/android_config/filter_lists/E-main-list-mode.txt cfg=out/Default/apks/VanadiumConfig.apk
-    if [[ -f $mode_file && $(cat "$mode_file") == merged && -f $cfg ]]; then
-        local rsize
+    local main_list=vanadium/android_config/filter_lists/filter_lists_easylist.txt
+    if [[ -f $mode_file && $(cat "$mode_file") == merged && -f $cfg && -f $main_list ]]; then
+        local rsize lsize
         rsize=$(unzip -l "$cfg" unindexed_ruleset 2>/dev/null | awk '$4 == "unindexed_ruleset" {print $1}')
-        if (( ${rsize:-0} < 10000000 )); then
-            echo "Lists are set to merged mode, but the config app's main ruleset is only ${rsize:-0} bytes (expected ~18 MB)."
-            echo "It was built before the merged list was in place. Re-run the lists, gn and build phases, then sign again."
+        lsize=$(wc -c < "$main_list")
+        if (( ${rsize:-0} * 10 < lsize * 12 )); then
+            echo "Lists are set to merged mode, but the config app's main ruleset (${rsize:-0} bytes) is too small for the main list on disk"
+            echo "(${lsize} bytes of text; a ruleset built from it is normally about 1.5x that). The config app was built before this list"
+            echo "was in place. Re-run the lists, gn and build phases, then sign again."
             exit 1
         fi
-        echo "config app main ruleset: ${rsize} bytes (merged list included)"
+        echo "config app main ruleset: ${rsize} bytes for a ${lsize}-byte main list (consistent)"
     fi
     # The browser silently refuses an indexed ruleset with more than 1,000,000 flatbuffers tables and then blocks
     # nothing. Index the config app's main ruleset here with Chromium's own tool and refuse to sign if it is too big.
