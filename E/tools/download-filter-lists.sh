@@ -11,11 +11,11 @@ dest=${1:?usage: $0 <chromium src dir>}/vanadium/android_config/filter_lists
 [[ -d $dest ]] || { echo "not found: $dest (apply the patches first)"; exit 1; }
 
 # Main ad/tracker ruleset source (E_MAIN_LIST):
-#   official (default)  EasyList + EasyPrivacy from adblockplus.org
-#   merged              one pre-merged, deduplicated list (E_MERGED_LIST_URL), which already contains EasyList and
+#   merged (default)    one pre-merged, deduplicated list (E_MERGED_LIST_URL), which already contains EasyList and
 #                       EasyPrivacy. The EasyPrivacy input then gets a comment-only file so the build file still works.
+#   official            EasyList + EasyPrivacy from adblockplus.org (fallback if the merged list is unavailable)
 # Switching modes changes the ruleset content, so raise E/config-revision before releasing.
-mode=${E_MAIN_LIST:-official}
+mode=${E_MAIN_LIST:-merged}
 merged_url=${E_MERGED_LIST_URL:-https://saeos.com/proxyfilters/adblock_merged.txt}
 case $mode in official|merged) ;; *) echo "E_MAIN_LIST must be 'official' or 'merged' (got '$mode')"; exit 2 ;; esac
 marker=$dest/E-main-list-mode.txt
