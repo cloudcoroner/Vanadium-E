@@ -47,10 +47,13 @@ git branch -r --contains "$commit" | grep -q 'origin/' || die "HEAD ($commit) is
 # --- version and tag
 version=$(sed -n 's/^android_default_version_name = "\(.*\)"/\1/p' args.gn)
 [[ -n $version ]] || die "could not read Chromium version from args.gn"
+# Tags follow the browser's full version name: <chromium version>.<ext_version_increment>-e<N>, e.g. 155.0.8059.84.0-e3.
+inc=$(sed -n 's/^ext_version_increment = "\(.*\)"/\1/p' E/args.gn.overlay args.gn | head -1)
+tagbase="$version${inc:+.$inc}"
 if [[ -z $tag ]]; then
     last=$(gh release list --repo "$REPO" --limit 200 --json tagName --jq '.[].tagName' \
-        | sed -n "s/^${version//./\\.}-e\([0-9][0-9]*\)$/\1/p" | sort -n | tail -1)
-    tag="$version-e$(( ${last:-0} + 1 ))"
+        | sed -n "s/^${tagbase//./\\.}-e\([0-9][0-9]*\)$/\1/p" | sort -n | tail -1)
+    tag="$tagbase-e$(( ${last:-0} + 1 ))"
 fi
 gh release view "$tag" --repo "$REPO" >/dev/null 2>&1 && die "release $tag already exists"
 
