@@ -12,10 +12,31 @@ If a web site is opened in Vanadium-E and it should open in Vanadium, tap the me
 Vanadium-E's build is a set of config settings as patches packaged after Vanadium's patches are applied. Claude is used to ensure Vanadium-E patches do not impact the effectiveness of upstream Vanadium patches.
 
 ## Layout
-- Everything upstream (`patches/`, `args.gn`, ...) is untouched, so syncing never conflicts.
-- `E/args.gn.overlay` – build arg overrides (package names, signing digest).
-- `E/patches/` – extra Chromium patches (defaults); `E/subprojects_patches/` – patches for the search engine data submodule. See `E/patches/README.md` for the settings map.
-- `E/tools/` – `sync-upstream.sh`, `build-args.sh`, `apply-patches.sh` / `apply-subproject-patches.sh`.
-- `.github/workflows/sync-upstream.yml` – daily upstream merge PR.
+- Vanadium's own files (`patches/`, `args.gn`, `generate-release`, `README.md`, ...) are left as upstream has them, so syncing from Vanadium doesn't conflict. The one exception is `.gitignore`, where a few lines keep signing keys out of git. Everything Vanadium-E adds is in `E/`, `.github/` and the two notice files (`README-Vanadium-E.md`, `NOTICE-Vanadium-E`).
+- `E/patches/` – Chromium patches applied after Vanadium's (defaults, names, icons, incognito start, ...). `E/patches/README.md` maps each setting to its patch.
+- `E/subprojects_patches/` – patches for the search engine data submodule (Startpage first on every regional list).
+- `E/args.gn.overlay` – build arguments that replace Vanadium's (package names `app.vanadiume.*`, `ext_version_increment`). The signing certificate digest is supplied at build time through `VANADIUM_E_CERT_DIGEST`.
+- `E/config-revision` – added to upstream's config app version (upstream x 100 + this number). **Raise it whenever the filter list content changes**, otherwise phones keep the old indexed rules.
+- `E/branding/` – launcher icon sources and the script that generates them.
+- `.github/workflows/` – `sync-upstream.yml` (daily: merges upstream, checks that the patches still apply, opens a pull request) and `check-patches.yml` (runs the same patch check on pushes and pull requests).
+
+### E/tools
+Build and release
+- `build-ubuntu.sh` – builds and signs on Ubuntu: dependencies, Chromium checkout, patches, filter lists, build, signing. Resumable, one phase at a time.
+- `apply-patches.sh`, `apply-subproject-patches.sh` – the two patch phases, before and after `gclient sync`.
+- `build-args.sh` – generates `args.gn`: Vanadium's, plus the overlay, certificate digest and config version.
+- `create-keystore.sh`, `cert-digest.sh`, `generate-release` – create the signing key, print its certificate digest, and sign the APKs (a copy of upstream's signing script using the Vanadium-E key).
+- `publish-release.sh` – creates the GitHub release (a draft by default, `--prerelease` for test builds) after verifying the APK signatures; the notes carry checksums and the filter-list sources.
+- `make-obtainium-links.py` – prints Obtainium links that add the browser and config APKs.
+- `rebrand-strings.py` – renames the visible product name to "Vanadium-E" in string files when patches are applied.
+
+Filter lists
+- `download-filter-lists.sh` – downloads the lists the config app is built from. The main list is the merged list (default, from `E_MERGED_LIST_URL`) or EasyList plus EasyPrivacy (`E_MAIN_LIST=official`).
+- `measure-ruleset.sh`, `count-ruleset-tables.py` – measure a list's size, indexing time and memory, and its index table count. The browser rejects an index over 1,000,000 tables and then blocks nothing; the signing step runs this check.
+- `measure-dns-overlap.py` – estimates how much of each blocklist Cloudflare's malware-blocking DNS already covers.
+
+Maintenance
+- `check-patches.sh` – checks that the patches still apply on top of Vanadium's at the target Chromium version, without a full checkout.
+- `sync-upstream.sh` – merges GrapheneOS/Vanadium into this repo.
 
 License: GPL-2.0 only, see `NOTICE-Vanadium-E`.
