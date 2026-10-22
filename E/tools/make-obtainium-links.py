@@ -7,6 +7,11 @@ fields Obtainium's own "share config link" emits, with `additionalSettings` as a
 GitHub repo but only the APK its filter matches. Version detection is off, so Obtainium compares release tags instead of
 trying to reconcile them with the installed version names. Tapping a link shows a confirmation with the raw JSON first.
 
+GitHub does not make custom-scheme links clickable, so the README links go through Obtainium's redirect page
+(https://apps.obtainium.imranr.dev/redirect?r=...), which only accepts single-app links (obtainium://app/...) and
+rejects the bulk obtainium://apps/... form. So the README gets one redirect link per APK; the bulk link is printed
+too for pasting into a phone's browser or a message, where it works directly.
+
 Usage: make-obtainium-links.py [repo-url]      (default https://github.com/cloudcoroner/Vanadium-E)
 """
 import json, re, sys, urllib.parse
@@ -27,6 +32,11 @@ def enc(obj):
 
 apps = [entry("app.vanadiume.browser", "Vanadium-E", "VanadiumBrowser.apk"),
         entry("app.vanadiume.config", "Vanadium-E Config", "VanadiumConfig.apk")]
-print("Both apps in one link:\n" + "obtainium://apps/" + enc(apps) + "\n")
-for a in apps:
-    print(f"{a['name']} only:\n" + "obtainium://app/" + enc(a) + "\n")
+REDIRECT = "https://apps.obtainium.imranr.dev/redirect?r="
+links = {a["name"]: "obtainium://app/" + enc(a) for a in apps}
+
+print("README markdown (works on GitHub; each link opens Obtainium's add-app confirmation on a phone):\n")
+print("Install with Obtainium (tap on the phone, one link per app): " +
+      " | ".join(f"[{name}]({REDIRECT}{link})" for name, link in links.items()) + "\n")
+print("Both apps in one link (bare custom-scheme link: paste into a phone's browser or a message, not into GitHub):\n")
+print("obtainium://apps/" + enc(apps) + "\n")
