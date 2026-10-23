@@ -50,9 +50,16 @@ deps=$(curl -sfL --retry 3 "$base/chromium/src/+/refs/tags/$version/DEPS?format=
 pin=$(grep -A1 "'src/third_party/search_engines_data/resources':" <<< "$deps" | grep -o '[0-9a-f]\{40\}' | head -1)
 if [[ -z $pin ]]; then echo "FAIL: could not find search_engines_data pin in DEPS"; fail=1; else
     sub=$work/sub; mkdir -p "$sub"; git_init "$sub"
-    for f in definitions/prepopulated_engines.json definitions/regional_settings.json; do
-        fetch "$base/external/search_engines_data/+/$pin/$f" "$sub/$f" || { echo "FAIL: fetch $f"; fail=1; }
-    done
+    # Fetch with git (what gclient does): the gitiles web view does not serve every pinned revision.
+    if git -C "$sub" fetch -q --depth 1 "$base/external/search_engines_data" "$pin" 2>"$work/err" \
+        && git -C "$sub" checkout -q FETCH_HEAD -- definitions/prepopulated_engines.json definitions/regional_settings.json 2>>"$work/err"; then
+        :
+    else
+        echo "  (git fetch of $pin failed, trying the web view)"; sed 's/^/    /' "$work/err" | head -3
+        for f in definitions/prepopulated_engines.json definitions/regional_settings.json; do
+            fetch "$base/external/search_engines_data/+/$pin/$f" "$sub/$f" || { echo "FAIL: fetch $f"; fail=1; }
+        done
+    fi
     git -C "$sub" add -A; git -C "$sub" commit -qm base
     for p in "$root"/subprojects_patches/third_party/search_engines_data/resources/*.patch \
              "$root"/E/subprojects_patches/third_party/search_engines_data/resources/E-*.patch; do

@@ -6,7 +6,7 @@
 #   E/tools/publish-release.sh --publish     create it already public
 #   E/tools/publish-release.sh --prerelease  mark it a pre-release (Obtainium skips these by default: use for test builds)
 #   E/tools/publish-release.sh --dry-run     check everything and show what would happen, change nothing
-#   E/tools/publish-release.sh --tag TAG     use this tag instead of <chromium version>-e<N>
+#   E/tools/publish-release.sh --tag TAG     use this tag instead of <browser version>-<config version>
 #
 # Needs the GitHub CLI (`sudo apt install gh`, then `gh auth login`), a clean checkout whose HEAD is
 # pushed, and the signed APKs from `build-ubuntu.sh sign`. Environment (optional):
@@ -47,15 +47,15 @@ git branch -r --contains "$commit" | grep -q 'origin/' || die "HEAD ($commit) is
 # --- version and tag
 version=$(sed -n 's/^android_default_version_name = "\(.*\)"/\1/p' args.gn)
 [[ -n $version ]] || die "could not read Chromium version from args.gn"
-# Tags follow the browser's full version name: <chromium version>.<ext_version_increment>-e<N>, e.g. 155.0.8059.84.0-e3.
+# What the build should have produced (same arithmetic as build-args.sh):
+#   browser versionName = <chromium version>.<ext_version_increment>   e.g. 156.0.8078.47.0
+#   config  versionCode = <upstream config version> x 100 + E/config-revision   e.g. 22004
 inc=$(sed -n 's/^ext_version_increment = "\(.*\)"/\1/p' E/args.gn.overlay args.gn | head -1)
-tagbase="$version${inc:+.$inc}"
-if [[ -z $tag ]]; then
-    last=$(gh release list --repo "$REPO" --limit 200 --json tagName --jq '.[].tagName' \
-        | sed -n "s/^${tagbase//./\\.}-e\([0-9][0-9]*\)$/\1/p" | sort -n | tail -1)
-    tag="$tagbase-e$(( ${last:-0} + 1 ))"
-fi
-gh release view "$tag" --repo "$REPO" >/dev/null 2>&1 && die "release $tag already exists"
+want_browser="$version${inc:+.$inc}"
+up_cfg=$(sed -n 's/^config_apk_version_code = "\([0-9]*\)"/\1/p' args.gn)
+rev=$(tr -dc 0-9 < E/config-revision 2>/dev/null)
+[[ -n $up_cfg && -n $rev ]] || die "could not compute the config version (upstream '${up_cfg}', E/config-revision '${rev}')"
+want_config=$(( up_cfg * 100 + rev ))
 
 # --- the APKs, and proof they carry the right signing key
 # Current Vanadium builds a standalone browser APK; older releases used the Trichrome library layout.
@@ -77,6 +77,25 @@ for a in "${apks[@]}"; do
     echo "verified signature: $a"
 done
 
+# --- the versions inside the APKs are what Obtainium sees, so the release name must carry exactly those
+aapt2=${AAPT2:-$(ls "$WORK"/chromium/src/third_party/android_sdk/public/build-tools/*/aapt2 2>/dev/null | tail -1)}
+apk_field() { "$aapt2" dump badging "$APK_DIR/$1" 2>/dev/null | sed -n "s/^package: .*$2='\([^']*\)'.*/\1/p" | head -1; }
+if [[ -x ${aapt2:-/nonexistent} ]]; then
+    have_browser=$(apk_field VanadiumBrowser.apk versionName)
+    have_config=$(apk_field VanadiumConfig.apk versionCode)
+    [[ $have_browser == "$want_browser" ]] || die "VanadiumBrowser.apk says version '${have_browser:-?}' but args.gn gives '$want_browser'. Is $APK_DIR from an older build?"
+    [[ $have_config == "$want_config" ]] || die "VanadiumConfig.apk says version '${have_config:-?}' but args.gn and E/config-revision give '$want_config'. Rebuild, or the revision changed after the build."
+    echo "versions inside the APKs: browser $have_browser, config $have_config"
+else
+    echo "warning: aapt2 not found (set AAPT2); trusting the versions computed from args.gn instead of reading the APKs" >&2
+    have_browser=$want_browser; have_config=$want_config
+fi
+
+# Tag: <browser versionName>-<config versionCode>, e.g. 156.0.8078.47.0-22004. Obtainium extracts each app's version from it.
+if [[ -z $tag ]]; then tag="$have_browser-$have_config"; fi
+title="Vanadium-E $have_browser (config $have_config)"
+gh release view "$tag" --repo "$REPO" >/dev/null 2>&1 && die "release $tag already exists. Raise E/config-revision for a new release of the same Chromium version, then rebuild."
+
 # --- release assets and notes
 stage=$(mktemp -d); trap 'rm -rf "$stage"' EXIT
 for a in "${apks[@]}"; do cp "$APK_DIR/$a" "$stage/"; done
@@ -91,6 +110,8 @@ cat > "$stage/notes.md" <<NOTES
 Unofficial Vanadium-E build on Chromium \`$version\`. Not affiliated with or endorsed by GrapheneOS.
 
 $install_note
+
+**Versions:** browser \`$have_browser\`, config app \`$have_config\`.
 Vanadium-E uses its own signing key: it installs alongside Vanadium and updates earlier Vanadium-E builds, but cannot replace Vanadium.
 
 **Signing certificate SHA-256:** \`$digest\`
@@ -114,5 +135,5 @@ if (( dry )); then echo; echo "dry run: nothing created"; exit 0; fi
 flags=(--draft); (( publish )) && flags=()
 (( pre )) && flags+=(--prerelease)
 gh release create "$tag" "$stage"/*.apk "$stage/SHA256SUMS" --repo "$REPO" --target "$commit" \
-    --title "Vanadium-E $tag" --notes-file "$stage/notes.md" "${flags[@]}"
+    --title "$title" --notes-file "$stage/notes.md" "${flags[@]}"
 echo "done. $([[ $publish == 1 ]] || echo "Review the draft at https://github.com/$REPO/releases and press Publish.")"

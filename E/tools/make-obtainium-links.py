@@ -4,8 +4,11 @@
 
 Format: obtainium://apps/<url-encoded JSON array> (https://wiki.obtainium.imranr.dev/deep_links/); each entry has the
 fields Obtainium's own "share config link" emits, with `additionalSettings` as a JSON string. Each entry tracks the same
-GitHub repo but only the APK its filter matches. Version detection is off, so Obtainium compares release tags instead of
-trying to reconcile them with the installed version names. Tapping a link shows a confirmation with the raw JSON first.
+GitHub repo but only the APK its filter matches. Releases are tagged <browser version>-<config version>, e.g.
+156.0.8078.47.0-22004, and each entry extracts ITS OWN version from the tag with a regex (browser: the leading five-part
+number; config app: the number after the dash). Those strings are exactly the versionName the installed apps report, so
+Obtainium sees an app as up to date only when it truly has that version, and shows real version numbers. Tapping a link
+shows a confirmation with the raw JSON first.
 
 GitHub does not make custom-scheme links clickable, so the README links go through Obtainium's redirect page
 (https://apps.obtainium.imranr.dev/redirect?r=...), which only accepts single-app links (obtainium://app/...) and
@@ -20,8 +23,9 @@ repo = sys.argv[1] if len(sys.argv) > 1 else "https://github.com/cloudcoroner/Va
 author = repo.rstrip('/').split('/')[-2]
 
 
-def entry(package, name, apk):
-    settings = {"apkFilterRegEx": "^" + re.escape(apk) + "$", "versionDetection": False}
+def entry(package, name, apk, version_regex, group):
+    settings = {"apkFilterRegEx": "^" + re.escape(apk) + "$", "versionDetection": True,
+                "versionExtractionRegEx": version_regex, "matchGroupToUse": group}
     return {"id": package, "url": repo, "author": author, "name": name, "preferredApkIndex": 0,
             "additionalSettings": json.dumps(settings, separators=(',', ':'))}
 
@@ -30,8 +34,8 @@ def enc(obj):
     return urllib.parse.quote(json.dumps(obj, separators=(',', ':')), safe='')
 
 
-apps = [entry("app.vanadiume.browser", "Vanadium-E", "VanadiumBrowser.apk"),
-        entry("app.vanadiume.config", "Vanadium-E Config", "VanadiumConfig.apk")]
+apps = [entry("app.vanadiume.browser", "Vanadium-E", "VanadiumBrowser.apk", r"^[0-9]+(?:\.[0-9]+){4}", ""),
+        entry("app.vanadiume.config", "Vanadium-E Config", "VanadiumConfig.apk", r"-([0-9]+)$", "1")]
 REDIRECT = "https://apps.obtainium.imranr.dev/redirect?r="
 links = {a["name"]: "obtainium://app/" + enc(a) for a in apps}
 
