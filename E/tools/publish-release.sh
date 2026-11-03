@@ -6,7 +6,11 @@
 #   E/tools/publish-release.sh --publish     create it already public
 #   E/tools/publish-release.sh --prerelease  mark it a pre-release (Obtainium skips these by default: use for test builds)
 #   E/tools/publish-release.sh --dry-run     check everything and show what would happen, change nothing
-#   E/tools/publish-release.sh --tag TAG     use this tag instead of <browser version>-<config version>
+#   E/tools/publish-release.sh --only browser|config   publish just one of the two releases
+#
+# Makes ONE release per APK, tagged with that APK's own version (e.g. 156.0.8078.79.0 for VanadiumBrowser.apk and
+# 22204 for VanadiumConfig.apk), because that is the string Obtainium compares. A tag that already exists is skipped,
+# so re-running after a config-only change publishes only the config release.
 #
 # Needs the GitHub CLI (`sudo apt install gh`, then `gh auth login`), a clean checkout whose HEAD is
 # pushed, and the signed APKs from `build-ubuntu.sh sign`. Environment (optional):
@@ -19,11 +23,11 @@ cd "$root"
 WORK=${WORK:-$HOME/vanadium-e-build}
 APK_DIR=${APK_DIR:-$WORK/chromium/src/out/Default/apks/release}
 APKSIGNER=${APKSIGNER:-$WORK/chromium/src/third_party/android_sdk/public/build-tools/37.0.0/apksigner}
-publish=0; dry=0; pre=0; tag=""
+publish=0; dry=0; pre=0; only=""
 while [[ $# -gt 0 ]]; do
     case $1 in
-        --publish) publish=1 ;; --prerelease) pre=1 ;; --dry-run) dry=1 ;; --tag) tag=${2:?--tag needs a value}; shift ;;
-        -h|--help) sed -n '2,14p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+        --publish) publish=1 ;; --prerelease) pre=1 ;; --dry-run) dry=1 ;; --only) only=${2:?--only needs browser or config}; shift ;;
+        -h|--help) sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
         *) echo "unknown option: $1"; exit 2 ;;
     esac; shift
 done
@@ -58,14 +62,7 @@ rev=$(tr -dc 0-9 < E/config-revision 2>/dev/null)
 want_config=$(( up_cfg * 100 + rev ))
 
 # --- the APKs, and proof they carry the right signing key
-# Current Vanadium builds a standalone browser APK; older releases used the Trichrome library layout.
-if [[ -s $APK_DIR/VanadiumBrowser.apk ]]; then
-    apks=(VanadiumBrowser.apk VanadiumConfig.apk)
-    install_note='**Install both:** `VanadiumBrowser.apk` and `VanadiumConfig.apk` (the config app carries the ad-blocking rules; install it with the browser, in either order).'
-else
-    apks=(TrichromeLibrary.apk TrichromeChrome.apk VanadiumConfig.apk)
-    install_note='**Install in this order:** `TrichromeLibrary.apk`, `TrichromeChrome.apk`, `VanadiumConfig.apk`.'
-fi
+apks=(VanadiumBrowser.apk VanadiumConfig.apk)
 for a in "${apks[@]}"; do [[ -s $APK_DIR/$a ]] || die "missing $APK_DIR/$a (run: E/tools/build-ubuntu.sh sign)"; done
 digest=$(sed -n 's/^trichrome_certdigest = "\([0-9a-f]\{64\}\)"/\1/p' E/args.gn.overlay)
 digest=${digest:-${VANADIUM_E_CERT_DIGEST:-}}
@@ -77,7 +74,7 @@ for a in "${apks[@]}"; do
     echo "verified signature: $a"
 done
 
-# --- the versions inside the APKs are what Obtainium sees, so the release name must carry exactly those
+# --- the versions inside the APKs are what Obtainium sees, so the tags must carry exactly those
 aapt2=${AAPT2:-$(ls "$WORK"/chromium/src/third_party/android_sdk/public/build-tools/*/aapt2 2>/dev/null | tail -1)}
 apk_field() { "$aapt2" dump badging "$APK_DIR/$1" 2>/dev/null | sed -n "s/^package: .*$2='\([^']*\)'.*/\1/p" | head -1; }
 if [[ -x ${aapt2:-/nonexistent} ]]; then
@@ -91,49 +88,48 @@ else
     have_browser=$want_browser; have_config=$want_config
 fi
 
-# Tag: <browser versionName>-<config versionCode>, e.g. 156.0.8078.47.0-22004. Obtainium extracts each app's version from it.
-if [[ -z $tag ]]; then tag="$have_browser-$have_config"; fi
-title="Vanadium-E $have_browser (config $have_config)"
-gh release view "$tag" --repo "$REPO" >/dev/null 2>&1 && die "release $tag already exists. Raise E/config-revision for a new release of the same Chromium version, then rebuild."
-
-# --- release assets and notes
-stage=$(mktemp -d); trap 'rm -rf "$stage"' EXIT
-for a in "${apks[@]}"; do cp "$APK_DIR/$a" "$stage/"; done
-( cd "$stage" && sha256 "${apks[@]}" > SHA256SUMS )
-# Which filter-list content went into this build (written by download-filter-lists.sh), if available.
 lists_manifest=$WORK/chromium/src/vanadium/android_config/filter_lists/E-manifest.txt
-lists_section=""
-if [[ -s $lists_manifest ]]; then
-    lists_section=$(printf '\n<details><summary>Filter lists in this build</summary>\n\n```\n%s\n```\n</details>\n\n' "$(cat "$lists_manifest")")
-fi
-cat > "$stage/notes.md" <<NOTES
+src_line="**Source (GPL-2.0-only):** https://github.com/$REPO/tree/$commit (Vanadium patches in \`patches/\`, Vanadium-E patches in \`E/\`). Chromium source: tag \`$version\` at https://chromium.googlesource.com/chromium/src/+/refs/tags/$version"
+stage=$(mktemp -d); trap 'rm -rf "$stage"' EXIT
+flags=(--draft); (( publish )) && flags=()
+(( pre )) && flags+=(--prerelease)
+
+# release <kind> <apk> <tag> <title> <extra notes>
+release() {
+    local kind=$1 apk=$2 tag=$3 title=$4 extra=$5 d=$stage/$1
+    if gh release view "$tag" --repo "$REPO" >/dev/null 2>&1; then echo "skip $kind: release $tag already exists"; return; fi
+    mkdir -p "$d"; cp "$APK_DIR/$apk" "$d/"
+    ( cd "$d" && sha256 "$apk" > SHA256SUMS )
+    cat > "$d/notes.md" <<NOTES
 Unofficial Vanadium-E build on Chromium \`$version\`. Not affiliated with or endorsed by GrapheneOS.
 
-$install_note
-
-**Versions:** browser \`$have_browser\`, config app \`$have_config\`.
+**Install both apps:** \`VanadiumBrowser.apk\` (release \`$have_browser\`) and \`VanadiumConfig.apk\` (release \`$have_config\`, carries the ad-blocking rules).
 Vanadium-E uses its own signing key: it installs alongside Vanadium and updates earlier Vanadium-E builds, but cannot replace Vanadium.
 
 **Signing certificate SHA-256:** \`$digest\`
 
 **Checksums (SHA-256):**
 \`\`\`
-$(cat "$stage/SHA256SUMS")
+$(cat "$d/SHA256SUMS")
 \`\`\`
-
-$lists_section
-**Source (GPL-2.0-only):** https://github.com/$REPO/tree/$commit (Vanadium patches in \`patches/\`, Vanadium-E patches in \`E/\`). Chromium source: tag \`$version\` at https://chromium.googlesource.com/chromium/src/+/refs/tags/$version
+$extra
+$src_line
 NOTES
+    echo; echo "repo:    $REPO"; echo "tag:     $tag   (commit ${commit:0:12})"
+    echo "mode:    $([[ $publish == 1 ]] && echo PUBLIC || echo draft)$([[ $pre == 1 ]] && echo ", pre-release")"
+    echo "asset:   $apk + SHA256SUMS"
+    (( dry )) && return
+    gh release create "$tag" "$d/$apk" "$d/SHA256SUMS" --repo "$REPO" --target "$commit" \
+        --title "$title" --notes-file "$d/notes.md" "${flags[@]}"
+}
 
-echo
-echo "repo:    $REPO"
-echo "tag:     $tag   (commit ${commit:0:12})"
-echo "mode:    $([[ $publish == 1 ]] && echo PUBLIC || echo draft)$([[ $pre == 1 ]] && echo ", pre-release")"
-echo "assets:  ${apks[*]} SHA256SUMS"
-if (( dry )); then echo; echo "dry run: nothing created"; exit 0; fi
-
-flags=(--draft); (( publish )) && flags=()
-(( pre )) && flags+=(--prerelease)
-gh release create "$tag" "$stage"/*.apk "$stage/SHA256SUMS" --repo "$REPO" --target "$commit" \
-    --title "$title" --notes-file "$stage/notes.md" "${flags[@]}"
-echo "done. $([[ $publish == 1 ]] || echo "Review the draft at https://github.com/$REPO/releases and press Publish.")"
+lists_section=""
+if [[ -s $lists_manifest ]]; then
+    lists_section=$(printf '\n<details><summary>Filter lists in this build</summary>\n\n```\n%s\n```\n</details>\n' "$(cat "$lists_manifest")")
+fi
+# Browser first, then config. Obtainium links set fallbackToOlderReleases, so the order does not matter to it.
+[[ $only == config ]]  || release browser VanadiumBrowser.apk "$have_browser" "Vanadium-E $have_browser" ""
+[[ $only == browser ]] || release config  VanadiumConfig.apk  "$have_config"  "Vanadium-E Config $have_config" "$lists_section"
+if (( dry )); then echo; echo "dry run: nothing created"; else
+    echo "done. $([[ $publish == 1 ]] || echo "Review the drafts at https://github.com/$REPO/releases and press Publish.")"
+fi

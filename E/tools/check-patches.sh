@@ -12,12 +12,12 @@ work=$(mktemp -d); trap 'rm -rf "$work"' EXIT
 fetch() { # fetch <url> <dest>; 0 = ok, 1 = HTTP 404 (file absent), exits on persistent network errors
     mkdir -p "$(dirname "$2")"
     local code i
-    for i in 1 2 3 4; do
+    for i in 1 2 3 4 5 6 7 8; do
         code=$(curl -sL -m 120 -o "$2.b64" -w '%{http_code}' "$1?format=TEXT" || true)
         if [[ $code == 200 ]]; then base64 -d < "$2.b64" > "$2"; rm -f "$2.b64"; return 0; fi
         rm -f "$2.b64"
         [[ $code == 404 ]] && return 1
-        sleep $((i * 3))
+        sleep $((i * 8))
     done
     echo "network error (HTTP $code) fetching $1"; exit 2
 }
@@ -46,7 +46,8 @@ for p in "$root"/E/patches/E-*.patch; do
 done
 
 echo "== search_engines_data submodule patches"
-deps=$(curl -sfL --retry 3 "$base/chromium/src/+/refs/tags/$version/DEPS?format=TEXT" | base64 -d)
+fetch "$base/chromium/src/+/refs/tags/$version/DEPS" "$work/DEPS" || { echo "DEPS not found for $version"; exit 2; }
+deps=$(cat "$work/DEPS")
 pin=$(grep -A1 "'src/third_party/search_engines_data/resources':" <<< "$deps" | grep -o '[0-9a-f]\{40\}' | head -1)
 if [[ -z $pin ]]; then echo "FAIL: could not find search_engines_data pin in DEPS"; fail=1; else
     sub=$work/sub; mkdir -p "$sub"; git_init "$sub"
