@@ -86,7 +86,9 @@ p_fetch() {
 
 p_patch() {
     cd "$WORK/chromium/src"
-    git checkout -B "vanadium-e-$version" "$version"
+    # -f: files left over from the previous build (untracked) may now exist in the new tag; overwrite them.
+    # Nothing in this tree is hand-edited: the patches are re-applied as commits right after.
+    git checkout -f -B "vanadium-e-$version" "$version"
     "$root/E/tools/apply-patches.sh"
 }
 
