@@ -23,9 +23,10 @@ WORK=${WORK:-$HOME/vanadium-e-build}
 JOBS=${JOBS:-$(nproc)}
 export VANADIUM_E_KEYSTORE=${VANADIUM_E_KEYSTORE:-$HOME/.vanadium-e/vanadium-e.keystore}
 export PATH=$HOME/depot_tools:$PATH
-state=$WORK/.state
 version=$(sed -n 's/^android_default_version_name = "\(.*\)"/\1/p' "$root/args.gn")
 [[ -n $version ]] || { echo "could not read Chromium version from args.gn"; exit 1; }
+# Per-version markers, so a finished build of the previous Chromium version never makes a new one skip phases.
+state=$WORK/.state/$version
 
 say() { printf '\n==> %s\n' "$*"; }
 done_p() { [[ -z ${FORCE:-} && -e $state/$1 ]]; }
@@ -208,4 +209,5 @@ phase lists p_lists
 phase gn p_gn
 phase build p_build
 phase sign p_sign
-say "Done. Install order: TrichromeLibrary, TrichromeChrome, VanadiumConfig (out/Default/apks/release/)."
+if [[ -n ${ONLY:-} ]]; then say "Phase $ONLY finished. Run again without a phase name to continue with the remaining phases."
+else say "Done. Signed APKs: out/Default/apks/release/ (VanadiumBrowser.apk, VanadiumConfig.apk). Next: E/tools/publish-release.sh --dry-run"; fi
